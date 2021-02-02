@@ -1,0 +1,127 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fonts2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.fonts3 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+}
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 130%;
+}
+
+h6 {
+    font-size: 15px;
+    line-height: 120%;
+}
+
+.text {
+    font-size: 24px;
+    line-height: 130%;
+}
+
+.text-card {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.text-color-primary {
+    color: #002E64;
+}
+
+.text-color-secondary {
+    color: #ffffff;
+}
+
+.gradient_1 {
+    background: rgb(83, 80, 225);
+    background: linear-gradient(261deg, rgba(83, 80, 225, 1) 0%, rgba(44, 61, 103, 1) 100%);
+}
+
+.gradient_2 {
+    background: rgb(255, 211, 55);
+    background: linear-gradient(260deg, rgba(255, 211, 55, 1) 0%, rgba(255, 153, 0, 1) 100%);
+}
+
+.button {
+    width: 250px;
+    height: 50px;
+    border-radius: 1em;
+    color: #ffffff;
+    text-align: center;
+    background-color: #EBAB08;
+}
+
+.pr-8 {
+    padding: 0 8px 0 0;
+}
+
+.p-26 {
+    padding: 0 0 0 26px;
+}
+
+.p-120 {
+    padding: 0 0 0 120px;
+}
+
+.icon-20 {
+    width: 20px;
+    height: 20px;
+}
