@@ -29,8 +29,8 @@ body {
 
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 167px;
+    padding-left: 167px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -116,6 +116,7 @@ h6 {
 .p-26 {
     padding: 0 0 0 26px;
 }
+
 
 .p-120 {
     padding: 0 0 0 120px;

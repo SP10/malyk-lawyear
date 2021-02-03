@@ -31,4 +31,9 @@ header img {
 
 .phone {
     align-items: center;
+    padding: 0 0 0 50px;
+}
+
+.language{
+    padding: 0 0 0 50px;
 }
