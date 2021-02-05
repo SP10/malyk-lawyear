@@ -32,6 +32,7 @@ nav>ul>li {
 
 .text-logo {
     min-width: 180px;
+    padding: 0 0 0 10px;
 }
 
 .phone {
