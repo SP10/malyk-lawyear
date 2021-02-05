@@ -13,18 +13,13 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.fonts2 {
+.font2 {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.fonts3 {
+.font3 {
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 100;
-}
-
-.wrapper {
-    max-width: 1920px;
-    margin: 0 auto
 }
 
 .container {
@@ -82,6 +77,11 @@ h6 {
     line-height: 130%;
 }
 
+.text-language {
+    font-size: 14px;
+    line-height: 120%;
+}
+
 .text-color-primary {
     color: #002E64;
 }
@@ -100,6 +100,31 @@ h6 {
     background: linear-gradient(260deg, rgba(255, 211, 55, 1) 0%, rgba(255, 153, 0, 1) 100%);
 }
 
+.gradient_3 {
+    background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
+}
+
+.pr-10 {
+    padding: 0 10px 0 0;
+}
+
+.pr-20 {
+    padding: 0 20px 0 0;
+}
+
+.p-26 {
+    padding: 0 0 0 26px;
+}
+
+.p-120 {
+    padding: 0 0 0 120px;
+}
+
+.icon-20 {
+    width: 20px;
+    height: 20px;
+}
+
 .button {
     width: 250px;
     height: 50px;
@@ -109,20 +134,17 @@ h6 {
     background-color: #EBAB08;
 }
 
-.pr-8 {
-    padding: 0 8px 0 0;
+.menu a:hover {
+    color: #F5D481;
 }
 
-.p-26 {
-    padding: 0 0 0 26px;
-}
-
-
-.p-120 {
-    padding: 0 0 0 120px;
-}
-
-.icon-20 {
-    width: 20px;
-    height: 20px;
+.menu a:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("../assets/arrow-icon.svg") no-repeat -30px -50px fixed;
+    top: 10px;
+    right: 5px;
+    position: absolute;
+    display: inline-block;
 }
