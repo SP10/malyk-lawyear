@@ -24,10 +24,11 @@ body {
 
 .container {
     width: 100%;
-    padding-right: 167px;
+    height: 100vh;
+    /* padding-right: 167px;
     padding-left: 167px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; */
 }
 
 .row {
@@ -36,8 +37,8 @@ body {
 }
 
 .col {
-    display: flex;
-    flex-direction: column;
+    padding: 0 50px 0 0;
+    flex: 0 0 50%;
 }
 
 h1 {

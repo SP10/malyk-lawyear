@@ -19,69 +19,134 @@
     <meta property="og:title" content="Адвокат Малик">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <link href="./css/app.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+    <script src="./js/script.js"></script>
 </head>
 
-<body>
+<body onload="initMap()">
     <div class="wrapper">
-        <header class="container">
-            <div class="row header">
-                <img src="./assets/logo.png" alt="Логотип">
-                <div class="text-logo">
-                    <h5 class="font2"><b>Малик Олександр</b></h5>
-                    <h5 class="font2"><b>Володимирович</b></h5>
-                    <h5 class="font3">адвокат</h5>
-                </div>
-                <nav class="menu">
-                    <ul id="menu" class="menu__list">
-                        <li>
-                            <a href="#">
-                                <h4>Послуги</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/costs/">
-                                <h4>Вартість послуг</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/benefits/">
-                                <h4>Переваги</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/news/">
-                                <h4>Новини</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/contacts/">
-                                <h4>Контакти</h4>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="row phone">
-                    <img class="icon-20 pr-10" src="./assets/phone-icon.svg" alt="phone icon">
-                    <a href="tel:+380961097608">
-                        <h4>+38 096-109-76-08</h4>
-                    </a>
-                </div>
-                <div class="row language menu">
-                    <img class="pr-10" src="./assets/language-icon.svg" alt="language icon">
-                    <h4 class="pr-20">
-                        <a href="#">
-                            <h4>Російською</h4>
-                        </a>
-                        <!-- <h4 class="pr-20">Українською</h4> -->
+        <div class="content">
+            <div class="container hero">
+                <div class="row">
+
                 </div>
             </div>
-            <!-- <div class="button">
-                <h3>Консультація</h3>
-            </div> -->
-        </header>
-        <div></div>
+            <div class="container about">
+                <div class="row">
+
+                </div>
+            </div>
+            <div class="container service">
+                <div class="row">
+
+                </div>
+            </div>
+            <div class="container costs">
+                <div class="row">
+
+                </div>
+            </div>
+            <div class="container benefit">
+                <div class="benefit__body">
+                    <div class="benefit__header">
+                        <h1>Переваги</h1>
+                    </div>
+                    <div class="benefit__row">
+                        <div class="benefit_col">
+                            <div class="item__benefit">
+                                <div class="item-benefit__title">Інноваційність</div>
+                                <div class="item-benefit__text">Застосовує перевірені технології правового захисту — від класичних до прогресивних. Для зручності клієнтів використовує системи “Електронний Суд” та “EASYCON” для відеоконференцзв’язку. </div>
+                                <div class="item-benefit__icon"><img src="./assets/innovation-icon.svg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="benefit_col">
+                            <div class="item__benefit">
+                                <div class="item-benefit__title">Прозорість та зручність</div>
+                                <div class="item-benefit__text">Клієнти отримують прозору систему оплати наданих послуг, вчасну та повну інформацію про перебіг справ, послідовність дій та результати.</div>
+                                <div class="item-benefit__icon"><img src="./assets/transparency-icon.svg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="benefit_col">
+                            <div class="item__benefit">
+                                <div class="item-benefit__title">Досвід роботи</div>
+                                <div class="item-benefit__text">Практичний досвід Олександра Володимировича у судовій системі дозволяє обирати оптимальний варіант захисту прав клієнтів.</div>
+                                <div class="item-benefit__icon"><img src="./assets/experience-icon.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container news">
+                <div class="news__body">
+                    <div class="news__header">
+                        <h1>Новини</h1>
+                    </div>
+                </div>
+                <div class="news__publication">
+
+                </div>
+                <div class="news__interview">
+
+                </div>
+            </div>
+            <div class="container contacts">
+                <div class="contacts__body">
+                    <div class="row contacts__header">
+                        <h1>Контакти</h1>
+                    </div>
+                    <div class="row contacts__map">
+                        <div class="contacts__col">
+                            <div id="map"></div>
+                        </div>
+                        <div class="contacts__col">
+                            <div class="contacts__title">
+                                <h2>Малик Олександр Володимирович</h2>
+                            </div>
+                            <div class="contacts__sub-title">
+                                адвокат
+                            </div>
+                            <div class="cotacts_email">
+                                <a href="mailto:lawyermalyk@gmail.com">lawyermalyk@gmail.com</a>
+                            </div>
+                            <div class="contacts__phone"><a href="tel:+380961097608">+38 096 109-76-08</a></div>
+                            <div class="contacts__address"> 21050, м. Вінниця, вул. Миколи Оводова (Козицького), 29а
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contacts__footer">
+                        <div class="footer__col">
+                            <div class="contacts-social__icon">
+                                <div class="social-icon">
+                                    <a href="tg://resolve?domain=lawyermalyk"><img src="./assets/telegram.svg" alt="telegram icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                    <a href="'viber://chat/?number=380961097608'"><img src="./assets/viber.svg" alt="viber icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                    <a href="https://www.facebook.com/malyk.partners/"><img src="./assets/facebook.svg" alt="facebook icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                    <a href="https://www.instagram.com/malyk.partners/"><img src="./assets/instagram.svg" alt="instagram icon"></a>
+                                </div>
+                            </div>
+                            <div class="contacts-social__text">© 2021 Малик Олександр</div>
+                        </div>
+                        <div class="footer__col">
+                            <div class="contacts-developer__icon">
+                                <div class="developer-icon">
+                                    <a href="mailto:tsukuru@gmail.com"><img src="./assets/tsukuru.svg" alt="tsukuru"></a>
+                                </div>
+                            </div>
+                            <div class="contacts-developer__text">2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
