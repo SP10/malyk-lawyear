@@ -32,14 +32,17 @@ body {
     margin-left: auto; */
 }
 
+.m-container {
+    margin-left: 126px;
+    margin-right: 126px;
+}
+
 .row {
     display: flex;
     flex-direction: row;
 }
 
 .col {
-    /* padding: 0 50px 0 0;
-    flex: 0 0 50%; */
     display: flex;
     flex-direction: column;
 }
@@ -110,22 +113,6 @@ h6 {
 
 .gradient_3 {
     background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
-}
-
-.pr-10 {
-    padding: 0 10px 0 0;
-}
-
-.pr-20 {
-    padding: 0 20px 0 0;
-}
-
-.p-15 {
-    padding: 0 0 0 15px;
-}
-
-.p-120 {
-    padding: 0 0 0 120px;
 }
 
 .icon-20 {
