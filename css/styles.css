@@ -4,7 +4,8 @@ h3,
 h4,
 h5,
 h6,
-body {
+body,
+ul {
     margin: 0;
     padding: 0;
 }
@@ -37,8 +38,14 @@ body {
 }
 
 .col {
-    padding: 0 50px 0 0;
-    flex: 0 0 50%;
+    /* padding: 0 50px 0 0;
+    flex: 0 0 50%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.flexible {
+    flex-grow: 1;
 }
 
 h1 {
