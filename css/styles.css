@@ -129,6 +129,11 @@ h6 {
     background-color: #EBAB08;
 }
 
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .menu a:hover {
     color: #F5D481;
 }

@@ -16,9 +16,46 @@
 
 .hero {
     background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
-    color: #FFFFFF;
     /* height       : 100vh; */
 }
+
+.hero__logo {
+    align-items: center;
+}
+
+.logo__img {}
+
+.logo__title {
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    color: #FFFFFF;
+    padding: 0 0 0 15px;
+}
+
+.logo__sub-title {
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.menu-item {}
+
+.menu-item__text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.dropdown {}
 
 .about {
     background-color: #F5F5F5;
