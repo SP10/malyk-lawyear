@@ -134,11 +134,11 @@ h6 {
     color: #fff;
 }
 
-.menu a:hover {
+/* .menu a:hover {
     color: #F5D481;
-}
+} */
 
-.menu a:after {
+/* .menu a:after {
     content: "";
     width: 30px;
     height: 30px;
@@ -147,4 +147,4 @@ h6 {
     right: 5px;
     position: absolute;
     display: inline-block;
-}
+} */
