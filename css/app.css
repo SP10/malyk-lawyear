@@ -14,13 +14,23 @@
     padding: 18px 0 60px 0;
 } */
 
+header {
+    display: flex;
+    align-items: center;
+}
+
 .hero {
     background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
     /* height       : 100vh; */
 }
 
+.hero__body {
+    padding: 25px 0 0 0;
+}
+
 .hero__logo {
     align-items: center;
+    padding-right: 80px;
 }
 
 .logo__img {}
@@ -44,7 +54,9 @@
     color: #FFFFFF;
 }
 
-.menu-item {}
+.menu-item {
+    padding: 0 36px 0 0;
+}
 
 .menu-item__text {
     font-family: Montserrat;
