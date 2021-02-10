@@ -133,6 +133,9 @@ h6 {
     text-decoration: none;
     color: #fff;
 }
+.push {
+    margin-left: auto;
+}
 
 /* .menu a:hover {
     color: #F5D481;

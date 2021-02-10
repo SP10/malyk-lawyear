@@ -37,6 +37,7 @@ header {
     line-height: 130%;
     color      : #FFFFFF;
     padding    : 0 0 0 15px;
+    min-width  : 180px;
 }
 
 .logo__sub-title {
@@ -46,7 +47,7 @@ header {
     font-size  : 18px;
     line-height: 130%;
     color      : #FFFFFF;
-}  
+}
 
 .about {
     background-color: #F5F5F5;
@@ -350,80 +351,94 @@ header {
 
 /* -------------- menu ------------------ */
 #menu {
-	/* background: #0099CC;
+    /* background: #0099CC;
 	color: #FFF;
 	height: 45px;
 	padding-left: 18px;
 	border-radius: 10px; */
 }
-#menu ul, #menu li {
-	/* margin: 0 auto;
+
+#menu ul,
+#menu li {
+    /* margin: 0 auto;
 	padding: 0;
 	list-style: none */
 }
+
 #menu ul {
-	/* width: 100%; */
+    /* width: 100%; */
 }
+
 #menu li {
-	float: left;
-	display: inline;
-	position: relative;
+    float   : left;
+    display : inline;
+    position: relative;
 }
+
 #menu a {
-	display: block;
-	line-height: 45px;
-	padding: 0 14px;
-	text-decoration: none;  
-    font-family: Montserrat;
-    font-style : normal;
-    font-weight: bold;
-    font-size  : 20px;
-    color      : #FFFFFF;
+    display        : block;
+    line-height    : 45px;
+    padding        : 0 14px;
+    text-decoration: none;
+    font-family    : Montserrat;
+    font-style     : normal;
+    font-weight    : bold;
+    font-size      : 20px;
+    color          : #FFFFFF;
 }
+
 #menu a.dropdown-arrow:after {
-	content: "\25BE";
-	margin-left: 5px;
+    content    : "\25BE";
+    margin-left: 5px;
 }
+
 #menu li a:hover {
-	color: #F5D481;
+    color: #F5D481;
 }
+
 #menu input {
-	display: none;
-	margin: 0;
-	padding: 0;
-	height: 45px;
-	width: 100%;
-	opacity: 0;
-	cursor: pointer
+    display: none;
+    margin : 0;
+    padding: 0;
+    height : 45px;
+    width  : 100%;
+    opacity: 0;
+    cursor : pointer
 }
+
 #menu label {
-	display: none;
-	line-height: 45px;
-	text-align: center;
-	position: absolute;
-	left: 35px
+    display    : none;
+    line-height: 45px;
+    text-align : center;
+    position   : absolute;
+    left       : 35px
 }
+
 #menu label:before {
-	font-size: 1.6em;
-	content: "\2261"; 
-	margin-left: 20px;
+    font-size  : 1.6em;
+    content    : "\2261";
+    margin-left: 20px;
 }
-#menu ul.sub-menus{
-	height: auto;
-	overflow: hidden;
-    background: #fff;
-    box-shadow      : 0 4px 8px 0 rgb(0 0 0 / 20%);
+
+#menu ul.sub-menus {
+    height       : auto;
+    overflow     : hidden;
+    background   : #fff;
+    box-shadow   : 0 4px 8px 0 rgb(0 0 0 / 20%);
     border-radius: 25px;
-	position: absolute;
-    z-index: 99;
-    padding: 30px;
-    width: 365px;
-	display: none;
+    position     : absolute;
+    z-index      : 99;
+    padding      : 30px;
+    width        : 365px;
+    display      : none;
 }
+
 #menu ul.sub-menus li {
-	display: block;
-	width: 100%;
+    display: block;
+    padding: 0 0 15px 0;
+    width  : 100%;
 }
+
 #menu ul.sub-menus a {
     font-style : normal;
     font-weight: 600;
@@ -433,81 +448,72 @@ header {
     align-items: center;
     color      : #002E64;
 }
+
 #menu li:hover ul.sub-menus {
-	display: block
-}
-#menu ul.sub-menus a:hover{
-	color: #F5D481;
+    display: block
 }
 
-
-/* .menu-item {
-    padding: 0 36px 0 0;
-}
-
-.menu-item a:hover {
+#menu ul.sub-menus a:hover {
     color: #F5D481;
 }
 
-.menu-item__text {
-    font-family: Montserrat;
-    font-style : normal;
-    font-weight: bold;
-    font-size  : 20px;
-    line-height: 130%;
-    color      : #FFFFFF;
+.hero-information__wrap {
+    display: flex;
 }
 
-.menu-item__list {
-    font-family: Montserrat;
-    font-style : normal;
-    font-weight: bold;
-    font-size  : 20px;
-    line-height: 130%;
-    color      : #FFFFFF;
-}
-
-.menu-item__list::after {
-    content    : '';
-    margin-left: 10px;
-    display    : inline-block;
-    height     : 10px;
-    width      : 14px;
-    background : url(../assets/drop-down-arrow.svg) no-repeat;
-}
-
-.menu-drop-down__list {
-    position: absolute;
-    box-shadow      : 0 4px 8px 0 rgb(0 0 0 / 20%);
-    background-color: #fff;
-    border-radius   : 25px;
-    padding: 36px 50px 16px 50px;
-    margin: 10px 0 0 0;
-    min-height      : 252px;
-    z-index: 99;
-    visibility: hidden;
-    display: none;
-}
-
-.menu-drop-down__list ul:hover{
-    display: block;
-    visibility: visible;
-}
-
-.menu-drop-down__list>ul>li a {
-    font-style : normal;
-    font-weight: 600;
-    font-size  : 18px;
-    line-height: 130%;
-    display    : flex;
+.hero-information__phone {
+    display: flex;
+    padding: 0 30px 0 30px;
     align-items: center;
-    color      : #002E64;
+    min-width: 220px;
 }
 
-.menu-drop-down__list>ul>li {
-    padding-bottom: 20px;
+.hero-information-phone__icon {
+    padding: 0px 10px 0 0;
+    width  : 20px;
+    height : 20px;
 }
 
-.menu-drop-down__list ul {
-    list-style: none;
-} */
+.hero-information-phone__icon img{
+    width  : 20px;
+    height : 20px;
+}
+
+.hero-information-phone__telephone {}
+
+.hero-information-phone__telephone a {
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.hero-information__language {
+    display: flex;
+    align-items: center;
+}
+
+.hero-information-language__icon {
+    padding: 0px 10px 0 0;
+}
+
+.hero-information-language__icon img {
+    width  : 36px;
+    height : 20px;
+}
+
+
+.hero-information_language__title {
+
+}
+
+.hero-information_language__title a{
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
