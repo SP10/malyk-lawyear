@@ -49,6 +49,43 @@ header {
     color: #FFFFFF;
 }
 
+.hero__column {
+    flex: 0 0 50%;
+    padding: 0 45px 0 0;
+}
+
+.hero__femida--img {}
+
+.hero__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+.hero__sub-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.hero__button {}
+
+.button {}
+
+.hero-image__content {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image__content img {
+    width: 60%;
+    background-attachment: fixed;
+}
+
 .about {
     background-color: #F5F5F5;
 }
