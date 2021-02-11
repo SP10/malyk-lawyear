@@ -7,10 +7,10 @@
     /* margin: 25px 126px 25px 126px; */
 }
 
-
 header {
-    display    : flex;
+    display: flex;
     align-items: center;
+    flex-grow: 1;
 }
 
 .hero {
@@ -23,7 +23,7 @@ header {
 }
 
 .hero__logo {
-    align-items  : center;
+    align-items: center;
     padding-right: 80px;
 }
 
@@ -31,22 +31,22 @@ header {
 
 .logo__title {
     font-family: Montserrat Alternates;
-    font-style : normal;
+    font-style: normal;
     font-weight: 600;
-    font-size  : 18px;
+    font-size: 18px;
     line-height: 130%;
-    color      : #FFFFFF;
-    padding    : 0 0 0 15px;
-    min-width  : 180px;
+    color: #FFFFFF;
+    padding: 0 0 0 15px;
+    min-width: 180px;
 }
 
 .logo__sub-title {
     font-family: Montserrat Alternates;
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 18px;
+    font-size: 18px;
     line-height: 130%;
-    color      : #FFFFFF;
+    color: #FFFFFF;
 }
 
 .about {
@@ -58,25 +58,25 @@ header {
 }
 
 .about__col {
-    flex   : 0 0 50%;
+    flex: 0 0 50%;
     padding: 0 32px 0 0;
 }
 
 .about__header {
-    padding    : 0 0 28px 0;
-    font-style : normal;
+    padding: 0 0 28px 0;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 60px;
+    font-size: 60px;
     line-height: 100%;
-    color      : #002E64;
+    color: #002E64;
 }
 
 .about__text {
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 24px;
+    font-size: 24px;
     line-height: 130%;
-    color      : #002E64;
+    color: #002E64;
 }
 
 .about__text ul {
@@ -100,11 +100,11 @@ header {
 }
 
 .costs__header {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 60px;
+    font-size: 60px;
     line-height: 100%;
-    color      : #FFFFFF;
+    color: #FFFFFF;
 }
 
 .costs__row {
@@ -112,50 +112,50 @@ header {
 }
 
 .card__row {
-    display       : flex;
+    display: flex;
     flex-direction: row;
-    padding       : 0 0 45px 0;
+    padding: 0 0 45px 0;
 }
 
 .cost__title {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 24px;
+    font-size: 24px;
     line-height: 29px;
-    display    : flex;
+    display: flex;
     align-items: center;
-    color      : #FFFFFF;
-    padding    : 0 0 20px 0;
+    color: #FFFFFF;
+    padding: 0 0 20px 0;
 }
 
 .cost__col {
-    flex   : 0 0 31.53%;
+    flex: 0 0 31.53%;
     padding: 0 45px 0 0;
 }
 
 .cost__card {
-    box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    border-radius   : 25px;
-    padding         : 36px 50px 36px 50px;
-    min-height      : 252px;
+    border-radius: 25px;
+    padding: 36px 50px 36px 50px;
+    min-height: 252px;
 }
 
 .cost-card__title {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 20px;
+    font-size: 20px;
     line-height: 130%;
-    color      : #002E64;
+    color: #002E64;
 }
 
 .cost-card__text {
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 20px;
+    font-size: 20px;
     line-height: 130%;
-    color      : #002E64;
-    padding    : 20px 0 20px 0;
+    color: #002E64;
+    padding: 20px 0 20px 0;
 }
 
 .cost-card__text ul {
@@ -165,12 +165,12 @@ header {
 .cost-card__footer {}
 
 .cost-card__price {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 24px;
+    font-size: 24px;
     line-height: 29px;
-    text-align : right;
-    color      : #002E64;
+    text-align: right;
+    color: #002E64;
 }
 
 .benefit {
@@ -186,15 +186,15 @@ header {
 }
 
 .benefit__header {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 60px;
+    font-size: 60px;
     line-height: 100%;
-    color      : #002E64;
+    color: #002E64;
 }
 
 .benefit__row {
-    display       : flex;
+    display: flex;
     flex-direction: row;
 }
 
@@ -207,28 +207,28 @@ header {
 }
 
 .item-benefit__title {
-    margin     : 46px 0 0 0;
-    font-style : normal;
+    margin: 46px 0 0 0;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 24px;
+    font-size: 24px;
     line-height: 29px;
     /* text/blue */
-    color      : #002E64;
+    color: #002E64;
 }
 
 .item-benefit__text {
-    height     : 256px;
-    font-style : normal;
+    height: 256px;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 24px;
+    font-size: 24px;
     line-height: 130%;
-    color      : #002E64;
-    margin     : 15px 0 0 0;
+    color: #002E64;
+    margin: 15px 0 0 0;
 }
 
 .item-benefit__icon {
-    max-height     : 130px;
-    display        : flex;
+    max-height: 130px;
+    display: flex;
     justify-content: center;
 }
 
@@ -245,11 +245,11 @@ header {
 }
 
 .contacts__header {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 60px;
+    font-size: 60px;
     line-height: 100%;
-    color      : #002E64;
+    color: #002E64;
 }
 
 .contacts__map {
@@ -259,50 +259,50 @@ header {
 
 .contacts__col {
     padding: 0 50px 0 0;
-    flex   : 0 0 50%;
+    flex: 0 0 50%;
 }
 
 .contacts__title {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 30px;
+    font-size: 30px;
     line-height: 37px;
-    color      : #002E64;
+    color: #002E64;
 }
 
 .contacts__sub-title {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size  : 24px;
+    font-size: 24px;
     line-height: 130%;
-    font-size  : 24px;
-    color      : #002E64;
+    font-size: 24px;
+    color: #002E64;
 }
 
 .cotacts_email {
-    padding    : 25px 0 0 0;
-    font-style : normal;
+    padding: 25px 0 0 0;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 36px;
+    font-size: 36px;
     line-height: 44px;
-    color      : #2324A9;
+    color: #2324A9;
 }
 
 .contacts__phone {
-    padding    : 8px 0 0 0;
-    font-style : normal;
+    padding: 8px 0 0 0;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 36px;
+    font-size: 36px;
     line-height: 44px;
-    color      : #2324A9;
+    color: #2324A9;
 }
 
 .contacts__address {
-    padding    : 30px 0 0 0;
-    font-style : normal;
+    padding: 30px 0 0 0;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 24px;
+    font-size: 24px;
     line-height: 130%;
-    color      : #001D3F;
+    color: #001D3F;
 }
 
 .contacts-social__icon {
@@ -311,7 +311,7 @@ header {
 
 .contacts__footer {
     align-items: flex-end;
-    padding    : 20px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
 .contacts-social__icon {}
@@ -321,11 +321,11 @@ header {
 }
 
 .contacts-social__text {
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 15px;
+    font-size: 15px;
     line-height: 130%;
-    color      : #002E64;
+    color: #002E64;
 }
 
 .contacts-developer__icon {
@@ -335,12 +335,12 @@ header {
 .developer-icon {}
 
 .contacts-developer__text {
-    font-style : normal;
+    font-style: normal;
     font-weight: normal;
-    font-size  : 15px;
+    font-size: 15px;
     line-height: 130%;
-    color      : #002E64;
-    padding    : 0 0 0 6px;
+    color: #002E64;
+    padding: 0 0 0 6px;
 }
 
 .footer__col {
@@ -348,8 +348,8 @@ header {
 }
 
 
-
 /* -------------- menu ------------------ */
+
 #menu {
     /* background: #0099CC;
 	color: #FFF;
@@ -370,25 +370,25 @@ header {
 }
 
 #menu li {
-    float   : left;
-    display : inline;
+    float: left;
+    display: inline;
     position: relative;
 }
 
 #menu a {
-    display        : block;
-    line-height    : 45px;
-    padding        : 0 14px;
+    display: block;
+    line-height: 45px;
+    padding: 0 14px;
     text-decoration: none;
-    font-family    : Montserrat;
-    font-style     : normal;
-    font-weight    : bold;
-    font-size      : 20px;
-    color          : #FFFFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
 }
 
 #menu a.dropdown-arrow:after {
-    content    : "\25BE";
+    content: "\25BE";
     margin-left: 5px;
 }
 
@@ -398,55 +398,55 @@ header {
 
 #menu input {
     display: none;
-    margin : 0;
+    margin: 0;
     padding: 0;
-    height : 45px;
-    width  : 100%;
+    height: 45px;
+    width: 100%;
     opacity: 0;
-    cursor : pointer
+    cursor: pointer
 }
 
 #menu label {
-    display    : none;
+    display: none;
     line-height: 45px;
-    text-align : center;
-    position   : absolute;
-    left       : 35px
+    text-align: center;
+    position: absolute;
+    left: 35px
 }
 
 #menu label:before {
-    font-size  : 1.6em;
-    content    : "\2261";
+    font-size: 1.6em;
+    content: "\2261";
     margin-left: 20px;
 }
 
 #menu ul.sub-menus {
-    height       : auto;
-    overflow     : hidden;
-    background   : #fff;
-    box-shadow   : 0 4px 8px 0 rgb(0 0 0 / 20%);
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     border-radius: 25px;
-    position     : absolute;
-    z-index      : 99;
-    padding      : 30px;
-    width        : 365px;
-    display      : none;
+    position: absolute;
+    z-index: 99;
+    padding: 30px;
+    width: 365px;
+    display: none;
 }
 
 #menu ul.sub-menus li {
     display: block;
     padding: 0 0 15px 0;
-    width  : 100%;
+    width: 100%;
 }
 
 #menu ul.sub-menus a {
-    font-style : normal;
+    font-style: normal;
     font-weight: 600;
-    font-size  : 18px;
+    font-size: 18px;
     line-height: 130%;
-    display    : flex;
+    display: flex;
     align-items: center;
-    color      : #002E64;
+    color: #002E64;
 }
 
 #menu li:hover ul.sub-menus {
@@ -470,21 +470,21 @@ header {
 
 .hero-information-phone__icon {
     padding: 0px 10px 0 0;
-    width  : 20px;
-    height : 20px;
+    width: 20px;
+    height: 20px;
 }
 
-.hero-information-phone__icon img{
-    width  : 20px;
-    height : 20px;
+.hero-information-phone__icon img {
+    width: 20px;
+    height: 20px;
 }
 
 .hero-information-phone__telephone {}
 
 .hero-information-phone__telephone a {
-    font-style : normal;
+    font-style: normal;
     font-weight: bold;
-    font-size  : 20px;
+    font-size: 20px;
     line-height: 130%;
     color: #FFFFFF;
     text-decoration: none;
@@ -497,22 +497,21 @@ header {
 
 .hero-information-language__icon {
     padding: 0px 10px 0 0;
+    width: 36px;
+    height: 20px;
 }
 
 .hero-information-language__icon img {
-    width  : 36px;
-    height : 20px;
+    width: 36px;
+    height: 20px;
 }
 
+.hero-information_language__title {}
 
-.hero-information_language__title {
-
-}
-
-.hero-information_language__title a{
-    font-style : normal;
+.hero-information_language__title a {
+    font-style: normal;
     font-weight: bold;
-    font-size  : 20px;
+    font-size: 20px;
     line-height: 130%;
     color: #FFFFFF;
     text-decoration: none;
