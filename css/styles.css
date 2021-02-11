@@ -6,7 +6,7 @@ h5,
 h6,
 body,
 ul {
-    margin: 0;
+    margin : 0;
     padding: 0;
 }
 
@@ -24,26 +24,26 @@ body {
 }
 
 .container {
-    width: 100%;
-    height: 100vh;
+    width           : 100%;
+    height          : 100vh;
     /* padding-right: 167px;
-    padding-left: 167px;
-    margin-right: auto;
-    margin-left: auto; */
+    padding-left    : 167px;
+    margin-right    : auto;
+    margin-left     : auto; */
 }
 
 .m-container {
-    margin-left: 126px;
+    margin-left : 126px;
     margin-right: 126px;
 }
 
 .row {
-    display: flex;
+    display       : flex;
     flex-direction: row;
 }
 
 .col {
-    display: flex;
+    display       : flex;
     flex-direction: column;
 }
 
@@ -64,32 +64,32 @@ h3 {
 }
 
 h4 {
-    font-size: 20px;
+    font-size  : 20px;
     line-height: 130%;
 }
 
 h5 {
-    font-size: 18px;
+    font-size  : 18px;
     line-height: 130%;
 }
 
 h6 {
-    font-size: 15px;
+    font-size  : 15px;
     line-height: 120%;
 }
 
 .text {
-    font-size: 24px;
+    font-size  : 24px;
     line-height: 130%;
 }
 
 .text-card {
-    font-size: 20px;
+    font-size  : 20px;
     line-height: 130%;
 }
 
 .text-language {
-    font-size: 14px;
+    font-size  : 14px;
     line-height: 120%;
 }
 
@@ -116,22 +116,131 @@ h6 {
 }
 
 .icon-20 {
-    width: 20px;
+    width : 20px;
     height: 20px;
 }
 
-.button {
-    width: 250px;
-    height: 50px;
-    border-radius: 1em;
+/* .button {
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
     color: #ffffff;
     text-align: center;
     background-color: #EBAB08;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+} */
+
+
+.button:hover{
+    background-color: #CB9917;
+}
+
+.button {
+	/* box-shadow: 0px 0px 0px 0px #fde50b;
+	background:linear-gradient(to bottom, #CB9917 5%, #fffb01 100%);
+	background-color:#CB9917;
+	border-radius:28px;
+	border:1px solid #ffb657;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+	padding:16px 65px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #836d23; */
+        /* box-shadow: 0px 0px 0px 0px #fde50b; */
+    /* background: linear-gradient(to bottom, #c3c04e 5%, #fffb01 100%); */
+    background-color: #ffc107;
+    border-radius: 30px;
+    /* border: 1px solid #ffe847; */
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 16px 65px;
+    text-decoration: none;
+    /* text-shadow: 0px 1px 0px #836d23;*/
+}
+.button:hover {
+    background:linear-gradient(to bottom, #fffb01 5%, #CB9917 100%);
+	background-color:#ffb657;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.burger-continer {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    z-index: 99999;
+    -webkit-transition: opacity ease-in-out .2s;
+    -moz-transition: opacity ease-in-out .2s;
+    -o-transition: opacity ease-in-out .2s;
+    transition: opacity ease-in-out .2s;
+}
+.burger-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #EBAB08;
+    opacity: 0.50;
+    border-radius: 100px;
+}
+.burger {
+    width: 28px;
+    height: 19px;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    margin: 0 auto;
+}
+
+.burger span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    height: 3px;
+    background-color:#fff;
+    border: 3px;
 }
 
 .menu a {
     text-decoration: none;
-    color: #fff;
+    color          : rgb(161, 129, 129);
 }
 
 .push {

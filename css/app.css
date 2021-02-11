@@ -62,6 +62,7 @@ header {
     font-size: 60px;
     line-height: 100%;
     color: #FFFFFF;
+    padding: 0 0 15px 0;
 }
 
 .hero__sub-title {
@@ -70,16 +71,19 @@ header {
     font-size: 24px;
     line-height: 130%;
     color: #FFFFFF;
+    padding: 0 0 15px 0;
 }
 
 .hero__button {}
-
-.button {}
+.hero__button a{
+    text-decoration: none;
+}
 
 .hero__content {
     height: 1706px;
     background-position: right top;
     background-image: url("../assets/hero-crop.png");
+    background-repeat: no-repeat;
 }
 
 .hero-image__content {
