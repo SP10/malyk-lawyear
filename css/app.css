@@ -76,6 +76,12 @@ header {
 
 .button {}
 
+.hero__content {
+    height: 1706px;
+    background-position: right top;
+    background-image: url("../assets/hero-crop.png");
+}
+
 .hero-image__content {
     display: flex;
     justify-content: center;
