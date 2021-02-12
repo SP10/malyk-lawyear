@@ -144,26 +144,8 @@ h6 {
 }
 
 .button {
-	/* box-shadow: 0px 0px 0px 0px #fde50b;
-	background:linear-gradient(to bottom, #CB9917 5%, #fffb01 100%);
-	background-color:#CB9917;
-	border-radius:28px;
-	border:1px solid #ffb657;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-	padding:16px 65px;
-	text-decoration:none;
-    text-shadow:0px 1px 0px #836d23; */
-        /* box-shadow: 0px 0px 0px 0px #fde50b; */
-    /* background: linear-gradient(to bottom, #c3c04e 5%, #fffb01 100%); */
     background-color: #ffc107;
     border-radius: 30px;
-    /* border: 1px solid #ffe847; */
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -173,7 +155,6 @@ h6 {
     font-size: 24px;
     padding: 16px 65px;
     text-decoration: none;
-    /* text-shadow: 0px 1px 0px #836d23;*/
 }
 .button:hover {
     background:linear-gradient(to bottom, #fffb01 5%, #CB9917 100%);
@@ -235,18 +216,80 @@ h6 {
     transform: rotate(0deg);
     height: 3px;
     background-color:#fff;
-    border: 3px;
 }
 
-.menu a {
-    text-decoration: none;
-    color          : rgb(161, 129, 129);
+.burger .p-10{
+ top:10px;
+}
+.burger .p-20{
+    top: 20px;
 }
 
-.push {
-    margin-left: auto;
+.overlay{
+    display: none;
+    z-index: 99999;
+    opacity: 1;
 }
 
+.overlay-show{
+     display: block;
+}
+.overlay-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .6;
+}
+
+.side-menu {
+    display: none;
+    max-width: 300px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.side-menu-show{
+    display: block;
+}
+
+.close-button-container {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 999999;
+}
+
+.close-button-container img{
+    width: 40px;
+    height: 40px;
+}
+
+.side-menu-container {
+    height: 100%;
+    padding: 50px 35px 35px 35px;
+}
+.dropdown-arrow {
+}
+.sub-menus {
+}
+.side-menu-footer {
+}
+
+.overflow{
+    overflow: hidden;
+}
 
 /* .menu a:hover {
     color: #F5D481;

@@ -36,17 +36,47 @@
 <body onload="initMap()">
     <div class="wrapper">
         <div class="content">
-            <div class="burger-continer">
+            <div class="burger-continer" onclick="openMenu()">
                 <div class="burger-circle">
                     <div class="burger">
                         <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="p-10"></span>
+                        <span class="p-20"></span>
                     </div>
                 </div>
             </div>
-            <div class="container hero">
+            <div class="overlay">
+                <div class="overlay-bg"></div>
+            </div>
+            <div class="side-menu">
+                <div class="close-button-container">
+                    <img src="./assets/close-icon.svg">
+                </div>
+                <div class="side-menu-container">
+                    <nav id='menu-side'>
+                        <ul>
+                            <li><a href='#home'>Головна</a></li>
+                            <li><a href='#service'>Послуги</a></li>
+                            <li><a class='dropdown-arrow' href='#'>Вартість послуг</a>
+                                <ul class='sub-menus'>
+                                    <li><a href="#cost_1">Аналіз справи</a></li>
+                                    <li><a href="#cost_2">Адміністративні правопорушення</a></li>
+                                    <li><a href="#cost_3">Кримінальні справи</a></li>
+                                    <li><a href="#cost_4">Цивільні справи </a></li>
+                                    <li><a href="#cost_5">Сімейні справи </a></li>
+                                    <li><a href="#cost_6">Адміністративні справи</a></li>
+                                    <li><a href="#cost_7">Господарські справи</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='#benefits'>Переваги</a></li>
+                            <li><a href='#news'>Новини</a></li>
+                            <li><a href='#contacts'>Контакти</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="side-menu-footer"></div>
+            </div>
+            <div id="home" class="container hero">
                 <div class="hero__body m-container">
                     <header>
                         <div class="hero__logo row">
@@ -165,7 +195,7 @@
                 </div>
             </div>
         </div>
-        <div class="container service">
+        <div id="service" class="container service">
             <div class=" m-container row">
 
             </div>
@@ -689,7 +719,7 @@
                                         alt="telegram icon"></a>
                             </div>
                             <div class="social-icon">
-                                <a href="'viber://chat/?number=380961097608'"><img src="./assets/viber.svg"
+                                <a href="viber://chat/?number=380961097608"><img src="./assets/viber.svg"
                                         alt="viber icon"></a>
                             </div>
                             <div class="social-icon">
