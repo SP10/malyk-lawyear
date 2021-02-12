@@ -15,10 +15,19 @@
  }
 
  function openMenu(){
-    //  let html=document.getElementsByTagName('html');
-    //  let overlay=document.getElementsByClassName('overlay');
+     let html=document.querySelector('html');
+     let overlay=document.querySelector('.overlay');
      let sidemenu=document.querySelector('.side-menu');
-    //  html.classList.add('overflow');
-    //  overlay.classList.add('overlay-show');
+     html.classList.add('overflow');
+     overlay.classList.add('overlay-show');
      sidemenu.classList.add('side-menu-show');
+ }
+
+ function closeMenu(){
+    let html=document.querySelector('html');
+    let overlay=document.querySelector('.overlay');
+    let sidemenu=document.querySelector('.side-menu');
+    html.classList.remove('overflow');
+    overlay.classList.remove('overlay-show');
+    sidemenu.classList.remove('side-menu-show');
  }
