@@ -1,7 +1,10 @@
-function init() {
+window.addEventListener('load', function() {
     initMap();
     initScroll();
-}
+    closeOverlay();
+    console.log('All assets loaded')
+});
+
 // Initialize and add the map
 function initMap() {
     var map = L.map('map').setView([49.2352, 28.4702], 16);
@@ -42,4 +45,19 @@ function initScroll() {
     window.addEventListener('scroll', function() {
         burger.hidden = (pageYOffset < header.clientHeight);
     });
+}
+
+function closeOverlay() {
+    var elements = document.querySelectorAll('#menu-side > ul >li >a');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("click", function() {
+            closeMenu();
+        });
+    }
+    var elements = document.querySelectorAll('#menu-side > ul > li > ul > li > a');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("click", function() {
+            closeMenu();
+        });
+    }
 }
