@@ -262,20 +262,33 @@ h6 {
 }
 
 .side-menu {
-    display: none;
     max-width: 352px;
     background-color: #fff;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
+    max-width: 300px;
     width: 100%;
     z-index: 99999;
     overflow: hidden;
+    -webkit-transition: transform ease-in-out 0.3s;
+    -moz-transition: transform ease-in-out 0.3s;
+    -o-transition: transform ease-in-out 0.3s;
+    transition: transform ease-in-out 0.3s;
+    -moz-transform: translate(100%,0);
+    -ms-transform: translate(100%,0);
+    -webkit-transform: translate(100%,0);
+    -o-transform: translate(100%,0);
+    transform: translate(100%,0);
 }
 
 .side-menu-show {
     display: block;
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    z-index: 999999;
 }
 
 .close-button-container {
