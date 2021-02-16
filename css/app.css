@@ -52,6 +52,7 @@ header {
 .hero__column {
     flex: 0 0 50%;
     padding: 0 45px 0 0;
+    align-self: center;
 }
 
 .hero__femida--img {
@@ -85,10 +86,11 @@ header {
 }
 
 .hero__content {
-    height: 1706px;
-    background-position: right top;
-    background-image: url("../assets/hero-crop.png");
+    height: 88vh;
+    background-position: right bottom;
+    background-image: url(../assets/hero-crop.png);
     background-repeat: no-repeat;
+    background-size: 75vh;
 }
 
 .hero-image__content {
@@ -107,6 +109,11 @@ header {
 
 .about__body {
     padding: 60px 0 50px 0;
+    height: 93vh;
+    background-position: right bottom;
+    background-image: url(../assets/malyk.png);
+    background-repeat: no-repeat;
+    background-size: 80vh;
 }
 
 .about__col {
@@ -137,6 +144,11 @@ header {
 
 .about__img {
     /* background-attachment: fixed; */
+    height: 93vh;
+    background-position: right bottom;
+    background-image: url(../assets/malyk.png);
+    background-repeat: no-repeat;
+    background-size: 75vh;
 }
 
 .service {
