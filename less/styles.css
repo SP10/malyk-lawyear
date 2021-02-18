@@ -71,6 +71,7 @@ body {
 }
 .hero {
   background-image: -webkit-linear-gradient(top, #3896f2, #1e2fae);
+  padding: 25px 126px 25px 126px;
 }
 .hero__body {
   display: flex;
