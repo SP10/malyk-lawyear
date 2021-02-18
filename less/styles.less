@@ -1,0 +1,218 @@
+@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+
+@text-color-primary: #002E64;
+@text-color-secondary: #ffffff;
+@link-hover: #F5D481;
+@font-primary: 'Montserrat', sans-serif;
+@font-secondary: 'Montserrat Alternates', sans-serif;
+
+.wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+    height: 100vh;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: auto;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+}
+
+.section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+}
+
+.parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+    background-color: #F5F5F5;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.hero::after {
+    height: 100vh;
+    background-position: right bottom;
+    background-image: url(../assets/hero-crop.png);
+    background-repeat: no-repeat;
+    background-size: 74vh;
+    z-index: 2;
+}
+
+.about::after {
+    height: 100vh;
+    background-position: right bottom;
+    background-image: url(../assets/malyk.png);
+    background-repeat: no-repeat;
+    background-size: 74vh;
+    z-index: 3;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero{
+    background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .hero {
+
+        &__logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__menu {}
+
+        &__phone {}
+
+        &__language {}
+    }
+
+    .logo {
+
+        &__img {}
+
+        &__title {
+            padding: 0 0 0 20px;
+        }
+
+        &__text {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 130%;
+            color: @text-color-secondary;
+        }
+
+        &__text-caption {
+            font-size: 18px;
+            line-height: 130%;
+            color: @text-color-secondary;
+        }
+    }
+
+    .menu {
+
+        &__item {
+            float: left;
+            display: inline;
+            position: relative;
+        }
+
+        &__link {
+            display: block;
+            line-height: 45px;
+            padding: 0 14px;
+            text-decoration: none;
+            font-family: @font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            color: @text-color-secondary;
+        }
+
+        &__link:hover {
+            color: @link-hover;
+        }
+
+        &__list{
+            display: block;
+            line-height: 45px;
+            padding: 0 14px;
+            text-decoration: none;
+            font-family: @font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            color: @text-color-secondary;
+        }
+
+        &__list::after {
+            content: "\25BE";
+            margin-left: 5px;
+        }
+
+        &__list:hover{
+            color: @link-hover;
+        }
+        &__item:hover .menu-list {
+            display: block;
+        }
+    }
+
+    .menu-list {
+        height: auto;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        border-radius: 25px;
+        position: absolute;
+        z-index: 60000000000;
+        padding: 30px;
+        width: 365px;
+        display: none;
+
+        &__item {
+            display: block;
+            padding: 0 0 15px 0;
+            width: 100%;
+        }
+    
+        &__link {
+            font-family: @font-primary;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 130%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #002E64;
+        }
+
+        &__link:hover{
+            color: @link-hover;
+        }
+    }
+}
+
+.about{
+    background-color: #F5F5F5;
+}

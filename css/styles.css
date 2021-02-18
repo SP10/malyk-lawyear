@@ -1,382 +1,45 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-body,
-ul {
-    margin: 0;
-    padding: 0;
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
 }
-
-body {
-    font-family: 'Montserrat', sans-serif;
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
 }
-
-.font2 {
-    font-family: 'Montserrat Alternates', sans-serif;
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
 }
-
-.font3 {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 100;
+/* The styling for the static div. */
+.static {
+  background: #44adf3;
 }
-
-.container {
-    width: 100%;
-    height: 100vh;
-    /* padding-right: 167px;
-    padding-left    : 167px;
-    margin-right    : auto;
-    margin-left     : auto; */
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url("https://placekitten.com/g/900/700");
 }
-
-.m-container {
-    margin-left: 126px;
-    margin-right: 126px;
+.bg2::after {
+  background-image: url("https://placekitten.com/g/800/600");
 }
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.col {
-    display: flex;
-    flex-direction: column;
-}
-
-.flexible {
-    flex-grow: 1;
-}
-
-h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 24px;
-}
-
-h4 {
-    font-size: 20px;
-    line-height: 130%;
-}
-
-h5 {
-    font-size: 18px;
-    line-height: 130%;
-}
-
-h6 {
-    font-size: 15px;
-    line-height: 120%;
-}
-
-.text {
-    font-size: 24px;
-    line-height: 130%;
-}
-
-.text-card {
-    font-size: 20px;
-    line-height: 130%;
-}
-
-.text-language {
-    font-size: 14px;
-    line-height: 120%;
-}
-
-.text-color-primary {
-    color: #002E64;
-}
-
-.text-color-secondary {
-    color: #ffffff;
-}
-
-.gradient_1 {
-    background: rgb(83, 80, 225);
-    background: linear-gradient(261deg, rgba(83, 80, 225, 1) 0%, rgba(44, 61, 103, 1) 100%);
-}
-
-.gradient_2 {
-    background: rgb(255, 211, 55);
-    background: linear-gradient(260deg, rgba(255, 211, 55, 1) 0%, rgba(255, 153, 0, 1) 100%);
-}
-
-.gradient_3 {
-    background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
-}
-
-.icon-20 {
-    width: 20px;
-    height: 20px;
-}
-
-
-/* .button {
-    width: 300px;
-    height: 60px;
-    border-radius: 30px;
-    color: #ffffff;
-    text-align: center;
-    background-color: #EBAB08;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-} */
-
-.button:hover {
-    background-color: #CB9917;
-}
-
-.button {
-    background-color: #ffc107;
-    border-radius: 30px;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 16px 65px;
-    text-decoration: none;
-}
-
-.button:hover {
-    background: linear-gradient(to bottom, #fffb01 5%, #CB9917 100%);
-    background-color: #ffb657;
-}
-
-.button:active {
-    position: relative;
-    top: 1px;
-}
-
-.burger-continer {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    width: 58px;
-    height: 58px;
-    cursor: pointer;
-    z-index: 99999;
-    -webkit-transition: opacity ease-in-out .2s;
-    -moz-transition: opacity ease-in-out .2s;
-    -o-transition: opacity ease-in-out .2s;
-    transition: opacity ease-in-out .2s;
-}
-
-.burger-circle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #EBAB08;
-    opacity: 0.80;
-    border-radius: 100px;
-}
-
-.burger {
-    width: 28px;
-    height: 19px;
-    z-index: 999;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    margin: 0 auto;
-}
-
-.burger span {
-    display: block;
-    position: absolute;
-    width: 100%;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    height: 3px;
-    background-color: #fff;
-}
-
-.burger .p-10 {
-    top: 10px;
-}
-
-.burger .p-20 {
-    top: 20px;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    z-index: -1;
-    -webkit-transition: opacity ease-in-out 0.3s;
-    -moz-transition: opacity ease-in-out 0.3s;
-    -o-transition: opacity ease-in-out 0.3s;
-    transition: opacity ease-in-out 0.3s;
-}
-
-.overlay-show {
-    display: block;
-    z-index: 99999;
-    opacity: 1;
-}
-
-.overlay-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    opacity: .6;
-}
-
-.side-menu {
-    max-width: 352px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 99999;
-    /* overflow: hidden; */
-    -webkit-transition: transform ease-in-out 0.3s;
-    -moz-transition: transform ease-in-out 0.3s;
-    -o-transition: transform ease-in-out 0.3s;
-    transition: transform ease-in-out 0.3s;
-    -moz-transform: translate(100%, 0);
-    -ms-transform: translate(100%, 0);
-    -webkit-transform: translate(100%, 0);
-    -o-transform: translate(100%, 0);
-    transform: translate(100%, 0);
-}
-
-.side-menu-show {
-    display: block;
-    -webkit-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-    z-index: 999999;
-}
-
-.close-button-container {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    z-index: 999999;
-}
-
-.close-button-container img {
-    width: 40px;
-    height: 40px;
-}
-
-.side-menu-container {
-    height: 100%;
-    padding: 50px 35px 35px 35px;
-}
-
-.side-menu-footer {
-    position: absolute;
-    right: 40px;
-    bottom: 38px;
-    left: 40px;
-}
-
-.footer-language-container {
-    padding: 0 0 50px 0;
-}
-
-.side-menu-footer__ua {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    text-decoration-line: underline;
-    color: #EBAB08;
-    padding: 0 0 5px 0;
-}
-
-.side-menu-footer__rus {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 120%;
-    /* identical to box height, or 22px */
-    text-align: justify;
-    text-decoration-line: underline;
-    /* button/third/normal */
-    color: #002E64;
-}
-
-.copyright {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    /* text/blue */
-    color: #002E64;
-}
-
-.overflow {
-    overflow: hidden;
-}
-
-
-/* .menu a:hover {
-    color: #F5D481;
-} */
-
-
-/* .menu a:after {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background: url("../assets/arrow-icon.svg") no-repeat -30px -50px fixed;
-    top: 10px;
-    right: 5px;
-    position: absolute;
-    display: inline-block;
-} */

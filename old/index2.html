@@ -1,0 +1,748 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Адвокат Малик</title>
+    <meta name="description" content="Якісна юридична допомога на всіх етапах розгляду справи. 
+    Проаналізую, надам компетентну правову оцінку та запропоную рішення">
+    <meta name="title" content="Адвокат Малик">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="ссылка">
+    <meta property="og:locale" content="ua">
+    <meta property="og:locale" content="ua">
+    <meta property="og:description" content="Якісна юридична допомога на всіх етапах розгляду справи. 
+    Проаналізую, надам компетентну правову оцінку та запропоную рішення">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Заголовок страницы">
+    <meta property="og:title" content="Адвокат Малик">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link href="./css/app.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="burger-continer" onclick="openMenu()">
+                <div class="burger-circle">
+                    <div class="burger">
+                        <span></span>
+                        <span class="p-10"></span>
+                        <span class="p-20"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay" onclick="closeMenu()">
+                <div class="overlay-bg"></div>
+            </div>
+            <div class="side-menu">
+                <div class="close-button-container" onclick="closeMenu()">
+                    <img src="./assets/close-icon.svg">
+                </div>
+                <div class="side-menu-container">
+                    <nav id='menu-side'>
+                        <ul>
+                            <li><a href='#home'>Головна</a></li>
+                            <li><a href='#lawyear'>Біографія</a></li>
+                            <li><a href='#service'>Послуги</a></li>
+                            <li><a class='dropdown-arrow' href='#'>Вартість послуг</a>
+                                <ul class='sub-menus'>
+                                    <li><a href='#cost_1'>Аналіз справи</a></li>
+                                    <li><a href='#cost_2'>Адміністративні правопорушення</a></li>
+                                    <li><a href='#cost_3'>Кримінальні справи</a></li>
+                                    <li><a href='#cost_4'>Цивільні справи </a></li>
+                                    <li><a href='#cost_5'>Сімейні справи </a></li>
+                                    <li><a href='#cost_6'>Адміністративні справи</a></li>
+                                    <li><a href='#cost_7'>Господарські справи</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='#benefits'>Переваги</a></li>
+                            <li><a href='#news'>Новини</a></li>
+                            <li><a href='#contacts'>Контакти</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="side-menu-footer">
+                    <div class="footer-language-container">
+                        <a href="/ua" class="side-menu-footer__ua">українська мова</a>
+                        <a href=" /rus" class="side-menu-footer__rus">русский язык</a>
+                    </div>
+                    <span class="copyright">© 2021 Малик Олександр</span>
+                </div>
+            </div>
+            <div id="home" class="container hero">
+                <div class="hero__body m-container">
+                    <header>
+                        <div class="hero__logo row">
+                            <div class="logo__img"><img src="./assets/logo.svg"></div>
+                            <div class="logo__title col">
+                                <span>Малик Олександр</span>
+                                <span>Володимирович</span>
+                                <span class="logo__sub-title">адвокат</span>
+                            </div>
+                        </div>
+                        <nav id='menu'>
+                            <ul>
+                                <!-- <li><a href='#lawyear'>Біографія</a></li> -->
+                                <li><a href='#service'>Послуги</a></li>
+                                <li><a class='dropdown-arrow' href='#'>Вартість послуг</a>
+                                    <ul class='sub-menus'>
+                                        <li><a href="#cost_1">Аналіз справи</a></li>
+                                        <li><a href="#cost_2">Адміністративні правопорушення</a></li>
+                                        <li><a href="#cost_3">Кримінальні справи</a></li>
+                                        <li><a href="#cost_4">Цивільні справи </a></li>
+                                        <li><a href="#cost_5">Сімейні справи </a></li>
+                                        <li><a href="#cost_6">Адміністративні справи</a></li>
+                                        <li><a href="#cost_7">Господарські справи</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href='#benefits'>Переваги</a></li>
+                                <li><a href='#news'>Новини</a></li>
+                                <li><a href='#contacts'>Контакти</a></li>
+                            </ul>
+                        </nav>
+                        <div class="flexible"></div>
+                        <div class="hero-information__wrap">
+                            <div class="hero-information__phone">
+                                <div class="hero-information-phone__icon">
+                                    <img src="./assets/phone-icon.svg" alt="phone icon">
+                                </div>
+                                <div class="hero-information-phone__telephone">
+                                    <a href="tel:+380961097608"> +38 096-109-76-08</a>
+                                </div>
+                            </div>
+                            <div class="hero-information__language">
+                                <div class="hero-information-language__icon">
+                                    <img src="./assets/language-icon.svg" alt="language icon">
+                                </div>
+                                <div class="hero-information_language__title"><a href="/rus">Російською</a></div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="row hero__content">
+                        <div class="hero__column">
+                            <div class="hero__femida--img">
+                                <!-- <img src="./assets/femida.png"> -->
+                            </div>
+                            <div class="hero__title">Якісна юридична допомога на всіх етапах розгляду справи</div>
+                            <div class="hero__sub-title">Проаналізую, надам компетентну правову оцінку та запропоную рішення
+                            </div>
+                            <div class="hero__button">
+                                <a href="#" class="button">Консультація</a>
+                            </div>
+                        </div>
+                        <div class="hero__column">
+                            <!-- <div class="hero-image__content"> -->
+                                <!-- <img src="./assets/hero-crop.png" alt="hero"> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="lawyear" class="container about">
+                <div class="about__body m-container row">
+                    <div class="about__col">
+                        <div class="about__header">
+                            <h1>Малик Олександр Володимирович</h1>
+                        </div>
+                        <div class="about__text">
+                            <p>Олександр Володимирович є адвокатом з досвідом вирішення складних юридичних завдань.</p>
+                            <p> Олександр бере активну участь у розвитку юридичної справи міста Вінниці. Протягом певного часу викладав право у Вінницькому коледжі менеджменту. На даний момент входить до складу Ради Відділення Асоціації Правників України
+                                в Вінницькій області.
+                            </p>
+                            <p>У свій час судив I Дебатний правовий турнір серед учнівської і студентської молоді міста Вінниці. </p>
+                            <p>Лауреат Всеукраїнського конкурсу при Міністерстві юстиції України “Молодий правник року 2016” у номінації “Працівник судової системи”. Номінант обласного конкурсу на звання “Людина року” за 2019 рік у номінації “Правник року”.</p>
+                            <p>Нагороджений почесною грамотою Територіального управління Державної судової адміністрації України у Вінницькій області.</p>
+                            <p>Олександр є автором низки наукових статей, зокрема:</p>
+                            <p>
+                                <ul>
+                                    <li>"Право особи на вільний вибір захисника своїх прав у контексті представництва інтересів особи в суді винятково адвокатом",</li>
+                                    <li>"Правова природа спадкового правовідношення".</li>
+                                </ul>
+                            </p>
+                            <h3><b>Освіта</b></h3>
+                            <p>Малик Олександр закінчив Київський університет права Національної академії наук України за спеціальністю"Правознавство". У 2018 році здобув кваліфікацію магістр права в Донецькому національному університеті імені Василя Стуса.</p>
+                            <h3><b>Досвід роботи</b></h3>
+                            <p>Олександр Володимирович працював у одному із завантажених та найбільших місцевих судів Вінницької області у Вінницькому міському суді.</p>
+                            <p>За час роботи в суді, перебуваючи на посадах секретаря судового засідання та помічника судді, здобув цінний практичний досвід, що дає змогу оцінити справу комплексно та передбачити кінцеве рішення. Тим самим не давати клієнтам
+                                хибну надію, витрачаючи час. Вважає, що необхідно дивитись на стан речей свідомо.</p>
+                        </div>
+                    </div>
+                    <div class="about__col">
+                        <!-- <div class="about__img"> -->
+                            <!-- <img src="./assets/malyk.png" alt="На фото Малик Олександр"> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+            <div id="service" class="container service">
+                <div class=" m-container row">
+
+                </div>
+            </div>
+            <div class="costs">
+                <div class="costs__body m-container">
+                    <div class="costs__header">
+                        <h1>Вартість послуг</h1>
+                    </div>
+                    <div class="costs__row">
+                        <div id="cost_1" class="cost__title">Аналіз справи</div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Консультація</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Оцінка правової ситуації;</li>
+                                            <li>Створення правової позиції;</li>
+                                            <li>Надання юридичних рекомендацій.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 700 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Ознайомлення з матеріалами справи</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Підготовка документів;</li>
+                                            <li>Виїзд адвоката в суд;</li>
+                                            <li>Ознайомлення з матеріалами справи</li>
+                                            <li>Надання юридичних рекомендацій.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 700 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Консультація із ознайомленням з матеріалами справи
+                                    </div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Оцінка правової ситуації;</li>
+                                            <li>Створення правової позиції;</li>
+                                            <li>Надання юридичних рекомендацій.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 1 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Терміновий виїзд адвоката на місце подій</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Виїзд адвоката на місце;</li>
+                                            <li>Первинний захист прав на місці;</li>
+                                            <li>Надання юридичних рекомендацій.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 2000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="costs__row">
+                        <div id="cost_2" class="cost__title">Адміністративні правопорушення</div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Дорожньо-транспортна пригода</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи;</li>
+                                            <li>Створення правової позиції;</li>
+                                            <li>Збір доказів по справі;</li>
+                                            <li>Участь у судових засіданнях;</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 5 000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Нетверезе керування транспортним засобом</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Збір доказів по справі</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 6 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Інші адміністративні покарання</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Збір доказів по справі</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 5 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="costs__row">
+                        <div id="cost_3" class="cost__title">Кримінальні справи</div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Нанесення тілесних ушкоджень</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи;
+                                                <li>Створення правової позиції</li>
+                                                <li>Збір доказів по справі</li>
+                                                <li>Досудове розслідування</li>
+                                                <li>Участь у судових засіданнях</li>
+                                                <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 12 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Шахрайство</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Збір доказів по справі</li>
+                                            <li>Досудове розслідування</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 10 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Крадіжки, грабіж, розбої</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Збір доказів по справі</li>
+                                            <li>Досудове розслідування</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 10 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Інші кримінальні справи</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Збір доказів по справі</li>
+                                            <li>Досудове розслідування</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 10 000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="costs__row">
+                        <div id="cost_4" class="cost__title">Цивільні справи</div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Спадкові справи</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 5 000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Стягнення заборгованості</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 6 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Відшкодування заподіяної шкоди
+                                    </div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 10 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Інші цивільні справи</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 5 000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="costs__row">
+                        <div id="cost_5" class="cost__title">Сімейні справи</div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Розірвання шлюбу</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 700 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Стягнення аліментів</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 700 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Поділ спільного майна подружжя
+                                    </div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 10 000 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Інші сімейні справи</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 2 000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="costs__row">
+                        <div id="cost_6" class="cost__title">Адміністративні справи </div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Усі типи справ</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 6 000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+
+                            </div>
+                            <div class="cost__col">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="costs__row">
+                        <div id="cost_7" class="cost__title">Господарські справи</div>
+                        <div class="card__row">
+                            <div class="cost__col">
+                                <div class="cost__card col">
+                                    <div class="cost-card__title">Усі типи справ</div>
+                                    <div class="cost-card__text">
+                                        <ul>
+                                            <li>Вивчення матеріалів справи</li>
+                                            <li>Створення правової позиції</li>
+                                            <li>Створення документів</li>
+                                            <li>Участь у судових засіданнях</li>
+                                            <li>Інше.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="cost-card__footer">
+                                        <div class="cost-card__price">від 8 000 ₴ </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost__col">
+
+                            </div>
+                            <div class="cost__col">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="benefits" class="container benefit">
+                <div class="benefit__body m-container">
+                    <div class="benefit__header">
+                        <h1>Переваги</h1>
+                    </div>
+                    <div class="benefit__row">
+                        <div class="benefit_col">
+                            <div class="item__benefit">
+                                <div class="item-benefit__title">Інноваційність</div>
+                                <div class="item-benefit__text">Застосовує перевірені технології правового захисту — від класичних до прогресивних. Для зручності клієнтів використовує системи “Електронний Суд” та “EASYCON” для відеоконференцзв’язку. </div>
+                                <div class="item-benefit__icon"><img src="./assets/innovation-icon.svg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="benefit_col">
+                            <div class="item__benefit">
+                                <div class="item-benefit__title">Прозорість та зручність</div>
+                                <div class="item-benefit__text">Клієнти отримують прозору систему оплати наданих послуг, вчасну та повну інформацію про перебіг справ, послідовність дій та результати.</div>
+                                <div class="item-benefit__icon"><img src="./assets/transparency-icon.svg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="benefit_col">
+                            <div class="item__benefit">
+                                <div class="item-benefit__title">Досвід роботи</div>
+                                <div class="item-benefit__text">Практичний досвід Олександра Володимировича у судовій системі дозволяє обирати оптимальний варіант захисту прав клієнтів.</div>
+                                <div class="item-benefit__icon"><img src="./assets/experience-icon.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="news" class="container news">
+                <div class="news__body m-container">
+                    <div class="news__header">
+                        <h1>Новини</h1>
+                    </div>
+                    <div class="news__publication">
+                        <div class="publication__header"></div>
+                        <div class="publications row">
+
+                            <div class="news-card">
+                                <a href="/news/1">
+                                    <div class="news-card__body col">
+                                        <div class="news-card-title">Реєстрація права власності на земельну ділянку
+                                        </div>
+                                        <div class="flexible"></div>
+                                        <div class="news-card__date">
+                                            <img src="./assets/date-icon.svg" alt="date icon">
+                                            <span class="news-card-text">20.08.2020</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="news__interview">
+                        <div class="interview__header"></div>
+                        <div class="interviews"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="contacts" class="container contacts">
+                <div class="contacts__body m-container">
+                    <div class="row contacts__header">
+                        <h1>Контакти</h1>
+                    </div>
+                    <div class="row contacts__map">
+                        <div class="contacts__col">
+                            <div id="map"></div>
+                        </div>
+                        <div class="contacts__col">
+                            <div class="contacts__title">
+                                <h2>Малик Олександр Володимирович</h2>
+                            </div>
+                            <div class="contacts__sub-title">
+                                адвокат
+                            </div>
+                            <div class="cotacts_email">
+                                <a href="mailto:lawyermalyk@gmail.com">lawyermalyk@gmail.com</a>
+                            </div>
+                            <div class="contacts__phone"><a href="tel:+380961097608">+38 096 109-76-08</a></div>
+                            <div class="contacts__address"> 21050, м. Вінниця, вул. Миколи Оводова (Козицького), 29а
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contacts__footer">
+                        <div class="footer__col">
+                            <div class="contacts-social__icon">
+                                <div class="social-icon">
+                                    <a href="tg://resolve?domain=lawyermalyk"><img src="./assets/telegram.svg" alt="telegram icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                    <a href="viber://chat/?number=380961097608"><img src="./assets/viber.svg" alt="viber icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                    <a href="https://www.facebook.com/lawyer.malyk/"><img src="./assets/facebook.svg" alt="facebook icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                    <a href="https://www.instagram.com/lawyer.malyk/"><img src="./assets/instagram.svg" alt="instagram icon"></a>
+                                </div>
+                            </div>
+                            <div class="contacts-social__text">© 2021 Малик Олександр</div>
+                        </div>
+                        <div class="footer__col">
+                            <div class="contacts-developer__icon">
+                                <div class="developer-icon">
+                                    <a href="mailto:tsukuru@gmail.com"><img src="./assets/tsukuru.svg" alt="tsukuru"></a>
+                                </div>
+                            </div>
+                            <div class="contacts-developer__text">2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
