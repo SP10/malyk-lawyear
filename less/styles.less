@@ -1,47 +1,91 @@
 @import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
 
-@text-color-primary: #002E64;
+@text-color-primary  : #002E64;
 @text-color-secondary: #ffffff;
-@link-hover: #F5D481;
-@font-primary: 'Montserrat', sans-serif;
-@font-secondary: 'Montserrat Alternates', sans-serif;
+@link-hover          : #F5D481;
+@font-primary        : 'Montserrat',
+sans-serif;
+@font-secondary : 'Montserrat Alternates',
+sans-serif;
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size  : 20px;
+    line-height: 130%;
+}
+
+h5 {
+    font-size  : 18px;
+    line-height: 130%;
+}
+
+h6 {
+    font-size  : 15px;
+    line-height: 120%;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .wrapper {
     /* The height needs to be set to a fixed value for the effect to work.
      * 100vh is the full height of the viewport. */
-    height: 100vh;
+    height     : 100vh;
     /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-    overflow-x: hidden;
+    overflow-x : hidden;
     /* Enable scrolling on the page. */
-    overflow-y: auto;
+    overflow-y : auto;
     /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
     perspective: 2px;
+}
+
+.column {
+    display       : flex;
+    flex-direction: column;
+}
+
+.row {
+    display       : flex;
+    flex-direction: row;
 }
 
 .section {
     /* Needed for children to be absolutely positioned relative to the parent. */
     position: relative;
     /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height: 100vh;
+    height  : 100vh;
 }
 
 .parallax::after {
     /* Display and position the pseudo-element */
-    content: " ";
+    content : " ";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top     : 0;
+    right   : 0;
+    bottom  : 0;
+    left    : 0;
 
     /* Move the pseudo-element back away from the camera,
      * then scale it back up to fill the viewport.
      * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-    transform: translateZ(-1px) scale(1.5);
+    transform      : translateZ(-1px) scale(1.5);
     /* Force the background image to fill the whole element. */
     background-size: 100%;
     /* Keep the image from overlapping sibling elements. */
-    z-index: -1;
+    z-index        : -1;
 }
 
 /* The styling for the static div. */
@@ -49,54 +93,49 @@
     background-color: #F5F5F5;
 }
 
-/* Sets the actual background images to adorable kitties. This part is crucial. */
-.hero::after {
-    height: 100vh;
-    background-position: right bottom;
-    background-image: url(../assets/hero-crop.png);
-    background-repeat: no-repeat;
-    background-size: 74vh;
-    z-index: 2;
-}
-
-.about::after {
-    height: 100vh;
-    background-position: right bottom;
-    background-image: url(../assets/malyk.png);
-    background-repeat: no-repeat;
-    background-size: 74vh;
-    z-index: 3;
-}
-
-body {
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.hero{
+.hero {
     background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
+
+    &__body {
+        display    : flex;
+        height     : 80vh;
+        align-items: center;
+    }
+
+    &__content {
+        flex   : 0 0 50%;
+        padding: 100px 32px 0 0;
+        color  : @text-color-secondary;
+    }
+
+    &__content h1,
+    &__content h3 {
+        padding: 0 0 20px;
+    }
+
+    &__content img {
+        height  : 110vh;
+        position: relative;
+        right   : 0px;
+        bottom  : -100px;
+    }
 }
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+
 
 header {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
+    display        : flex;
+    align-items    : center;
+    flex-grow      : 1;
+    justify-content: space-between;
 
     .hero {
 
         &__logo {
-            display: flex;
+            display       : flex;
             flex-direction: row;
-            align-items: center;
+            align-items   : center;
         }
 
         &__menu {}
@@ -111,108 +150,205 @@ header {
         &__img {}
 
         &__title {
-            padding: 0 0 0 20px;
+            padding  : 0 20px 0 20px;
+            min-width: 180px;
         }
 
         &__text {
             font-weight: 600;
-            font-size: 18px;
+            font-size  : 18px;
             line-height: 130%;
-            color: @text-color-secondary;
+            color      : @text-color-secondary;
         }
 
         &__text-caption {
-            font-size: 18px;
+            font-size  : 18px;
             line-height: 130%;
-            color: @text-color-secondary;
+            color      : @text-color-secondary;
         }
     }
 
     .menu {
 
         &__item {
-            float: left;
-            display: inline;
+            float   : left;
+            display : inline;
             position: relative;
         }
 
         &__link {
-            display: block;
-            line-height: 45px;
-            padding: 0 14px;
+            display        : block;
+            line-height    : 45px;
+            padding        : 0 14px;
             text-decoration: none;
-            font-family: @font-primary;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            color: @text-color-secondary;
+            font-family    : @font-primary;
+            font-style     : normal;
+            font-weight    : bold;
+            font-size      : 20px;
+            color          : @text-color-secondary;
         }
 
         &__link:hover {
             color: @link-hover;
         }
 
-        &__list{
-            display: block;
-            line-height: 45px;
-            padding: 0 14px;
+        &__list {
+            display        : block;
+            line-height    : 45px;
+            padding        : 0 14px;
             text-decoration: none;
-            font-family: @font-primary;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            color: @text-color-secondary;
+            font-family    : @font-primary;
+            font-style     : normal;
+            font-weight    : bold;
+            font-size      : 20px;
+            color          : @text-color-secondary;
         }
 
         &__list::after {
-            content: "\25BE";
+            content    : "\25BE";
             margin-left: 5px;
         }
 
-        &__list:hover{
+        &__list:hover {
             color: @link-hover;
         }
+
         &__item:hover .menu-list {
             display: block;
         }
     }
 
     .menu-list {
-        height: auto;
-        overflow: hidden;
-        background: #fff;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        height       : auto;
+        overflow     : hidden;
+        background   : #fff;
+        box-shadow   : 0 4px 8px 0 rgb(0 0 0 / 20%);
         border-radius: 25px;
-        position: absolute;
-        z-index: 60000000000;
-        padding: 30px;
-        width: 365px;
-        display: none;
+        position     : absolute;
+        z-index      : 60000000000;
+        padding      : 30px;
+        width        : 365px;
+        display      : none;
 
         &__item {
             display: block;
             padding: 0 0 15px 0;
-            width: 100%;
-        }
-    
-        &__link {
-            font-family: @font-primary;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 130%;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            color: #002E64;
+            width  : 100%;
         }
 
-        &__link:hover{
+        &__link {
+            font-family    : @font-primary;
+            font-style     : normal;
+            font-weight    : 600;
+            font-size      : 18px;
+            line-height    : 130%;
+            text-decoration: none;
+            display        : flex;
+            align-items    : center;
+            color          : #002E64;
+        }
+
+        &__link:hover {
             color: @link-hover;
+        }
+    }
+
+    .hero__phone {
+        align-items: center;
+        min-width  : 300px;
+
+        .phone__icon {
+            width : 24px;
+            height: 24px;
+        }
+
+        .phone__number {
+            display        : block;
+            line-height    : 45px;
+            padding        : 0 14px;
+            text-decoration: none;
+            font-family    : @font-primary;
+            font-style     : normal;
+            font-weight    : bold;
+            font-size      : 26px;
+            color          : @text-color-secondary;
+
+            &:hover {
+                color: @link-hover;
+            }
+
+            &:active {}
+
+            &:focus {}
+        }
+    }
+
+    .hero__language {
+        align-items: center;
+
+        .language__icon {
+            width : 30px;
+            height: 18px;
+        }
+
+        .language__title {
+            display        : block;
+            line-height    : 45px;
+            padding        : 0 14px;
+            text-decoration: none;
+            font-family    : @font-primary;
+            font-style     : normal;
+            font-weight    : bold;
+            font-size      : 20px;
+            color          : @text-color-secondary;
+
+            &:hover {
+                color: @link-hover;
+            }
+
+            &:active {}
+
+            &:focus {}
         }
     }
 }
 
-.about{
+.button:hover {
+    background-color: #CB9917;
+}
+
+.button {
+    background-color: #ffc107;
+    border-radius   : 30px;
+    display         : inline-block;
+    cursor          : pointer;
+    color           : #ffffff;
+    font-style      : normal;
+    font-weight     : bold;
+    font-size       : 24px;
+    padding         : 16px 65px;
+    text-decoration : none;
+}
+
+.button:hover {
+    background      : linear-gradient(to bottom, #fffb01 5%, #CB9917 100%);
+    background-color: #ffb657;
+}
+
+.button:active {
+    position: relative;
+    top     : 1px;
+}
+
+.about {
     background-color: #F5F5F5;
 }
+
+// .about::after {
+//     height             : 100vh;
+//     background-position: right bottom;
+//     background-image   : url(../assets/malyk.png);
+//     background-repeat  : no-repeat;
+//     background-size    : 74vh;
+//     z-index            : 3;
+// }

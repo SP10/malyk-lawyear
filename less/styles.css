@@ -1,4 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 130%;
+}
+h5 {
+  font-size: 18px;
+  line-height: 130%;
+}
+h6 {
+  font-size: 15px;
+  line-height: 120%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
      * 100vh is the full height of the viewport. */
@@ -9,6 +33,14 @@
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 2px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
 }
 .section {
   /* Needed for children to be absolutely positioned relative to the parent. */
@@ -37,41 +69,35 @@
 .static {
   background-color: #F5F5F5;
 }
-/* Sets the actual background images to adorable kitties. This part is crucial. */
-.hero::after {
-  height: 100vh;
-  background-position: right bottom;
-  background-image: url(../assets/hero-crop.png);
-  background-repeat: no-repeat;
-  background-size: 74vh;
-  z-index: 2;
-}
-.about::after {
-  height: 100vh;
-  background-position: right bottom;
-  background-image: url(../assets/malyk.png);
-  background-repeat: no-repeat;
-  background-size: 74vh;
-  z-index: 3;
-}
-body {
-  font-family: 'Montserrat Alternates', sans-serif;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-}
 .hero {
   background-image: -webkit-linear-gradient(top, #3896f2, #1e2fae);
 }
+.hero__body {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+}
+.hero__content {
+  flex: 0 0 50%;
+  padding: 100px 32px 0 0;
+  color: #ffffff;
+}
+.hero__content h1,
+.hero__content h3 {
+  padding: 0 0 20px;
+}
+.hero__content img {
+  height: 110vh;
+  position: relative;
+  right: 0px;
+  bottom: -100px;
+}
+/* Sets the actual background images to adorable kitties. This part is crucial. */
 header {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  justify-content: space-between;
 }
 header .hero__logo {
   display: flex;
@@ -79,7 +105,8 @@ header .hero__logo {
   align-items: center;
 }
 header .logo__title {
-  padding: 0 0 0 20px;
+  padding: 0 20px 0 20px;
+  min-width: 180px;
 }
 header .logo__text {
   font-weight: 600;
@@ -162,6 +189,72 @@ header .menu-list__link {
 }
 header .menu-list__link:hover {
   color: #F5D481;
+}
+header .hero__phone {
+  align-items: center;
+  min-width: 300px;
+}
+header .hero__phone .phone__icon {
+  width: 24px;
+  height: 24px;
+}
+header .hero__phone .phone__number {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  color: #ffffff;
+}
+header .hero__phone .phone__number:hover {
+  color: #F5D481;
+}
+header .hero__language {
+  align-items: center;
+}
+header .hero__language .language__icon {
+  width: 30px;
+  height: 18px;
+}
+header .hero__language .language__title {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+header .hero__language .language__title:hover {
+  color: #F5D481;
+}
+.button:hover {
+  background-color: #CB9917;
+}
+.button {
+  background-color: #ffc107;
+  border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 16px 65px;
+  text-decoration: none;
+}
+.button:hover {
+  background: linear-gradient(to bottom, #fffb01 5%, #CB9917 100%);
+  background-color: #ffb657;
+}
+.button:active {
+  position: relative;
+  top: 1px;
 }
 .about {
   background-color: #F5F5F5;
