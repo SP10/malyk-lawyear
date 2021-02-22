@@ -8,86 +8,901 @@
 
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./less/styles.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/telegram.js"></script>
 </head>
 
 <body>
+    <div class="overlay"></div>
+    <div class="burger-menu">
+        <div class="burger-menu__circle">
+            <div class="burger-menu__burger">
+                <span></span>
+                <span class="burger-menu__p-10"></span>
+                <span class="burger-menu__p-20"></span>
+            </div>
+        </div>
+    </div>
+    <div class="side-menu">
+        <a href="#" class="close-button" id="side-menu-close-btn">
+            <img src="./assets/close-icon.svg">
+        </a>
+        <div class="side-menu__container">
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#home">Головна</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#about">Біографія</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#service">Послуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class='menu__list' href='#'>Вартість послуг</a>
+                        <ul class='menu-list'>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#analysis">Аналіз справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#administrativeOff">Адміністративні правопорушення</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#criminal">Кримінальні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#civil">Цивільні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#family">Сімейні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#administrative">Адміністративні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#business">Господарські справи</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#benefits">Переваги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#news">Новини</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contacts">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="side-menu__footer">
+            <div class="side-menu__language">
+                <a href="/ua" class="side-menu__ua">українська мова</a>
+                <a href=" /ru" class="side-menu__ru">русский язык</a>
+            </div>
+            <h6>© 2021 Малик Олександр</h6>
+        </div>
+    </div>
+    <div class="feedback">
+        <a href="#" class="close-button" onclick="CloseFeedBackForm()">
+            <img src="./assets/close-icon.svg">
+        </a>
+        <h3>Залишіть номер телефону, зателефоную та надам консультацію</h3>
+        <span class="note-sign">*</span><span class="note">консультація платна</span>
+        <div id="feedbackForm" class="feedback__form">
+            <input type="text" name="name" placeholder="ім'я" required="">
+            <input type="text" name="phoneNumber" placeholder="номер телефону" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" type="tel" required="">
+            <button onclick="sendMessage()" class="button button__send">Відправити</button>
+        </div>
+    </div>
+    <div class="feedback-success">
+        <h3>Дякую!</h3>
+        <h3>Очікуйте, скоро наберу.</h3>
+    </div>
     <main class="wrapper">
-        <section class="section hero">
-            <header>
-                <div class="hero__logo">
-                    <img class="logo__img" src="./assets/logo.svg" alt="logo image">
-                    <div class="logo__title column">
-                        <span class="logo__text">Малик Олександр</span>
-                        <span class="logo__text">Володимирович</span>
-                        <span class="logo__text-caption">адвокат</span>
+        <section id="home" class="section container hero">
+            <div class="hero__cover">
+                <header>
+                    <div class="hero__logo">
+                        <img class="logo__img" src="./assets/logo.svg" alt="logo image">
+                        <div class="logo__title column">
+                            <span class="logo__text">Малик Олександр</span>
+                            <span class="logo__text">Володимирович</span>
+                            <span class="logo__text-caption">адвокат</span>
+                        </div>
                     </div>
-                </div>
-                <nav class="hero__menu">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#service">Послуги</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class='menu__list' href='#'>Вартість послуг</a>
-                            <ul class='menu-list'>
-                                <li class="menu-list__item">
-                                    <a class="menu-list__link" href="#cost_1">Аналіз справи</a>
-                                </li>
-                                <li class="menu-list__item">
-                                    <a class="menu-list__link" href="#cost_2">Адміністративні правопорушення</a>
-                                </li>
-                                <li class="menu-list__item">
-                                    <a class="menu-list__link" href="#cost_3">Цивільні справи</a>
-                                </li>
-                                <li class="menu-list__item">
-                                    <a class="menu-list__link" href="#cost_4">Сімейні справи</a>
-                                </li>
-                                <li class="menu-list__item">
-                                    <a class="menu-list__link" href="#cost_5">Адміністративні справи</a>
-                                </li>
-                                <li class="menu-list__item">
-                                    <a class="menu-list__link" href="#cost_6">Господарські справи</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#benefits">Переваги</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#news">Новини</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#contacts">Контакти</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="hero__phone row">
-                    <img class="phone__icon" src="./assets/phone-icon.svg" alt="phone icon">
-                    <a class="phone__number" href="tel:+380961097608"> +38 096-109-76-08</a>
-                </div>
-                <div class="hero__language row">
-                    <!-- <img class="language__icon" src="./assets/language-icon.svg" alt="language icon"> -->
-                    <a class="language__title" href="/rus">Російською</a>
-                </div>
-            </header>
-            <div class="hero__body">
-                <div class="hero__content">
-                    <h1>Якісна юридична допомога на всіх етапах розгляду справи</h1>
-                    <h3>Проаналізую, надам компетентну правову оцінку та запропоную рішення</h3>
-                    <a href="#" class="button">Консультація</a>
-                </div>
-                <div class="hero__content">
-                    <img src="./assets/hero.png" alt="hero image">
+                    <nav class="hero__menu">
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#service">Послуги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class='menu__list' href='#'>Вартість послуг</a>
+                                <ul class='menu-list'>
+                                    <li class="menu-list__item">
+                                        <a class="menu-list__link" href="#analysis">Аналіз справи</a>
+                                    </li>
+                                    <li class="menu-list__item">
+                                        <a class="menu-list__link" href="#administrativeOff">Адміністративні
+                                            правопорушення</a>
+                                    </li>
+                                    <li class="menu-list__item">
+                                        <a class="menu-list__link" href="#criminal">Кримінальні справи</a>
+                                    </li>
+                                    <li class="menu-list__item">
+                                        <a class="menu-list__link" href="#civil">Цивільні справи</a>
+                                    </li>
+                                    <li class="menu-list__item">
+                                        <a class="menu-list__link" href="#family">Сімейні справи</a>
+                                    </li>
+                                    <li class="menu-list__item">
+                                        <a class="menu-list__link" href="#administrative">Адміністративні справи</a>
+                                    </li>
+                                    <li class="menu-list__item">
+                                        <a class="menu-list__link" href="#business">Господарські справи</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#benefits">Переваги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#news">Новини</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#contacts">Контакти</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="hero__phone row">
+                        <img class="phone__icon" src="./assets/phone-icon.svg" alt="phone icon">
+                        <a class="phone__number" href="tel:+380961097608"> +38 096-109-76-08</a>
+                    </div>
+                    <div class="hero__language row">
+                        <a class="language__title" href="/ru">Російською</a>
+                    </div>
+                </header>
+                <div class="hero__body">
+                    <div class="hero__content">
+                        <h1>Якісна юридична допомога на всіх етапах розгляду справи</h1>
+                        <h3>Проаналізую, надам компетентну правову оцінку та запропоную рішення</h3>
+                        <a href="#" class="button" onclick="OpenFeedBackForm()">Консультація</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="section parallax about">
-
+        <section id="about" class="container about">
+            <div class="about__cover">
+                <div class="about__body">
+                    <div class="about__content">
+                        <div class="about__header">
+                            <h1>Малик Олександр Володимирович</h1>
+                        </div>
+                        <div class="about__text">
+                            <p>Олександр Володимирович є адвокатом з досвідом вирішення складних юридичних завдань.</p>
+                            <p> Олександр бере активну участь у розвитку юридичної справи міста Вінниці. Протягом певного часу викладав право у Вінницькому коледжі менеджменту. На даний момент входить до складу Ради Відділення Асоціації Правників України
+                                в Вінницькій області.
+                            </p>
+                            <p>У свій час судив I Дебатний правовий турнір серед учнівської і студентської молоді міста Вінниці. </p>
+                            <p>Лауреат Всеукраїнського конкурсу при Міністерстві юстиції України “Молодий правник року 2016” у номінації “Працівник судової системи”. Номінант обласного конкурсу на звання “Людина року” за 2019 рік у номінації “Правник року”.</p>
+                            <p>Нагороджений почесною грамотою Територіального управління Державної судової адміністрації України у Вінницькій області.</p>
+                            <p>Олександр є автором низки наукових статей, зокрема:</p>
+                            <p>
+                                <ul>
+                                    <li>"Право особи на вільний вибір захисника своїх прав у контексті представництва інтересів особи в суді винятково адвокатом",</li>
+                                    <li>"Правова природа спадкового правовідношення".</li>
+                                </ul>
+                            </p>
+                            <h3><b>Освіта</b></h3>
+                            <p>Малик Олександр закінчив Київський університет права Національної академії наук України за спеціальністю"Правознавство". У 2018 році здобув кваліфікацію магістр права в Донецькому національному університеті імені Василя Стуса.</p>
+                            <h3><b>Досвід роботи</b></h3>
+                            <p>Олександр Володимирович працював у одному із завантажених та найбільших місцевих судів Вінницької області у Вінницькому міському суді.</p>
+                            <p>За час роботи в суді, перебуваючи на посадах секретаря судового засідання та помічника судді, здобув цінний практичний досвід, що дає змогу оцінити справу комплексно та передбачити кінцеве рішення. Тим самим не давати клієнтам
+                                хибну надію, витрачаючи час. Вважає, що необхідно дивитись на стан речей свідомо.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="section parallax service">
+        <section id="service" class="section container service">
+            <div class="service__body">
+                <div class="service__content">
+                    <div class="service__header">
+                        <h1>Послуги</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="costs" class="container costs">
+            <div class="costs__body">
+                <div class="costs__content">
+                    <div class="costs__header">
+                        <h1>Вартість послуг</h1>
+                    </div>
+                    <div class="cost__header" id="analysis">
+                        <h3>Аналіз справи</h3>
+                    </div>
+                    <div class="cost__items">
+                        <div class="cost__card column">
+                            <h5>Консультація</h5>
+                            <ul>
+                                <li>Оцінка правової ситуації;</li>
+                                <li>Створення правової позиції;</li>
+                                <li>Надання юридичних рекомендацій.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 250 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Ознайомлення з матеріалами справи</h5>
+                            <ul>
+                                <li>Підготовка документів;</li>
+                                <li>Виїзд адвоката в суд;</li>
+                                <li>Ознайомлення з матеріалами справи;</li>
+                                <li>Надання юридичних рекомендацій.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 700 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Консультація із ознайомленням з матеріалами справи</h5>
+                            <ul>
+                                <li>Оцінка правової ситуації;</li>
+                                <li>Створення правової позиції;</li>
+                                <li>Надання юридичних рекомендацій.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 1 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Терміновий виїзд адвоката на місце подій</h5>
+                            <ul>
+                                <li>Виїзд адвоката на місце;</li>
+                                <li>Первинний захист прав на місці;</li>
+                                <li>Надання юридичних рекомендацій.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 2 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cost__header" id="administrativeOff">
+                        <h3>Адміністративні правопорушення</h3>
+                    </div>
+                    <div class="cost__items">
+                        <div class="cost__card column">
+                            <h5>Дорожньо-транспортна пригода</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи;</li>
+                                <li>Створення правової позиції;</li>
+                                <li>Збір доказів по справі;</li>
+                                <li>Участь у судових засіданнях;</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 5 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Нетверезе керування транспортним засобом</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Збір доказів по справі</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 6 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Інші адміністративні покарання</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Збір доказів по справі</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 5 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="cost__header" id="criminal">
+                        <h3>Кримінальні справи</h3>
+                    </div>
+                    <div class="cost__items">
+                        <div class="cost__card column">
+                            <h5>Нанесення тілесних ушкоджень</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи;
+                                    <li>Створення правової позиції</li>
+                                    <li>Збір доказів по справі</li>
+                                    <li>Досудове розслідування</li>
+                                    <li>Участь у судових засіданнях</li>
+                                    <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 12 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Шахрайство</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Збір доказів по справі</li>
+                                <li>Досудове розслідування</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 10 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Інші кримінальні справи</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Збір доказів по справі</li>
+                                <li>Досудове розслідування</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 10 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cost__header" id="civil">
+                        <h3>Цивільні справи</h3>
+                    </div>
+                    <div class="cost__items">
+                        <div class="cost__card column">
+                            <h5>Спадкові справи</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 5 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Стягнення заборгованості</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 6 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Відшкодування заподіяної шкоди</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 10 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Інші цивільні справи</h5>
+                            <ul>
+                                <li>Виїзд адвоката на місце;</li>
+                                <li>Первинний захист прав на місці;</li>
+                                <li>Надання юридичних рекомендацій.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 5 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cost__header" id="family">
+                        <h3>Сімейні справи</h3>
+                    </div>
+                    <div class="cost__items">
+                        <div class="cost__card column">
+                            <h5>Розірвання шлюбу</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 1 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Стягнення аліментів</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 1 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Поділ спільного майна подружжя</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 5 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cost__card column">
+                            <h5>Інші сімейні справи</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 2 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cost__header" id="administrative">
+                        <h3>Адміністративні справи</h3>
+                    </div>
+                    <div class="cost__items">
+                        <div class="cost__card column">
+                            <h5>Усі типи справ</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 6 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cost__header" id="business">
+                        <h3>Господарські справи</h3>
+                    </div>
+                    <div class="cost__items">
+                        <div class="cost__card column">
+                            <h5>Усі типи справ</h5>
+                            <ul>
+                                <li>Вивчення матеріалів справи</li>
+                                <li>Створення правової позиції</li>
+                                <li>Створення документів</li>
+                                <li>Участь у судових засіданнях</li>
+                                <li>Інше.</li>
+                            </ul>
+                            <div class="flexible"></div>
+                            <div class="cost__footer">
+                                <span class="cost__price">
+                                    <h4>від 8 000 ₴</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="benefits" class="section container benefits">
+            <div class="benefits__body">
+                <div class="benefits__content">
+                    <div class="benefits__header">
+                        <h1>Переваги</h1>
+                    </div>
+                    <div class="benefit__items">
+                        <div class="benefit__card column">
+                            <div class="benefit__content">
+                                <h3>Інноваційність</h3>
+                                <p>Застосовує перевірені технології правового захисту — від класичних до прогресивних.
+                                </p>
+                                <p>Для зручності клієнтів використовує системи “Електронний Суд” та “EASYCON” для відеоконференцзв’язку.
+                                </p>
+                            </div>
+                            <div class="flexible"></div>
+                            <div class="benefit__icon">
+                                <img src="./assets/innovation-icon.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="benefit__card column">
+                            <div class="benefit__content">
+                                <h3>Прозорість та зручність</h3>
+                                <p>Клієнти отримують прозору систему оплати наданих послуг, вчасну та повну інформацію про перебіг справ, послідовність дій та результати.
+                                </p>
+                            </div>
+                            <div class="flexible"></div>
+                            <div class="benefit__icon">
+                                <img src="./assets/transparency-icon.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="benefit__item">
+                            <div class="benefit__card column">
+                                <div class="benefit__content">
+                                    <h3>Досвід роботи</h3>
+                                    <p>Практичний досвід Олександра Володимировича у судовій системі дозволяє обирати оптимальний варіант захисту прав клієнтів.
+                                    </p>
+                                </div>
+                                <div class="flexible"></div>
+                                <div class="benefit__icon">
+                                    <img src="./assets/experience-icon.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="news" class="section container news">
+            <div class="news__body">
+                <div class="news__content">
+                    <div class="news__header">
+                        <h1>Новини</h1>
+                    </div>
+                    <div class="publication">
+                        <h3>Публікації</h3>
+                        <div class="new__items">
+                            <a href="/news/1">
+                                <div class="new__card">
+                                    <div class="new__content">
+                                        <h4>Реєстрація права власності на земельну ділянку</h4>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="new__footer">
+                                        <span class="new__icon"></span>
+                                        <h5>05.01.2021</h5>
+                                        <div class="new__read">Читати</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/news/2">
+                                <div class="new__card">
+                                    <div class="new__content">
+                                        <h4>Поділ майна – що необхідно знати?</h4>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="new__footer">
+                                        <span class="new__icon"></span>
+                                        <h5>09.01.2021</h5>
+                                        <div class="new__read">Читати</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/news/3">
+                                <div class="new__card">
+                                    <div class="new__content">
+                                        <h4>Що необхідно знати про розірвання шлюбу</h4>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="new__footer">
+                                        <span class="new__icon"></span>
+                                        <h5>05.02.2021</h5>
+                                        <div class="new__read">Читати</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="interview">
+                        <h3>Інтерв'ю</h3>
+                        <div class="new__items">
+                            <a href="https://www.youtube.com/watch?v=k9F3K30PZiU&fbclid=IwAR0ziP0WA--LDaxtygUKobMpnUpYhSmn0wrp8x3m_ibHwWifmw9ExBnCjnU">
+                                <div class="new__card-i">
+                                    <div class="new__content">
+                                        <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="new__footer">
+                                        <span class="new__icon"></span>
+                                        <h5>25.11.2020</h5>
+                                        <div class="new__read">Дивитись</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" style="visibility: hidden;">
+                                <div class="new__card-i">
+                                    <div class="new__content">
+                                        <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="new__footer">
+                                        <span class="new__icon"></span>
+                                        <h5>25.11.2020</h5>
+                                        <div class="new__read">Дивитись</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" style="visibility: hidden;">
+                                <div class="new__card-i">
+                                    <div class="new__content">
+                                        <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
+                                    </div>
+                                    <div class="flexible"></div>
+                                    <div class="new__footer">
+                                        <span class="new__icon"></span>
+                                        <h5>25.11.2020</h5>
+                                        <div class="new__read">Дивитись</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacts" class="section container contacts">
+            <div class="contacts__body">
+                <div class="contacts__header">
+                    <h1>Контакти</h1>
+                </div>
+                <div class="contacts__content row">
+                    <div class="contacts__column">
+                        <div class="contacts__map row">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                    <div class="contacts__column column">
+                        <h2>Малик Олександр Володимирович</h2>
+                        <span class="subtext">адвокат</span>
+                        <a class="contacts__email" href="mailto:lawyermalyk@gmail.com">lawyermalyk@gmail.com</a>
+                        <a class="contacts__telephone" href="tel:+380961097608">+38 096 109-76-08</a>
+                        <span class="contacts__address">
+                            <h3>вул. Миколи Оводова (Козицького), 29а</h3>
+                            <h3>м. Вінниця, 21050</h3>
+                        </span>
+                    </div>
+                </div>
+                <div class="contacts__footer row">
+                    <div class="footer__social">
+                        <div class="row">
+                            <a class="social-icon" href="tg://resolve?domain=lawyermalyk">
+                                <img src="./assets/telegram.svg" alt="telegram icon">
+                            </a>
+
+                            <a class="social-icon" href="viber://chat/?number=380961097608">
+                                <img src="./assets/viber.svg" alt="viber icon">
+                            </a>
+
+                            <a class="social-icon" href="https://www.facebook.com/lawyer.malyk/">
+                                <img src="./assets/facebook.svg" alt="facebook icon">
+                            </a>
+                            <a class="social-icon" href="https://www.instagram.com/lawyer.malyk/">
+                                <img src="./assets/instagram.svg" alt="instagram icon">
+                            </a>
+                        </div>
+                        <h6>© 2021 Малик Олександр</h6>
+                    </div>
+                    <div class="row">
+                        <a href="mailto:art.tsukuru@gmail.com">
+                            <img src="./assets/tsukuru.svg" alt="tsukuru">
+                        </a>
+                        <div class="footer__developer">
+                            <h6>Створено та розроблено </h6>
+                            <a href="mailto:art.tsukuru@gmail.com">Tsukuru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <script type="text/javascript">
+        var map = L.map('map').setView([49.2352, 28.4702], 16);
+        var icon = L.icon({
+            iconUrl: './assets/marker.svg',
+            iconSize: [88, 91.03], // size of the icon
+            //  iconAnchor: [-10, 60], // point of the icon which will correspond to marker's location
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([49.2352, 28.4702], {
+            icon: icon
+        }).addTo(map);
+    </script>
+    <script>
+        const onScroll = () => {
+            let burger = document.querySelector('.burger-menu');
+            let header = document.querySelector('header');
+            let wrapper = document.querySelector('.wrapper');
+
+            window.addEventListener('scroll', () => {
+                if (pageYOffset > header.clientHeight) {
+                    burger.hidden = false;
+                    burger.classList.add('burger-menu__show');
+                } else {
+                    burger.classList.remove('burger-menu__show');
+                }
+
+                // burger.hidden = pageYOffset > header.clientHeight;
+                console.log(pageYOffset);
+            }, false);
+        }
+
+        const OnBurgerClick = () => {
+            let burger = document.querySelector('.burger-menu');
+            burger.addEventListener('click', () => {
+                let html = document.querySelector('html');
+                let overlay = document.querySelector('.overlay');
+                let sidemenu = document.querySelector('.side-menu');
+                html.classList.add('overflow');
+                overlay.classList.add('overlay-bg');
+                sidemenu.classList.add('side-menu__show');
+            }, false);
+        }
+
+        const OnSideMenuClose = () => {
+            let html = document.querySelector('html');
+            let overlay = document.querySelector('.overlay');
+            let sidemenu = document.querySelector('.side-menu');
+            let closeBtn = document.getElementById('side-menu-close-btn');
+            closeBtn.addEventListener('click', () => {
+                html.classList.remove('overflow');
+                overlay.classList.remove('overlay-bg');
+                sidemenu.classList.remove('side-menu__show');
+            }, false);
+        }
+
+        const OnMenuItemClick = () => {
+            let html = document.querySelector('html');
+            let item = document.querySelector('.menu__link');
+            let overlay = document.querySelector('.overlay');
+            let sidemenu = document.querySelector('.side-menu');
+            item.addEventListener('click', () => {
+                if (html.classList.contains('overflow')) html.classList.remove('overflow');
+                if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+                if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
+            }, false);
+        }
+
+        const OnOverlayClick = () => {
+            let html = document.querySelector('html');
+            let overlay = document.querySelector('.overlay');
+            let sidemenu = document.querySelector('.side-menu');
+            overlay.addEventListener('click', () => {
+                html.classList.remove('overflow');
+                overlay.classList.remove('overlay-bg');
+                sidemenu.classList.remove('side-menu__show');
+            }, false);
+        }
+
+        const OpenFeedBackForm = () => {
+            let html = document.querySelector('html');
+            html.classList.add('overflow');
+            let overlay = document.getElementsByClassName("overlay")[0];
+            overlay.classList.add('overlay-bg');
+            let feedback = document.getElementsByClassName("feedback")[0];
+            feedback.classList.add('feedback-bg');
+        }
+
+        const CloseFeedBackForm = () => {
+            let html = document.querySelector('html');
+            html.classList.remove('overflow');
+            let overlay = document.getElementsByClassName("overlay")[0];
+            overlay.classList.remove('overlay-bg');
+            let feedback = document.getElementsByClassName("feedback")[0];
+            feedback.classList.remove('feedback-bg');
+        }
+
+        const sendMessage = () => {
+            let feedbackForm = document.getElementById('feedbackForm');
+            let message = `*${feedbackForm.children.name.value}*\n${feedbackForm.children.phoneNumber.value}`;
+            if (message !== `**\n`) {
+                TelegramBot.sendMessage(message);
+                let success = document.querySelector('.feedback-success');
+                success.classList.add('feedback-success-bg');
+                CloseFeedBackForm();
+                setTimeout(() => {
+                    success.classList.remove('feedback-success-bg');
+                }, 2000)
+            }
+        }
+
+        const init = () => {
+            let burger = document.querySelector('.burger-menu');
+            burger.hidden = true;
+        }
+
+        window.onload = () => {
+            init();
+            onScroll();
+            OnBurgerClick();
+            OnSideMenuClose();
+            OnMenuItemClick();
+        }
+    </script>
 </body>
 
 </html>

@@ -1,9 +1,11 @@
-window.addEventListener('load', function() {
-    initMap();
-    initScroll();
-    closeOverlay();
-    console.log('All assets loaded')
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     let burger = document.querySelector('.burger-menu');
+//     let header = document.querySelector('header');
+//     window.addEventListener('onscroll', function() {
+//         burger.hidden = (pageYOffset < header.clientHeight);
+//         console.log(pageYOffset);
+//     });
+// });
 
 // Initialize and add the map
 function initMap() {
@@ -40,10 +42,11 @@ function closeMenu() {
 }
 
 function initScroll() {
-    let burger = document.querySelector('.burger-continer');
+    let burger = document.querySelector('.burger-menu');
     let header = document.querySelector('header');
     window.addEventListener('scroll', function() {
         burger.hidden = (pageYOffset < header.clientHeight);
+        console.log(pageYOffset);
     });
 }
 
@@ -60,4 +63,27 @@ function closeOverlay() {
             closeMenu();
         });
     }
+}
+
+function showFeedBackForm() {
+    let overlay = document.getElementsByClassName("overlay")[0];
+    overlay.classList.add('overlay-bg');
+    let feedback = document.getElementsByClassName("feedback")[0];
+    feedback.classList.add('feedback-bg');
+}
+
+function closeFeedbackForm() {
+    let overlay = document.getElementsByClassName("overlay")[0];
+    overlay.classList.remove('overlay-bg');
+    let feedback = document.getElementsByClassName("feedback")[0];
+    feedback.classList.remove('feedback-bg');
+}
+
+function send() {
+    let bot = TelegramBot;
+    let feedbackForm = document.getElementById('feedbackForm');
+    let message = `
+    *${feedbackForm.children.name.value}*\n${feedbackForm.children.phoneNumber.value}`;
+    bot.sendMessage(message);
+    closeFeedbackForm();
 }
