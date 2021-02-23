@@ -67,6 +67,10 @@ body {
     font-size: 15px;
     line-height: 120%;
   }
+  .text {
+    font-size: 15px;
+    line-height: 130%;
+  }
 }
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
@@ -123,6 +127,10 @@ body {
   }
   .container {
     padding: 0 20px 0 20px;
+  }
+  .section {
+    position: relative;
+    height: auto;
   }
 }
 .hero {
@@ -732,6 +740,16 @@ input:focus {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  .benefits .benefit__card {
+    padding: 0 0 50px 0px;
+    height: 315px;
+  }
+  .benefits .benefit__card p {
+    font-size: 15px;
+    line-height: 130%;
+  }
+}
 .benefits__header {
   padding-bottom: 40px;
 }
@@ -951,16 +969,6 @@ input:focus {
   color: #002E64;
   display: none;
 }
-.tabs .content section h2::after {
-  content: "";
-  position: relative;
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #002E64;
-  margin-top: 5px;
-  left: 1px;
-}
 .tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
   cursor: default;
   color: #002E64;
@@ -970,7 +978,7 @@ input:focus {
 }
 @media (max-width: 600px) {
   .tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
-    background: rgba(0, 0, 0, 0.08);
+    background: #EBAB08;
   }
 }
 .tabs input[name="tab-control"]:nth-of-type(1):checked ~ .slider {
@@ -988,7 +996,7 @@ input:focus {
 }
 @media (max-width: 600px) {
   .tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
-    background: rgba(0, 0, 0, 0.08);
+    background: #EBAB08;
   }
 }
 .tabs input[name="tab-control"]:nth-of-type(2):checked ~ .slider {
@@ -1006,7 +1014,7 @@ input:focus {
 }
 @media (max-width: 600px) {
   .tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
-    background: rgba(0, 0, 0, 0.08);
+    background: #EBAB08;
   }
 }
 .tabs input[name="tab-control"]:nth-of-type(3):checked ~ .slider {
@@ -1024,7 +1032,7 @@ input:focus {
 }
 @media (max-width: 600px) {
   .tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
-    background: rgba(0, 0, 0, 0.08);
+    background: #EBAB08;
   }
 }
 .tabs input[name="tab-control"]:nth-of-type(4):checked ~ .slider {
