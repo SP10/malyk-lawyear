@@ -916,8 +916,7 @@ input:focus {
     transform: scale(1, 1);
   }
   .news .new__read {
-    position: absolute;
-    right: 140px;
+    visibility: hidden;
   }
 }
 .news__header {
@@ -932,6 +931,15 @@ input:focus {
 #map {
   width: 100%;
   height: 66vh;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  #map {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
 }
 .contacts__body {
   color: #002E64;
@@ -997,6 +1005,7 @@ input:focus {
   .contacts__map {
     padding-top: 30px;
     width: 100vw;
+    padding-right: 0;
     order: 2;
   }
   .contacts__info {
