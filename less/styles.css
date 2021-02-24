@@ -431,6 +431,21 @@ header .hero__language .language__title:hover {
   .burger-menu {
     display: block;
   }
+  .button {
+    background-color: #ffc107;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 16px 65px;
+    border: 0px;
+    text-decoration: none;
+    outline: none;
+    margin: 0 auto;
+  }
 }
 .side-menu {
   max-width: 352px;
@@ -657,9 +672,26 @@ input:focus {
     color: #002E64;
     padding: 30px 0 25px 0;
   }
+  .about__header {
+    padding-top: 20px;
+  }
   .about__text {
     font-size: 15px;
     line-height: 130%;
+  }
+  .about__image img {
+    width: 100%;
+  }
+}
+.about-mobile {
+  visibility: hidden;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .about {
+    display: none;
+  }
+  .about-mobile {
+    visibility: visible;
   }
 }
 .service__body {
@@ -705,18 +737,6 @@ input:focus {
   width: 406px;
   height: 174px;
 }
-@media (min-width: 1400px) and (max-width: 1920px) {
-  .costs .cost {
-    background: #fff;
-    color: #002E64;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    padding: 50px;
-    margin: 0px auto 40px 0px;
-    width: 345px;
-    height: 180px;
-  }
-}
 .costs .cost__card ul {
   padding: 10px 0 10px 20px;
 }
@@ -726,6 +746,18 @@ input:focus {
 }
 .costs .cost__price {
   text-align: end;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .costs .cost__card {
+    background: #fff;
+    color: #002E64;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    padding: 50px;
+    margin: 0px auto 40px 0px;
+    width: 100%;
+    height: 100%;
+  }
 }
 @media (min-width: 320px) and (max-width: 688px) {
   .costs__body {
@@ -855,24 +887,22 @@ input:focus {
 @media (min-width: 320px) and (max-width: 688px) {
   .news .new__card {
     margin: 30px auto;
-    width: 320px;
+    width: 100%;
     height: 190px;
     border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
     cursor: pointer;
-    transition: 0.7s;
     background: #EBAB08;
     color: #ffffff;
     padding: 25px;
   }
   .news .new__card-i {
     margin: 30px auto;
-    width: 320px;
+    width: 100%;
     height: 190px;
     border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
     cursor: pointer;
-    transition: 0.7s;
     background: #4f1fff;
     color: #ffffff;
     padding: 25px;
@@ -916,8 +946,8 @@ input:focus {
   display: flex;
 }
 .contacts__map {
-  width: 52vw;
-  padding-right: 40px;
+  width: 46vw;
+  padding-right: 70px;
 }
 .contacts__column {
   flex: 0 0 50%;
@@ -928,15 +958,21 @@ input:focus {
   font-size: 36px;
   line-height: 44px;
   color: #2324A9;
+  font-weight: 600;
 }
 .contacts__telephone {
   padding-top: 10px;
   font-size: 36px;
   line-height: 44px;
   color: #2324A9;
+  font-weight: 600;
 }
 .contacts__address {
   padding-top: 20px;
+}
+.contacts__address text {
+  font-size: 24px;
+  font-weight: 100;
 }
 .contacts__footer {
   display: flex;
@@ -955,6 +991,9 @@ input:focus {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .contacts__header {
+    padding-bottom: 30px;
+  }
   .contacts__map {
     padding-top: 30px;
     width: 100vw;
@@ -962,7 +1001,6 @@ input:focus {
   }
   .contacts__info {
     order: 1;
-    padding-top: 15px;
   }
   .contacts__email {
     padding-top: 20px;
@@ -981,12 +1019,19 @@ input:focus {
     flex-direction: column;
     padding-top: 20px;
   }
+  .contacts__address text {
+    font-size: 18px;
+    font-weight: 100;
+  }
 }
 .social-icon {
   padding: 0 10px 0 0;
 }
 .footer__social {
   padding-right: 50px;
+}
+.footer__social .set {
+  padding-bottom: 10px;
 }
 .footer__developer {
   align-self: center;
