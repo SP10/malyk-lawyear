@@ -158,10 +158,10 @@ body {
 }
 
 .section {
-    /* Needed for children to be absolutely positioned relative to the parent. */
     position: relative;
-    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height  : 100vh;
+    height: 100vh;
+    // width: 100%;
+    
 }
 
 /* The styling for the static div. */
@@ -454,6 +454,20 @@ header {
     text-decoration: none;
     outline        : none;
     margin         : 0 auto;
+}
+
+.feedback-btn{
+    display: none;
+    z-index: 999;
+    position: fixed;
+    right: 25px;
+    bottom: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    margin: 0 auto;
 }
 
 // .button:hover {
@@ -888,6 +902,7 @@ input {
 
 .about-mobile{
     visibility: hidden;
+    display: none;
 }
 
 @media @mobile{
@@ -1344,6 +1359,7 @@ input {
             display       : flex;
             flex-direction: column;
             padding-top   : 20px;
+            display: none;
         }
 
 
