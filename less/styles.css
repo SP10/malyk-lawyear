@@ -50,7 +50,7 @@ body {
     line-height: 100%;
   }
   h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
   h3 {
     font-size: 18px;
@@ -69,6 +69,11 @@ body {
   }
   .text {
     font-size: 15px;
+    line-height: 130%;
+  }
+  .subtext {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 18px;
     line-height: 130%;
   }
 }
@@ -648,6 +653,10 @@ input:focus {
   padding: 0 0 0 26px;
 }
 @media (min-width: 320px) and (max-width: 688px) {
+  .about__body {
+    color: #002E64;
+    padding: 30px 0 25px 0;
+  }
   .about__text {
     font-size: 15px;
     line-height: 130%;
@@ -659,6 +668,12 @@ input:focus {
 }
 .service__header {
   padding-bottom: 40px;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .service__body {
+    color: #002E64;
+    padding: 30px 0 25px 0;
+  }
 }
 .costs {
   background-color: #2324A9;
@@ -712,6 +727,12 @@ input:focus {
 .costs .cost__price {
   text-align: end;
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  .costs__body {
+    color: #ffffff;
+    padding: 30px 0 25px 0;
+  }
+}
 .benefits {
   background: #FFFEFE;
 }
@@ -724,7 +745,6 @@ input:focus {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 .benefits .benefit__card {
   margin: 0px auto 0 0px;
@@ -741,6 +761,13 @@ input:focus {
   justify-content: center;
 }
 @media (min-width: 320px) and (max-width: 688px) {
+  .benefits .benefit__items {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   .benefits .benefit__card {
     padding: 0 0 50px 0px;
     height: 315px;
@@ -825,19 +852,48 @@ input:focus {
   width: 18px;
   height: 17px;
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  .news .new__card:hover {
+    color: #002E64;
+    transform: scale(1, 1);
+  }
+  .news .new__card-i:hover {
+    color: #002E64;
+    transform: scale(1, 1);
+  }
+  .news .new__read {
+    position: absolute;
+    right: 140px;
+  }
+}
 .news__header {
   padding-bottom: 40px;
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  .news__body {
+    color: #002E64;
+    padding: 30px 0 25px 0;
+  }
+}
 #map {
-  width: 40vw;
-  height: 60vh;
+  width: 100%;
+  height: 66vh;
 }
 .contacts__body {
   color: #002E64;
   padding: 60px 0 25px 0;
 }
+.contacts__header {
+  padding-bottom: 40px;
+}
 .contacts__content {
-  padding: 40px 0 0 0;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+}
+.contacts__map {
+  width: 52vw;
+  padding-right: 40px;
 }
 .contacts__column {
   flex: 0 0 50%;
@@ -859,7 +915,48 @@ input:focus {
   padding-top: 20px;
 }
 .contacts__footer {
+  display: flex;
+  flex-direction: row;
   padding-top: 20px;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .contacts__body {
+    color: #002E64;
+    padding: 30px 0 25px 0;
+  }
+  .contacts__content {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .contacts__map {
+    padding-top: 30px;
+    width: 100vw;
+    order: 2;
+  }
+  .contacts__info {
+    order: 1;
+    padding-top: 15px;
+  }
+  .contacts__email {
+    padding-top: 20px;
+    font-size: 24px;
+    color: #2324A9;
+    font-weight: bold;
+  }
+  .contacts__telephone {
+    padding-top: 0px;
+    font-size: 24px;
+    color: #2324A9;
+    font-weight: bold;
+  }
+  .contacts__footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
 }
 .social-icon {
   padding: 0 10px 0 0;
@@ -869,6 +966,23 @@ input:focus {
 }
 .footer__developer {
   align-self: center;
+  padding-left: 10px;
+}
+.footer__info {
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .footer__social {
+    padding-right: 0;
+  }
+  .footer__developer {
+    align-self: center;
+    padding-left: 10px;
+  }
+  .footer__info {
+    padding-top: 20px;
+  }
 }
 .tabs {
   left: 50%;
