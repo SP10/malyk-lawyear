@@ -704,6 +704,7 @@ input:focus {
   }
   .about-mobile {
     visibility: visible;
+    display: flex;
   }
 }
 .service__body {
@@ -899,7 +900,7 @@ input:focus {
 @media (min-width: 320px) and (max-width: 688px) {
   .news .new__card {
     margin: 30px auto;
-    width: 100%;
+    width: auto;
     height: 190px;
     border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
@@ -910,7 +911,7 @@ input:focus {
   }
   .news .new__card-i {
     margin: 30px auto;
-    width: 100%;
+    width: auto;
     height: 190px;
     border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
