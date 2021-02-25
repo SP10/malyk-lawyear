@@ -1123,13 +1123,6 @@ input {
             padding      : 25px;
         }
 
-        &__card:hover {
-            background-color: #fff;
-            color           : @text-color-primary;
-            transform       : scale(0.9, 0.9);
-            box-shadow      : 5px 5px 42px 0px rgb(0 0 0 / 8%);
-        }
-
         &__card-i {
             margin       : 30px auto;
             width        : 360px;
@@ -1143,12 +1136,20 @@ input {
             padding      : 25px;
         }
 
-        &__card-i:hover {
+        
+        &__card,  &__card-i:hover {
             background-color: #fff;
             color           : @text-color-primary;
             transform       : scale(0.9, 0.9);
             box-shadow      : 5px 5px 42px 0px rgb(0 0 0 / 8%);
         }
+
+        // &__card-i:hover {
+        //     background-color: #fff;
+        //     color           : @text-color-primary;
+        //     transform       : scale(0.9, 0.9);
+        //     box-shadow      : 5px 5px 42px 0px rgb(0 0 0 / 8%);
+        // }
 
         &__content {
             min-height: 85%;
@@ -1184,6 +1185,7 @@ input {
                 box-shadow      : 0px 4px 4px rgb(253 182 89 / 15%);
                 cursor          : pointer;
                 // transition   : 0.7s;
+                transform       : scale(1, 1);
                 background      : #EBAB08;
                 color           : @text-color-secondary;
                 padding         : 25px;
@@ -1197,21 +1199,14 @@ input {
                 box-shadow      : 0px 4px 4px rgb(253 182 89 / 15%);
                 cursor          : pointer;
                 // transition   : 0.7s;
+                transform       : scale(1, 1);
                 background      : #4f1fff;
                 color           : @text-color-secondary;
                 padding         : 25px;
             }
 
-            &__card:hover {
-                // background-color: #fff;
-                color    : @text-color-primary;
-                transform: scale(1, 1);
-            }
-
-            &__card-i:hover {
-                // background-color: #fff;
-                color    : @text-color-primary;
-                transform: scale(1, 1);
+            &__card-i,  &__card:hover {
+                pointer-events: none;  
             }
 
             &__read {
