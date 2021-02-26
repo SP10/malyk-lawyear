@@ -159,9 +159,9 @@ body {
 
 .section {
     position: relative;
-    height: 100vh;
+    height  : 100vh;
     // width: 100%;
-    
+
 }
 
 /* The styling for the static div. */
@@ -231,6 +231,15 @@ body {
     //     right: 0px;
     //     bottom: -100px;
     // }
+
+    @media @mobile {
+        &__body {
+            display    : flex;
+            height     : 70vh;
+            align-items: center;
+        }
+    
+    }
 }
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
@@ -251,11 +260,21 @@ header {
             align-items   : center;
         }
 
+
+
         &__menu {}
 
         &__phone {}
 
         &__language {}
+
+        @media @mobile {
+            &__logo {
+                display       : flex;
+                flex-direction: column;
+                align-items: start;
+            }
+        }
     }
 
     .logo {
@@ -275,9 +294,28 @@ header {
         }
 
         &__text-caption {
+            font-family: @font-secondary;
             font-size  : 18px;
             line-height: 130%;
             color      : @text-color-secondary;
+        }
+
+        @media @mobile {
+            &__img {
+                width: 18vw;
+            }
+
+            &__title {
+                padding: 20px 0 0 0;
+                min-width: 180px;
+            }
+
+            &__text{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                color: #ffffff
+            }
         }
     }
 
@@ -435,6 +473,18 @@ header {
     }
 }
 
+
+@media @mobile {
+    header {
+        display        : flex;
+        align-items    : center;
+        flex-grow      : 1;
+        justify-content: space-between;
+        padding        : 15px 0 15px 0;
+    }
+    
+}
+
 .button:hover {
     background-color: #CB9917;
 }
@@ -456,18 +506,25 @@ header {
     margin         : 0 auto;
 }
 
-.feedback-btn{
-    display: none;
-    z-index: 999;
-    position: fixed;
-    right: 25px;
-    bottom: 0;
+@media @mobile{
+    .button:hover {
+        pointer-events: none;
+    }
+
+}
+
+.feedback-btn {
+    display          : none;
+    z-index          : 999;
+    position         : fixed;
+    right            : 25px;
+    bottom           : 0;
     -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    margin: 0 auto;
+    -ms-transform    : translate(0, -50%);
+    -moz-transform   : translate(0, -50%);
+    -o-transform     : translate(0, -50%);
+    transform        : translate(0, -50%);
+    margin           : 0 auto;
 }
 
 // .button:hover {
@@ -531,7 +588,7 @@ header {
     display           : none;
     position          : fixed;
     top               : 15px;
-    right             : 25px;
+    right             : 20px;
     width             : 58px;
     height            : 58px;
     cursor            : pointer;
@@ -602,41 +659,44 @@ header {
 
     .button {
         background-color: #ffc107;
-        border-radius   : 30px;
-        display         : inline-block;
-        cursor          : pointer;
-        color           : #ffffff;
-        font-style      : normal;
-        font-weight     : bold;
-        font-size       : 20px;
-        padding         : 16px 65px;
-        border          : 0px;
-        text-decoration : none;
-        outline         : none;
-        margin          : 0 auto;
+        border-radius: 30px;
+        display: block;
+        cursor: pointer;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 16px 65px;
+        border: 0px;
+        text-decoration: none;
+        outline: none;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 
 .side-menu {
-    max-width         : 352px;
-    background-color  : #fff;
-    position          : fixed;
-    top               : 0;
-    right             : 0;
-    bottom            : 0;
-    width             : 100%;
-    z-index           : 99999;
-    /* overflow       : hidden; */
-    -webkit-transition: transform ease-in-out 0.3s;
-    -moz-transition   : transform ease-in-out 0.3s;
-    -o-transition     : transform ease-in-out 0.3s;
-    transition        : transform ease-in-out 0.3s;
-    -moz-transform    : translate(100%, 0);
-    -ms-transform     : translate(100%, 0);
-    -webkit-transform : translate(100%, 0);
-    -o-transform      : translate(100%, 0);
-    transform         : translate(100%, 0);
-    color             : @text-color-primary;
+    & {
+        max-width         : 340px;
+        background-color  : #fff;
+        position          : fixed;
+        top               : 0;
+        right             : 0;
+        bottom            : 0;
+        width             : 100%;
+        z-index           : 99999;
+        /* overflow       : hidden; */
+        -webkit-transition: transform ease-in-out 0.3s;
+        -moz-transition   : transform ease-in-out 0.3s;
+        -o-transition     : transform ease-in-out 0.3s;
+        transition        : transform ease-in-out 0.3s;
+        -moz-transform    : translate(100%, 0);
+        -ms-transform     : translate(100%, 0);
+        -webkit-transform : translate(100%, 0);
+        -o-transform      : translate(100%, 0);
+        transform         : translate(100%, 0);
+        color             : @text-color-primary;
+    }
 
     &__show {
         display          : block;
@@ -772,6 +832,30 @@ header {
     }
 }
 
+@media @mobile {
+    // .side-menu {
+    //     max-width         : 300px;
+    //     background-color  : #fff;
+    //     position          : fixed;
+    //     top               : 0;
+    //     right             : 0;
+    //     bottom            : 0;
+    //     width             : 100%;
+    //     z-index           : 99999;
+    //     /* overflow       : hidden; */
+    //     -webkit-transition: transform ease-in-out 0.3s;
+    //     -moz-transition   : transform ease-in-out 0.3s;
+    //     -o-transition     : transform ease-in-out 0.3s;
+    //     transition        : transform ease-in-out 0.3s;
+    //     -moz-transform    : translate(100%, 0);
+    //     -ms-transform     : translate(100%, 0);
+    //     -webkit-transform : translate(100%, 0);
+    //     -o-transform      : translate(100%, 0);
+    //     transform         : translate(100%, 0);
+    //     color             : @text-color-primary;
+    // }
+}
+
 .feedback {
     display      : none;
     position     : absolute;
@@ -862,9 +946,7 @@ input {
         max-width: 800px;
     }
 
-    &__image {
-        
-    }
+    &__image {}
 
     &__header {}
 
@@ -896,22 +978,23 @@ input {
         &__image img {
             width: 100%;
         }
-    
+
     }
 }
 
-.about-mobile{
+.about-mobile {
     visibility: hidden;
-    display: none;
+    display   : none;
 }
 
-@media @mobile{
-    .about{
-       display: none;
+@media @mobile {
+    .about {
+        display: none;
     }
-    .about-mobile{
+
+    .about-mobile {
         visibility: visible;
-        display: flex;
+        display   : flex;
     }
 }
 
@@ -1136,8 +1219,9 @@ input {
             padding      : 25px;
         }
 
-        
-        &__card,  &__card-i:hover {
+
+        &__card,
+        &__card-i:hover {
             background-color: #fff;
             color           : @text-color-primary;
             transform       : scale(0.9, 0.9);
@@ -1205,8 +1289,9 @@ input {
                 padding         : 25px;
             }
 
-            &__card-i,  &__card:hover {
-                pointer-events: none;  
+            &__card-i,
+            &__card:hover {
+                pointer-events: none;
             }
 
             &__read {
@@ -1232,13 +1317,13 @@ input {
     height: 66vh;
 }
 
-@media @mobile{
+@media @mobile {
     #map {
-        width : 100%;
-        height: 50vh;
+        width   : 100%;
+        height  : 50vh;
         position: absolute;
-        left: 0;
-        right: 0;
+        left    : 0;
+        right   : 0;
     }
 }
 
@@ -1327,10 +1412,10 @@ input {
         }
 
         &__map {
-            padding-top: 30px;
-            width      : 100vw;
+            padding-top  : 30px;
+            width        : 100vw;
             padding-right: 0;
-            order      : 2;
+            order        : 2;
         }
 
         &__info {
@@ -1355,7 +1440,7 @@ input {
             display       : flex;
             flex-direction: column;
             padding-top   : 20px;
-            display: none;
+            display       : none;
         }
 
 

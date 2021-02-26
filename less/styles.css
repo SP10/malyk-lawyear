@@ -152,6 +152,13 @@ body {
 .hero__content h3 {
   padding: 0 0 20px;
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  .hero__body {
+    display: flex;
+    height: 70vh;
+    align-items: center;
+  }
+}
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 header {
   display: flex;
@@ -165,6 +172,13 @@ header .hero__logo {
   flex-direction: row;
   align-items: center;
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  header .hero__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
 header .logo__title {
   padding: 0 20px 0 20px;
   min-width: 180px;
@@ -176,9 +190,25 @@ header .logo__text {
   color: #ffffff;
 }
 header .logo__text-caption {
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 18px;
   line-height: 130%;
   color: #ffffff;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  header .logo__img {
+    width: 18vw;
+  }
+  header .logo__title {
+    padding: 20px 0 0 0;
+    min-width: 180px;
+  }
+  header .logo__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: #ffffff;
+  }
 }
 header .menu__item {
   float: left;
@@ -301,6 +331,15 @@ header .hero__language .language__title:hover {
     display: none;
   }
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 15px 0 15px 0;
+  }
+}
 .button:hover {
   background-color: #CB9917;
 }
@@ -318,6 +357,11 @@ header .hero__language .language__title:hover {
   text-decoration: none;
   outline: none;
   margin: 0 auto;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .button:hover {
+    pointer-events: none;
+  }
 }
 .feedback-btn {
   display: none;
@@ -381,7 +425,7 @@ header .hero__language .language__title:hover {
   display: none;
   position: fixed;
   top: 15px;
-  right: 25px;
+  right: 20px;
   width: 58px;
   height: 58px;
   cursor: pointer;
@@ -445,7 +489,7 @@ header .hero__language .language__title:hover {
   .button {
     background-color: #ffc107;
     border-radius: 30px;
-    display: inline-block;
+    display: block;
     cursor: pointer;
     color: #ffffff;
     font-style: normal;
@@ -456,10 +500,11 @@ header .hero__language .language__title:hover {
     text-decoration: none;
     outline: none;
     margin: 0 auto;
+    text-align: center;
   }
 }
 .side-menu {
-  max-width: 352px;
+  max-width: 340px;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -593,6 +638,8 @@ header .hero__language .language__title:hover {
 }
 .side-menu .menu-list__link:hover {
   color: #F5D481;
+}
+@media (min-width: 320px) and (max-width: 688px) {
 }
 .feedback {
   display: none;
