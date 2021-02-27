@@ -128,7 +128,47 @@ body {
         // pointer-events: none;
         color: #2324A9;
     }
+}
 
+@media @tablet {
+    h1 {
+        font-size: 40px;
+        line-height: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+    h5 {
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+    h6 {
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    .text {
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+    .subtext {
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 18px;
+        line-height: 130%;
+    }
 }
 
 // ------------------------------------------------------
@@ -209,6 +249,17 @@ body {
     }
 }
 
+@media @tablet {
+    .container {
+        padding: 0 20px 0 20px;
+    }
+
+    .section {
+        position: relative;
+        height: auto;
+    }
+}
+
 
 .hero {
     background-image: -webkit-linear-gradient(top, rgb(56, 150, 242), rgb(30, 47, 174));
@@ -246,17 +297,29 @@ body {
         }
 
     }
+
+    @media @tablet {
+        &__body {
+            height: 95vh;
+        }
+
+        &__content {
+            max-width: 665px;
+        }
+    }
 }
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 
 
 header {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: space-between;
-    padding: 25px 0 25px 0;
+    & {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
+        padding: 25px 0 25px 0;
+    }
 
     .hero {
 
@@ -279,6 +342,12 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
+            }
+        }
+
+        @media @tablet {
+            &__menu {
+                display: none;
             }
         }
     }
@@ -438,10 +507,18 @@ header {
 
             &:focus {}
         }
+
+        @media @tablet {
+            .phone__number {
+                font-size: 20px;
+            }
+        }
     }
 
     .hero__language {
-        align-items: center;
+        & {
+            align-items: center;
+        }
 
         .language__icon {
             width: 30px;
@@ -467,6 +544,12 @@ header {
 
             &:focus {}
         }
+
+        @media @tablet {
+            & {
+                display: none;
+            }
+        }
     }
 
     @media @mobile {
@@ -475,6 +558,12 @@ header {
         .hero__phone,
         .hero__language {
             display: none;
+        }
+    }
+
+    @media @tablet {
+        & {
+            padding: 15px 0 15px 0;
         }
     }
 }
@@ -499,7 +588,6 @@ header {
     background-color: #ffc107;
     border-radius: 30px;
     display: inline-block;
-    ;
     cursor: pointer;
     color: #ffffff;
     font-style: normal;
@@ -516,7 +604,12 @@ header {
     .button:hover {
         // pointer-events: none;
     }
+}
 
+@media @tablet {
+    .button {
+        font-size: 20px;
+    }
 }
 
 .feedback-btn {
@@ -1000,12 +1093,30 @@ input {
         &__image img {
             width: 70vw;
         }
+    }
 
+    @media @tablet {
+        &__text {
+            font-size: 18px;
+            line-height: 130%;
+        }
+
+        &__cover {
+            height: 100vh;
+        }
     }
 }
 
 .about-mobile {
     visibility: hidden;
+    display: none;
+}
+
+#about-desktop {
+    display: block;
+}
+
+#about-tablet {
     display: none;
 }
 
@@ -1017,6 +1128,16 @@ input {
     .about-mobile {
         visibility: visible;
         display: flex;
+    }
+}
+
+@media @tablet {
+    #about-desktop {
+        display: none;
+    }
+
+    #about-tablet {
+        display: block;
     }
 }
 
@@ -1179,6 +1300,22 @@ input {
             &__card p {
                 font-size: 15px;
                 line-height: 130%;
+            }
+        }
+
+        @media @tablet {
+            &__items {
+                z-index: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between; // space-around;
+                flex-wrap: wrap;
+            }
+
+            &__card {
+                padding: 0 0 50px 0px;
+                width: 100%;
+                height: 315px;
             }
         }
     }
