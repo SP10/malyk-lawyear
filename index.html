@@ -1058,11 +1058,12 @@
                 let callBtn = document.querySelector('.call-button');
                 if (pageYOffset > home.clientHeight) {
                     callBtn.classList.add('call-button-show');
+                    callBtn.hidden = false;
                     // console.log('show call btn');
                 } else {
                     callBtn.classList.remove('call-button-show');
+                    callBtn.hidden = true;
                 }
-
 
             }, false);
         }
