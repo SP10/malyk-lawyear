@@ -76,6 +76,10 @@ body {
     font-size: 18px;
     line-height: 130%;
   }
+  a:hover {
+    pointer-events: none;
+    color: #2324A9;
+  }
 }
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
@@ -504,7 +508,7 @@ header .hero__language .language__title:hover {
   }
 }
 .side-menu {
-  max-width: 340px;
+  max-width: 350px;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -607,16 +611,23 @@ header .hero__language .language__title:hover {
 .side-menu .menu__item:hover .menu-list {
   display: block;
 }
+@media (min-width: 320px) and (max-width: 688px) {
+  .side-menu .menu__link:hover {
+    color: #002E64;
+  }
+  .side-menu .menu__list:hover {
+    color: #002E64;
+  }
+}
 .side-menu .menu-list {
   height: auto;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  position: absolute;
+  position: fixed;
   z-index: 60000000000;
   padding: 35px;
-  width: 350px;
   right: 0;
   display: none;
 }
@@ -640,6 +651,14 @@ header .hero__language .language__title:hover {
   color: #F5D481;
 }
 @media (min-width: 320px) and (max-width: 688px) {
+  .side-menu .menu-list__link:hover {
+    color: #002E64;
+  }
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .side-menu {
+    max-width: 305px;
+  }
 }
 .feedback {
   display: none;
@@ -680,6 +699,11 @@ header .hero__language .language__title:hover {
 }
 .feedback__form {
   margin-top: 15px;
+}
+@media (min-width: 320px) and (max-width: 688px) {
+  .feedback {
+    width: auto;
+  }
 }
 input {
   width: 100%;
@@ -731,14 +755,14 @@ input:focus {
     padding: 30px 0 25px 0;
   }
   .about__header {
-    padding-top: 20px;
+    padding-top: 30px;
   }
   .about__text {
     font-size: 15px;
     line-height: 130%;
   }
   .about__image img {
-    width: 100%;
+    width: 70vw;
   }
 }
 .about-mobile {
@@ -813,7 +837,7 @@ input:focus {
     color: #002E64;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-    padding: 50px;
+    padding: 36px;
     margin: 0px auto 40px 0px;
     width: 100%;
     height: 100%;
