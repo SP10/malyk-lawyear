@@ -1053,8 +1053,17 @@
                         burger.classList.remove('burger-menu__show');
                     }
                 }
-                // burger.hidden = pageYOffset > header.clientHeight;
-                // console.log(pageYOffset);
+
+                let home = document.getElementById('home');
+                let callBtn = document.querySelector('.call-button');
+                if (pageYOffset > home.clientHeight) {
+                    callBtn.classList.add('call-button-show');
+                    console.log('show call btn');
+                } else {
+                    callBtn.classList.remove('call-button-show');
+                }
+
+
             }, false);
         }
 

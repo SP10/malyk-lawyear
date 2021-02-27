@@ -542,6 +542,9 @@ header .hero__language .language__title:hover {
   text-decoration: none;
   outline: none;
 }
+.call-button-show {
+  display: block;
+}
 .close-button {
   width: 40px;
   height: 40px;
@@ -659,9 +662,6 @@ header .hero__language .language__title:hover {
     outline: none;
     margin: 0 auto;
     text-align: center;
-  }
-  .call-button {
-    display: block;
   }
 }
 .side-menu {
