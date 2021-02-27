@@ -56,11 +56,11 @@ body {
     font-size: 18px;
   }
   h4 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 130%;
   }
   h5 {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 130%;
   }
   h6 {
@@ -620,6 +620,7 @@ header .hero__language .language__title:hover {
   z-index: 60000000000;
   padding: 35px;
   right: 0;
+  width: 338px;
   display: none;
 }
 .side-menu .menu-list__item {
@@ -642,6 +643,19 @@ header .hero__language .language__title:hover {
   color: #F5D481;
 }
 @media (min-width: 320px) and (max-width: 688px) {
+  .side-menu .menu-list {
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    position: fixed;
+    z-index: 60000000000;
+    padding: 35px;
+    right: 0;
+    width: auto;
+    display: none;
+  }
   .side-menu .menu-list__link:hover {
     color: #002E64;
   }
@@ -877,6 +891,7 @@ input:focus {
   }
   .benefits .benefit__card {
     padding: 0 0 50px 0px;
+    width: 100%;
     height: 315px;
   }
   .benefits .benefit__card p {
@@ -928,8 +943,13 @@ input:focus {
   color: #ffffff;
   padding: 25px;
 }
-.news .new__card,
 .news .new__card-i:hover {
+  background-color: #fff;
+  color: #002E64;
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 42px 0px rgba(0, 0, 0, 0.08);
+}
+.news .new__card:hover {
   background-color: #fff;
   color: #002E64;
   transform: scale(0.9, 0.9);
