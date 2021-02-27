@@ -80,7 +80,7 @@ body {
     color: #2324A9;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   h1 {
     font-size: 40px;
     line-height: 100%;
@@ -110,6 +110,37 @@ body {
   .subtext {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 18px;
+    line-height: 130%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  h1 {
+    font-size: 48px;
+    line-height: 100%;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  h6 {
+    font-size: 15px;
+    line-height: 120%;
+  }
+  .note {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 24px;
     line-height: 130%;
   }
 }
@@ -172,13 +203,18 @@ body {
     height: auto;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   .container {
     padding: 0 20px 0 20px;
   }
   .section {
     position: relative;
     height: auto;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .container {
+    padding: 0 100px 0 100px;
   }
 }
 .hero {
@@ -204,12 +240,17 @@ body {
     align-items: center;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   .hero__body {
     height: 95vh;
   }
   .hero__content {
     max-width: 603px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .hero__content {
+    max-width: 718px;
   }
 }
 /* Sets the actual background images to adorable kitties. This part is crucial. */
@@ -225,6 +266,9 @@ header .hero__logo {
   flex-direction: row;
   align-items: center;
 }
+header .hero__menu-desktop {
+  display: none;
+}
 @media (min-width: 320px) and (max-width: 688px) {
   header .hero__logo {
     display: flex;
@@ -232,9 +276,17 @@ header .hero__logo {
     align-items: start;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   header .hero__menu {
     display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  header .hero__menu {
+    display: none;
+  }
+  header .hero__menu-desktop {
+    display: block;
   }
 }
 header .logo__title {
@@ -361,9 +413,18 @@ header .hero__phone .phone__number {
 header .hero__phone .phone__number:hover {
   color: #F5D481;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   header .hero__phone .phone__number {
     font-size: 20px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  header .hero__phone .phone__number {
+    font-size: 20px;
+  }
+  header .hero__phone .phone__icon {
+    width: 20px;
+    height: 20px;
   }
 }
 header .hero__language {
@@ -387,7 +448,7 @@ header .hero__language .language__title {
 header .hero__language .language__title:hover {
   color: #F5D481;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   header .hero__language {
     display: none;
   }
@@ -399,7 +460,7 @@ header .hero__language .language__title:hover {
     display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   header {
     padding: 15px 0 15px 0;
   }
@@ -431,7 +492,7 @@ header .hero__language .language__title:hover {
   outline: none;
   margin: 0 auto;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   .button {
     font-size: 20px;
   }
@@ -845,13 +906,22 @@ input:focus {
     width: 70vw;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   .about__text {
     font-size: 18px;
     line-height: 130%;
   }
   .about__cover {
     height: 100vh;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .about__content {
+    max-width: 644px;
+  }
+  .about__text {
+    font-size: 20px;
+    line-height: 130%;
   }
 }
 .about-mobile {
@@ -873,7 +943,7 @@ input:focus {
     display: flex;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   #about-desktop {
     display: none;
   }
@@ -946,6 +1016,12 @@ input:focus {
     height: 100%;
   }
 }
+@media (min-width: 689px) and (max-width: 992px) {
+  .costs .cost__card {
+    width: 290px;
+    height: 220px;
+  }
+}
 @media (min-width: 320px) and (max-width: 688px) {
   .costs__body {
     color: #ffffff;
@@ -979,6 +1055,10 @@ input:focus {
   display: flex;
   justify-content: center;
 }
+.benefits .benefit__column {
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 320px) and (max-width: 688px) {
   .benefits .benefit__items {
     z-index: 0;
@@ -997,7 +1077,7 @@ input:focus {
     line-height: 130%;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 689px) and (max-width: 992px) {
   .benefits .benefit__items {
     z-index: 0;
     width: 100%;
@@ -1005,10 +1085,43 @@ input:focus {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .benefits .benefit__content {
+    max-width: 506px;
+    padding-right: 30px;
+  }
   .benefits .benefit__card {
     padding: 0 0 50px 0px;
     width: 100%;
-    height: 315px;
+    height: 192px;
+    align-items: center;
+  }
+  .benefits .benefit__card p {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  .benefits .benefit__card .flexible {
+    flex-grow: 0;
+  }
+  .benefits .benefit__column {
+    display: flex;
+    flex-direction: row;
+  }
+  .benefits .benefit__icon {
+    max-height: 105px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .benefits .benefit__card {
+    margin: 0px auto 0 0px;
+    width: 350px;
+    height: 370px;
+  }
+  .benefits .benefit__card p {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  .benefits .benefit__icon {
+    max-height: 100px;
   }
 }
 .benefits__header {
@@ -1078,8 +1191,8 @@ input:focus {
   padding-left: 10px;
 }
 .news .new__read {
-  position: absolute;
-  right: 50px;
+  position: relative;
+  padding-left: 100px;
 }
 .news .new__icon {
   background: url(../assets/date-icon.svg) no-repeat;
@@ -1117,6 +1230,20 @@ input:focus {
   }
   .news .new__read {
     visibility: hidden;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .news .new__card {
+    width: 315px;
+    height: 165px;
+  }
+  .news .new__card-i {
+    width: 315px;
+    height: 165px;
+  }
+  .news .new__read {
+    position: relative;
+    padding-left: 100px;
   }
 }
 .news__header {
@@ -1232,6 +1359,19 @@ input:focus {
   .contacts__address text {
     font-size: 18px;
     font-weight: 100;
+  }
+}
+@media (min-width: 689px) and (max-width: 992px) {
+  .contacts__email {
+    font-size: 24px;
+  }
+  .contacts__telephone {
+    font-size: 24px;
+    padding-top: 0px;
+  }
+  .contacts__map {
+    width: 48vw;
+    padding-right: 45px;
   }
 }
 .social-icon {
