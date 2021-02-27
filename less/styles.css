@@ -209,7 +209,7 @@ body {
     height: 95vh;
   }
   .hero__content {
-    max-width: 665px;
+    max-width: 603px;
   }
 }
 /* Sets the actual background images to adorable kitties. This part is crucial. */
@@ -754,7 +754,7 @@ header .hero__language .language__title:hover {
   border-radius: 25px;
   z-index: 99999;
   padding: 50px;
-  width: 32vw;
+  width: 40vw;
 }
 .feedback-success {
   display: none;
