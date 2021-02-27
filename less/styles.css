@@ -518,6 +518,30 @@ header .hero__language .language__title:hover {
   display: flex;
   margin-top: 15px;
 }
+.call-button {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  right: 25px;
+  bottom: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  margin: 0 auto;
+  background-color: #ffc107;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 20px;
+  border: 0px;
+  text-decoration: none;
+  outline: none;
+}
 .close-button {
   width: 40px;
   height: 40px;
@@ -635,6 +659,9 @@ header .hero__language .language__title:hover {
     outline: none;
     margin: 0 auto;
     text-align: center;
+  }
+  .call-button {
+    display: block;
   }
 }
 .side-menu {
