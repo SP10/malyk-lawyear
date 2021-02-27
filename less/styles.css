@@ -77,7 +77,6 @@ body {
     line-height: 130%;
   }
   a:hover {
-    pointer-events: none;
     color: #2324A9;
   }
 }
@@ -361,11 +360,6 @@ header .hero__language .language__title:hover {
   text-decoration: none;
   outline: none;
   margin: 0 auto;
-}
-@media (min-width: 320px) and (max-width: 688px) {
-  .button:hover {
-    pointer-events: none;
-  }
 }
 .feedback-btn {
   display: none;
@@ -984,10 +978,6 @@ input:focus {
     background: #4f1fff;
     color: #ffffff;
     padding: 25px;
-  }
-  .news .new__card-i,
-  .news .new__card:hover {
-    pointer-events: none;
   }
   .news .new__read {
     visibility: hidden;
