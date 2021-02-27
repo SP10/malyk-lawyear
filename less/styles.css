@@ -615,9 +615,6 @@ header .hero__language .language__title:hover {
   .side-menu .menu__link:hover {
     color: #002E64;
   }
-  .side-menu .menu__list:hover {
-    color: #002E64;
-  }
 }
 .side-menu .menu-list {
   height: auto;
