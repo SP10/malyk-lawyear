@@ -699,6 +699,9 @@ header .hero__language .language__title:hover {
   text-decoration-line: underline;
   color: #002E64;
 }
+.side-menu__social {
+  padding-bottom: 15px;
+}
 .side-menu .menu {
   display: flex;
   flex-direction: column;
