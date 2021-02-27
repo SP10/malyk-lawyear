@@ -979,6 +979,10 @@ input:focus {
     color: #ffffff;
     padding: 25px;
   }
+  .news .new__card-i,
+  .news .new__card:hover {
+    pointer-events: none;
+  }
   .news .new__read {
     visibility: hidden;
   }
