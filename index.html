@@ -245,7 +245,7 @@
                                     <li class="menu-list__item">
                                         <a class="menu-list__link" href="#administrative">Адміністративні справи</a>
                                     </li>
-                                    <li class="menu-list__item">
+                                    <li class="menu-list__item last">
                                         <a class="menu-list__link" href="#business">Господарські справи</a>
                                     </li>
                                 </ul>
@@ -253,8 +253,10 @@
                         </ul>
                     </nav>
                     <div class="hero__phone row">
-                        <img class="phone__icon" src="./assets/phone-icon.svg" alt="phone icon">
-                        <a class="phone__number" href="tel:+380961097608"> +38 096-109-76-08</a>
+                        <a class="phone__number" href="tel:+380961097608">
+                            <img class="phone__icon" src="./assets/phone-icon.svg" alt="phone icon">
+                            <div class="phone__text">+38 096-109-76-08</div>
+                        </a>
                     </div>
                     <div class="hero__language row">
                         <a class="language__title" href="/ru">Російською</a>
@@ -375,30 +377,39 @@
                         <h1>Послуги</h1>
                     </div>
                     <div class="tabs">
-                        <input type="radio" id="tab1" name="tab-control" checked>
+                        <div class="select">
+                            <select name="" id="serviceSelect">
+                                <option value="Адміністративне право" name="tab-control" id="option1" selected>Адміністративне право</option>
+                                <option value="Кримінальне право" name="tab-control" >Кримінальне право</option>
+                                <option value="Господарське право" name="tab-control">Господарське право</option>
+                                <option value="Земельні питання" name="tab-control">Земельні питання</option>
+                                <option value="Трудове право" name="tab-control">Трудове право</option>
+                            </select>
+                        </div>
+                        <!-- <input type="radio" id="tab1" name="tab-control" checked>
                         <input type="radio" id="tab2" name="tab-control">
                         <input type="radio" id="tab3" name="tab-control">
                         <input type="radio" id="tab4" name="tab-control">
-                        <input type="radio" id="tab5" name="tab-control">
+                        <input type="radio" id="tab5" name="tab-control"> 
                         <ul>
                             <li title="Адміністративне право"><label for="tab1" role="button"><span>Адміністративне
                                         право</span></label></li>
                             <li title="Кримінальне право"><label for="tab2" role="button"><span>Кримінальне
                                         право</span></label></li>
-                            <!-- <li title="Цивільне право"><label for="tab3" role="button"><span>Цивільне право</span></label></li> -->
+                             <li title="Цивільне право"><label for="tab3" role="button"><span>Цивільне право</span></label></li> 
                             <li title="Господарське право"><label for="tab3" role="button"><span>Господарське
                                         право</span></label></li>
                             <li title="Земельні питання"><label for="tab4" role="button"><span>Земельні
                                         питання</span></label></li>
                             <li title="Трудове право"><label for="tab5" role="button"><span>Трудове право</span></label>
                             </li>
-                        </ul>
+                        </ul> -->
 
-                        <div class="slider">
+                        <!-- <div class="slider">
                             <div class="indicator"></div>
-                        </div>
+                        </div> -->
                         <div class="content">
-                            <section>
+                            <section id="oprion1Value">
                                 <h2>Адміністративне право</h2>
                                 <span class="text">
                                     Проконсультую з питань адміністративного права, допоможу оскаржити постанову про
@@ -1045,13 +1056,16 @@
             let wrapper = document.querySelector('.wrapper');
 
             window.addEventListener('scroll', () => {
-                if (window.innerWidth >= 1024) {
+                if (window.innerWidth > 1399.98) {
                     if (pageYOffset > header.clientHeight) {
                         burger.hidden = false;
                         burger.classList.add('burger-menu__show');
                     } else {
                         burger.classList.remove('burger-menu__show');
                     }
+                } else if (window.innerWidth >= 575 && window.innerWidth <= 1399.98) {
+                    burger.hidden = false;
+                    burger.classList.add('burger-menu__show');
                 }
 
                 let home = document.getElementById('home');
