@@ -1640,6 +1640,7 @@ input:focus {
 }
 .wrapper-select-mobile {
   position: relative;
+  display: none;
 }
 .wrapper-select-mobile:after {
   content: ' ';
@@ -1656,6 +1657,11 @@ input:focus {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   border-color: #ffffff transparent transparent transparent;
+}
+@media (max-width: 575.98px) {
+  .wrapper-select-mobile {
+    display: block;
+  }
 }
 .firefox-fix {
   background-color: #efbc39;
