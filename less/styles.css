@@ -1107,6 +1107,9 @@ input:focus {
   padding-bottom: 40px;
 }
 @media (max-width: 575.98px) {
+  .service {
+    height: 100vh;
+  }
   .service__body {
     color: #002E64;
     padding: 30px 0 25px 0;
