@@ -174,7 +174,7 @@ body {
 }
 .hero__cover {
   height: 100vh;
-  background-position: right bottom;
+  background-position: left bottom;
   background-image: url(../assets/hero-crop.png);
   background-repeat: no-repeat;
   width: 100%;
@@ -222,6 +222,7 @@ body {
   display: flex;
   height: 80vh;
   align-items: center;
+  justify-content: flex-end;
 }
 .hero__content {
   max-width: 800px;
@@ -1342,8 +1343,8 @@ input:focus {
 }
 .news .new__card {
   margin: 30px auto;
-  width: 360px;
-  height: 190px;
+  width: 310px;
+  height: 180px;
   border-radius: 25px;
   box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
   cursor: pointer;
@@ -1354,8 +1355,8 @@ input:focus {
 }
 .news .new__card-i {
   margin: 30px auto;
-  width: 360px;
-  height: 190px;
+  width: 310px;
+  height: 180px;
   border-radius: 25px;
   box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
   cursor: pointer;
