@@ -284,7 +284,7 @@ body {
 
     .section {
         position: relative;
-        height: auto;
+        height  : auto;
     }
 }
 
@@ -550,7 +550,7 @@ header {
             width  : 100%;
         }
 
-        &__item.last {
+        &__item.last-item {
             padding: 0;
         }
 
@@ -570,13 +570,23 @@ header {
             color: @link-hover;
         }
 
-        @media @desktop {
+        @media @mobile {
             &__link {
                 font-size: 15px;
             }
 
             &__list {
                 font-size: 15px;
+            }
+        }
+
+        @media @desktop {
+            &__link {
+                font-size: 18px;
+            }
+
+            &__list {
+                font-size: 18px;
             }
         }
     }
@@ -1166,8 +1176,8 @@ header {
             width  : 100%;
         }
 
-        &__item.last {
-            padding: 0px;
+        &__item.last-item {
+            padding: 0;
         }
 
         &__link {
@@ -1201,9 +1211,14 @@ header {
                 display      : none;
             }
 
+            &__link {
+                font-size: 15px;
+            }
+
             &__link:hover {
                 color: @text-color-primary;
             }
+
         }
     }
 
@@ -1434,9 +1449,10 @@ input {
     }
 
     @media @mobile {
-        &{
-           height: 100vh;
+        & {
+            height: 100vh;
         }
+
         &__body {
             color  : @text-color-primary;
             padding: 30px 0 25px 0;
@@ -1801,8 +1817,8 @@ input {
 
             &__card {
                 margin          : 30px auto;
-                width           : auto;
-                height          : 190px;
+                width           : 250px;
+                height          : 160px;
                 border-radius   : 25px;
                 box-shadow      : 0px 4px 4px rgb(253 182 89 / 15%);
                 cursor          : pointer;
@@ -1815,8 +1831,8 @@ input {
 
             &__card-i {
                 margin          : 30px auto;
-                width           : auto;
-                height          : 190px;
+                width           : 250px;
+                height          : 160px;
                 border-radius   : 25px;
                 box-shadow      : 0px 4px 4px rgb(253 182 89 / 15%);
                 cursor          : pointer;
@@ -1827,9 +1843,18 @@ input {
                 padding         : 25px;
             }
 
-            &__card-i,
             &__card:hover {
-                pointer-events: none;
+                pointer-events  : none;
+                background-color: #EBAB08;
+                transform       : scale(1, 1);
+                color           : @text-color-secondary;
+            }
+
+            &__card-i:hover {
+                pointer-events  : none;
+                background-color: #4f1fff;
+                transform       : scale(1, 1);
+                color           : @text-color-secondary;
             }
 
             &__read {

@@ -391,7 +391,7 @@ header .menu-list__item {
   padding: 0 0 15px 0;
   width: 100%;
 }
-header .menu-list__item.last {
+header .menu-list__item.last-item {
   padding: 0;
 }
 header .menu-list__link {
@@ -408,12 +408,20 @@ header .menu-list__link {
 header .menu-list__link:hover {
   color: #F5D481;
 }
-@media (min-width: 992px) and (max-width: 1399.98px) {
+@media (max-width: 575.98px) {
   header .menu-list__link {
     font-size: 15px;
   }
   header .menu-list__list {
     font-size: 15px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  header .menu-list__link {
+    font-size: 18px;
+  }
+  header .menu-list__list {
+    font-size: 18px;
   }
 }
 header .hero__phone {
@@ -894,8 +902,8 @@ header .hero__language .language__title:hover {
   padding: 0 0 15px 0;
   width: 100%;
 }
-.side-menu .menu-list__item.last {
-  padding: 0px;
+.side-menu .menu-list__item.last-item {
+  padding: 0;
 }
 .side-menu .menu-list__link {
   font-family: 'Montserrat', sans-serif;
@@ -924,6 +932,9 @@ header .hero__language .language__title:hover {
     right: 0;
     width: auto;
     display: none;
+  }
+  .side-menu .menu-list__link {
+    font-size: 15px;
   }
   .side-menu .menu-list__link:hover {
     color: #002E64;
@@ -1386,8 +1397,8 @@ input:focus {
 @media (max-width: 575.98px) {
   .news .new__card {
     margin: 30px auto;
-    width: auto;
-    height: 190px;
+    width: 250px;
+    height: 160px;
     border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
     cursor: pointer;
@@ -1398,8 +1409,8 @@ input:focus {
   }
   .news .new__card-i {
     margin: 30px auto;
-    width: auto;
-    height: 190px;
+    width: 250px;
+    height: 160px;
     border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(253, 182, 89, 0.15);
     cursor: pointer;
@@ -1408,9 +1419,17 @@ input:focus {
     color: #ffffff;
     padding: 25px;
   }
-  .news .new__card-i,
   .news .new__card:hover {
     pointer-events: none;
+    background-color: #EBAB08;
+    transform: scale(1, 1);
+    color: #ffffff;
+  }
+  .news .new__card-i:hover {
+    pointer-events: none;
+    background-color: #4f1fff;
+    transform: scale(1, 1);
+    color: #ffffff;
   }
   .news .new__read {
     visibility: hidden;
