@@ -1431,8 +1431,14 @@ input:focus {
     transform: scale(1, 1);
     color: #ffffff;
   }
+  .news .new__icon {
+    padding-right: 30px;
+  }
   .news .new__read {
     visibility: hidden;
+  }
+  .news .new__footer h5 {
+    padding-left: 0;
   }
 }
 @media (min-width: 992px) and (max-width: 1399.98px) {
