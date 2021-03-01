@@ -1,5 +1,6 @@
 @import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
 @import (css) url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css?integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""');
+@import (css) url('https://unpkg.com/swiper/swiper-bundle.min.css');
 
 @text-color-primary : #002E64;
 @text-color-secondary: #ffffff;
@@ -1677,6 +1678,35 @@ input {
     }
 
     &__content {}
+
+    & .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+    
+     & .swiper-slide {
+        // text-align: center;
+        // font-size: 18px;
+        /* Center slide text vertically */
+        justify-content: space-between;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+    }
+
 
     & .new {
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
 @import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css?integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""');
+@import url('https://unpkg.com/swiper/swiper-bundle.min.css');
 h1 {
   font-size: 60px;
   line-height: 100%;
@@ -1285,6 +1286,29 @@ input:focus {
 .news__body {
   color: #002E64;
   padding: 60px 0 25px 0;
+}
+.news .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.news .swiper-slide {
+  /* Center slide text vertically */
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.news a {
+  text-decoration: none;
 }
 .news .new__items {
   z-index: 0;

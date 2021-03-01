@@ -10,6 +10,8 @@
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./less/styles.css" rel="stylesheet">
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="./js/telegram.js"></script>
 
@@ -486,10 +488,13 @@
                             <section data-service="Відшкодування шкоди" data-show="false">
                                 <h2>Відшкодування шкоди</h2>
                                 <span class="text">
-                                <p>Надаю консультації в питаннях відшкодування шкоди у випадку ДТП, здійснюю комплексне врегулювання питання відшкодування збитків, готую позов про стягнення збитку з фізичної особи винуватця ДТП, стягнення страхового відшкодування
-                                    зі страхової компанії.</p>
-                                <p> Надаю консультації та супровід при регресному/суброгаційному позову страхової компанії. Збережу Ваш час та нерви.</p>
-                            </span>
+                                    <p>Надаю консультації в питаннях відшкодування шкоди у випадку ДТП, здійснюю
+                                        комплексне врегулювання питання відшкодування збитків, готую позов про стягнення
+                                        збитку з фізичної особи винуватця ДТП, стягнення страхового відшкодування
+                                        зі страхової компанії.</p>
+                                    <p> Надаю консультації та супровід при регресному/суброгаційному позову страхової
+                                        компанії. Збережу Ваш час та нерви.</p>
+                                </span>
                             </section>
                         </div>
                     </div>
@@ -909,7 +914,59 @@
                     </div>
                     <div class="publication">
                         <h3>Публікації</h3>
-                        <div class="new__items">
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="/news/1">
+                                        <div class="new__card">
+                                            <div class="new__content">
+                                                <h4>Реєстрація права власності на земельну ділянку</h4>
+                                            </div>
+                                            <div class="flexible"></div>
+                                            <div class="new__footer">
+                                                <span class="new__icon"></span>
+                                                <h5>05.01.2021</h5>
+                                                <div class="new__read">Читати</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="/news/2">
+                                        <div class="new__card">
+                                            <div class="new__content">
+                                                <h4>Поділ майна – що необхідно знати?</h4>
+                                            </div>
+                                            <div class="flexible"></div>
+                                            <div class="new__footer">
+                                                <span class="new__icon"></span>
+                                                <h5>09.01.2021</h5>
+                                                <div class="new__read">Читати</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="/news/3">
+                                        <div class="new__card">
+                                            <div class="new__content">
+                                                <h4>Що необхідно знати про розірвання шлюбу</h4>
+                                            </div>
+                                            <div class="flexible"></div>
+                                            <div class="new__footer">
+                                                <span class="new__icon"></span>
+                                                <h5>05.02.2021</h5>
+                                                <div class="new__read">Читати</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- <div class="new__items">
                             <a href="/news/1">
                                 <div class="new__card">
                                     <div class="new__content">
@@ -949,53 +1006,62 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="interview">
                         <h3>Інтерв'ю</h3>
-                        <div class="new__items">
-                            <a href="https://www.youtube.com/watch?v=k9F3K30PZiU&fbclid=IwAR0ziP0WA--LDaxtygUKobMpnUpYhSmn0wrp8x3m_ibHwWifmw9ExBnCjnU">
-                                <div class="new__card-i">
-                                    <div class="new__content">
-                                        <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
-                                    </div>
-                                    <div class="flexible"></div>
-                                    <div class="new__footer">
-                                        <span class="new__icon"></span>
-                                        <h5>25.11.2020</h5>
-                                        <div class="new__read">Дивитись</div>
-                                    </div>
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/watch?v=k9F3K30PZiU&fbclid=IwAR0ziP0WA--LDaxtygUKobMpnUpYhSmn0wrp8x3m_ibHwWifmw9ExBnCjnU">
+                                        <div class="new__card-i">
+                                            <div class="new__content">
+                                                <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
+                                            </div>
+                                            <div class="flexible"></div>
+                                            <div class="new__footer">
+                                                <span class="new__icon"></span>
+                                                <h5>25.11.2020</h5>
+                                                <div class="new__read">Дивитись</div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a href="#" style="visibility: hidden; display: none;">
-                                <div class="new__card-i">
-                                    <div class="new__content">
-                                        <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
-                                    </div>
-                                    <div class="flexible"></div>
-                                    <div class="new__footer">
-                                        <span class="new__icon"></span>
-                                        <h5>25.11.2020</h5>
-                                        <div class="new__read">Дивитись</div>
-                                    </div>
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/watch?v=kBtrKhveX_U&t=4s">
+                                        <div class="new__card-i">
+                                            <div class="new__content">
+                                                <h4>Щодо вакцинації та відповідальність за порушення під час щеплення
+                                                </h4>
+                                            </div>
+                                            <div class="flexible"></div>
+                                            <div class="new__footer">
+                                                <span class="new__icon"></span>
+                                                <h5>29.02.2021</h5>
+                                                <div class="new__read">Дивитись</div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a href="#" style="visibility: hidden; display: none;">
-                                <div class="new__card-i">
-                                    <div class="new__content">
-                                        <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
-                                    </div>
-                                    <div class="flexible"></div>
-                                    <div class="new__footer">
-                                        <span class="new__icon"></span>
-                                        <h5>25.11.2020</h5>
-                                        <div class="new__read">Дивитись</div>
-                                    </div>
-                                </div>
-                            </a>
+                                <!-- <a href="#" style="visibility: hidden; display: none;">
+                                        <div class="new__card-i">
+                                            <div class="new__content">
+                                                <h4>Про поділ майна подружжя при розірванні шлюбу</h4>
+                                            </div>
+                                            <div class="flexible"></div>
+                                            <div class="new__footer">
+                                                <span class="new__icon"></span>
+                                                <h5>25.11.2020</h5>
+                                                <div class="new__read">Дивитись</div>
+                                            </div>
+                                        </div>
+                                    </a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <section id="contacts" class="section container contacts">
@@ -1066,6 +1132,17 @@
         L.marker([49.2352, 28.4702], {
             icon: icon
         }).addTo(map);
+    </script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
     </script>
     <script>
         const onScroll = () => {
