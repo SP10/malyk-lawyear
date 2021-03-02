@@ -1616,11 +1616,15 @@ input:focus {
 .contact__body {
   display: flex;
   color: #002E64;
-  background-color: #a9ffa1;
+}
+.contact__header {
+  padding: 60px 0 30px 0;
 }
 .contact__content {
   height: 50vh;
-  background-color: red;
+}
+.contact__content .adress {
+  padding: 20px 0 20px 0;
 }
 .contact__content .adress-link {
   font-size: 36px;
@@ -1630,7 +1634,6 @@ input:focus {
 }
 .contact__map {
   height: 50vh;
-  background-color: aqua;
 }
 .contact__map #map {
   width: 100%;
@@ -1645,10 +1648,16 @@ input:focus {
   }
 }
 @media (max-width: 767.98px) {
+  .contact__header {
+    padding: 30px 0 20px 0;
+  }
   .contact__body {
     color: #002E64;
     height: 100vh;
     flex-direction: column;
+  }
+  .contact__content .adress {
+    padding: 10px 0 10px 0;
   }
   .contact__content .adress-link {
     font-size: 24px;
