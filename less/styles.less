@@ -2313,6 +2313,17 @@ input {
     align-items: center;
 }
 
+.tabs .swiper-button-prev {
+    left: 40px;
+    top:22%
+}
+
+.tabs .swiper-button-next {
+    right: 40px;
+    top:22%
+}
+
+
   .tabs input[name="tab-control"] {
     display: none;
 }
@@ -2369,10 +2380,15 @@ input {
 }
 
 .tabs .slider {
-    position  : relative;
+    position  : absolute;
     width     : 100%;
     transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
-    padding-top: 30px;
+    bottom: 0;
+    display: none;
+}
+
+.tabs .slider-wrapper{
+    height: 70px;
 }
 
 .tabs .slider .indicator {

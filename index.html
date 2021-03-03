@@ -438,42 +438,86 @@
                             <div class="swiper-container-tabs">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
+                                        <div class="slider-wrapper">
                                             <input type="radio" id="tab1" name="tab-control" checked>
                                             <label for="tab1" role="button"><span>Сімейне право</span></label>
-                                            <div class="indicator"></div>
+                                            <div class="slider" id="slider1">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab2" name="tab-control">
-                                        <label for="tab2" role="button"><span>Цивільне право</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab2" name="tab-control">
+                                            <label for="tab2" role="button"><span>Цивільне право</span></label>
+                                            <div class="slider" id="slider2">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab3" name="tab-control">
-                                        <label for="tab3" role="button"><span>Адміністративне право</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab3" name="tab-control">
+                                            <label for="tab3" role="button"><span>Адміністративне право</span></label>
+                                            <div class="slider" id="slider3">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab4" name="tab-control">
-                                        <label for="tab4" role="button"><span>Адміністративне
-                                                правопорушення</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab4" name="tab-control">
+                                            <label for="tab4" role="button"><span>Адміністративне
+                                                    правопорушення</span></label>
+                                            <div class="slider" id="slider4">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab5" name="tab-control">
-                                        <label for="tab5" role="button"><span>Кримінальне право</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab5" name="tab-control">
+                                            <label for="tab5" role="button"><span>Кримінальне право</span></label>
+                                            <div class="slider" id="slider5">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab6" name="tab-control">
-                                        <label for="tab6" role="button"><span>Господарське право</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab6" name="tab-control">
+                                            <label for="tab6" role="button"><span>Господарське право</span></label>
+                                            <div class="slider" id="slider6">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab7" name="tab-control">
-                                        <label for="tab7" role="button"><span>Земельні питання</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab7" name="tab-control">
+                                            <label for="tab7" role="button"><span>Земельні питання</span></label>
+                                            <div class="slider" id="slider7">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab8" name="tab-control">
-                                        <label for="tab8" role="button"><span>Трудове право</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab8" name="tab-control">
+                                            <label for="tab8" role="button"><span>Трудове право</span></label>
+                                            <div class="slider" id="slider8">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <input type="radio" id="tab9" name="tab-control">
-                                        <label for="tab9" role="button"><span>Відшкодування шкоди</span></label>
+                                        <div class="slider-wrapper">
+                                            <input type="radio" id="tab9" name="tab-control">
+                                            <label for="tab9" role="button"><span>Відшкодування шкоди</span></label>
+                                            <div class="slider" id="slider9">
+                                                <div class="indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Add Arrows -->
@@ -1451,20 +1495,21 @@
         }
 
         const OnServiceRadioClick = () => {
-            let tabs = [];
             for (let i = 1; i <= 9; i++) {
-                tabs.push(document.getElementById('tab' + i));
-            }
-
-            tabs.forEach(tab => {
+                let tab = document.getElementById('tab' + i);
                 tab.addEventListener("click", (option) => {
                     let content = document.querySelectorAll(`[data-show='true']`);
+                    let sliders=document.querySelectorAll('.slider');
 
                     if (content) {
                         content.forEach((value) => {
                             value.setAttribute("data-show", "false");
                             value.style.hidden = true;
                             value.style.display = 'none';
+                        });
+                        
+                        sliders.forEach(slider=>{
+                            slider.style.display = "none";
                         });
                     }
 
@@ -1474,9 +1519,12 @@
                         targetData.style.hidden = false;
                         targetData.style.display = "block";
                         document.getElementById(option.target.id).setAttribute("data-show", "true");
+
+                        let slider = document.getElementById('slider' + i);
+                        slider.style.display = "block";
                     }
                 })
-            })
+            }
         }
 
         window.onload = () => {
