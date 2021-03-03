@@ -413,7 +413,7 @@ header {
             }
 
             &__menu-desktop {
-                display: none;
+                display: block;
             }
         }
 
@@ -1941,6 +1941,18 @@ input {
         }
     }
 
+    @media @tablet {
+        &{
+            height: auto;
+        }
+    }
+
+    @media @desktop{
+        & {
+            height: auto;
+        }
+    }
+
     @media @ultraDesktop {
 
         & .swiper-button-prev,
@@ -1949,18 +1961,6 @@ input {
         }
     }
 }
-
-
-// @media @mobile {
-//     #map {
-//         width      : 100%;
-//         // height  : 50vh;
-//         position   : absolute;
-//         left       : 0;
-//         right      : 0;
-//         order:1;
-//     }
-// }
 
 .contacts {
 
@@ -2122,20 +2122,23 @@ input {
 
 .contact {
     & {
-        // padding         : 60px 0 25px 0;
+        color: @text-color-primary;
     }
 
     &__body {
         display: flex;
+        z-index: 0;
+        width: 100%;
+        padding: 60px 0 0 0;
         color: @text-color-primary;
     }
 
     &__header {
-        padding: 60px 0 30px 0;
+        padding: 0 0 30px 0;
     }
 
     &__content {
-        height: 55vh;
+        height: 50vh;
 
         & .adress {
             padding: 20px 0 20px 0;
@@ -2147,24 +2150,54 @@ input {
             color: #2324A9;
             font-weight: 600;
         }
+        
+        & .adress-link:hover{
+            color: @link-hover;
+        }
     }
 
     &__map {
-        height: 45vh;
+        &{
+            padding: 0 40px 0 0;
+        }
 
         #map {
-            width: 100%;
-            height: 45vh;
+            width: 45vw;
+            height: 70vh;
         }
 
         @media @mobile {
+            & {
+                order: 2;
+                padding: 0;
+            }
             #map {
                 width: 100%;
+                height: 50vh;
                 position: absolute;
                 left: 0;
                 right: 0;
             }
         }
+
+        @media @desktop {
+            &{
+                padding: 0 30px 0 0;
+            }
+            #map {
+                width: 45vw;
+                height: 70vh;
+            }
+        }
+    }
+
+    &__footer{
+        display: flex;
+        padding-top: 30px;
+    }
+
+    &__footer-info{
+        padding: 0 0 0 30px;
     }
 
     @media @mobile {
@@ -2179,6 +2212,7 @@ input {
         &__body {
             color: @text-color-primary;
             height: 100vh;
+            padding:0;
             flex-direction: column;
         }
 
@@ -2195,15 +2229,21 @@ input {
             }
         }
 
-        &__map {
-            order: 2;
+        &__footer{
+            display: none;
         }
 
     }
 
-    @media @tablet {}
+    @media @tablet {
+        & .adress-link {
+            font-size: 26px;
+        }
 
-    @media @desktop {}
+        &__footer{
+            display: none;
+        }
+    }
 }
 
 

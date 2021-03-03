@@ -277,7 +277,7 @@ header .hero__menu-desktop {
     display: none;
   }
   header .hero__menu-desktop {
-    display: none;
+    display: block;
   }
 }
 @media (min-width: 1400px) and (max-width: 1920px) {
@@ -1488,6 +1488,16 @@ input:focus {
     display: none;
   }
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .news {
+    height: auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .news {
+    height: auto;
+  }
+}
 @media (min-width: 1400px) and (max-width: 1920px) {
   .news .swiper-button-prev,
   .news .swiper-button-next {
@@ -1613,15 +1623,21 @@ input:focus {
     padding-right: 50px;
   }
 }
+.contact {
+  color: #002E64;
+}
 .contact__body {
   display: flex;
+  z-index: 0;
+  width: 100%;
+  padding: 60px 0 0 0;
   color: #002E64;
 }
 .contact__header {
-  padding: 60px 0 30px 0;
+  padding: 0 0 30px 0;
 }
 .contact__content {
-  height: 55vh;
+  height: 50vh;
 }
 .contact__content .adress {
   padding: 20px 0 20px 0;
@@ -1632,20 +1648,44 @@ input:focus {
   color: #2324A9;
   font-weight: 600;
 }
+.contact__content .adress-link:hover {
+  color: #F5D481;
+}
 .contact__map {
-  height: 45vh;
+  padding: 0 40px 0 0;
 }
 .contact__map #map {
-  width: 100%;
-  height: 45vh;
+  width: 45vw;
+  height: 70vh;
 }
 @media (max-width: 767.98px) {
+  .contact__map {
+    order: 2;
+    padding: 0;
+  }
   .contact__map #map {
     width: 100%;
+    height: 50vh;
     position: absolute;
     left: 0;
     right: 0;
   }
+}
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .contact__map {
+    padding: 0 30px 0 0;
+  }
+  .contact__map #map {
+    width: 45vw;
+    height: 70vh;
+  }
+}
+.contact__footer {
+  display: flex;
+  padding-top: 30px;
+}
+.contact__footer-info {
+  padding: 0 0 0 30px;
 }
 @media (max-width: 767.98px) {
   .contact__header {
@@ -1654,6 +1694,7 @@ input:focus {
   .contact__body {
     color: #002E64;
     height: 100vh;
+    padding: 0;
     flex-direction: column;
   }
   .contact__content .adress {
@@ -1665,8 +1706,16 @@ input:focus {
     color: #2324A9;
     font-weight: 600;
   }
-  .contact__map {
-    order: 2;
+  .contact__footer {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact .adress-link {
+    font-size: 26px;
+  }
+  .contact__footer {
+    display: none;
   }
 }
 .social-icon {
