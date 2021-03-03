@@ -74,7 +74,7 @@ body {
   }
   .subtext {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 130%;
   }
 }
@@ -1621,7 +1621,7 @@ input:focus {
   padding: 60px 0 30px 0;
 }
 .contact__content {
-  height: 50vh;
+  height: 55vh;
 }
 .contact__content .adress {
   padding: 20px 0 20px 0;
@@ -1633,7 +1633,7 @@ input:focus {
   font-weight: 600;
 }
 .contact__map {
-  height: 50vh;
+  height: 45vh;
 }
 .contact__map #map {
   width: 100%;
@@ -1660,7 +1660,7 @@ input:focus {
     padding: 10px 0 10px 0;
   }
   .contact__content .adress-link {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 44px;
     color: #2324A9;
     font-weight: 600;
