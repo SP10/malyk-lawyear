@@ -384,8 +384,7 @@
                             <select name="" id="service-select">
                                 <option value="Сімейне право" name="service-control" selected>Сімейне право</option>
                                 <option value="Цивільне право" name="service-control">Цивільне право</option>
-                                <option value="Адміністративне право" name="service-control">Адміністративне
-                                    право
+                                <option value="Адміністративне право" name="service-control">Адміністративне право
                                 </option>
                                 <option value="Адміністративне правопорушення" name="service-control">Адміністративне
                                     правопорушення</option>
@@ -395,6 +394,79 @@
                                 <option value="Трудове право" name="service-control">Трудове право</option>
                                 <option value="Відшкодування шкоди" name="service-control">Відшкодування шкоди</option>
                             </select>
+                        </div>
+                        <div class="wrapper-desktop">
+                            <input type="radio" id="tab1" name="tab-control" checked>
+                            <input type="radio" id="tab2" name="tab-control">
+                            <input type="radio" id="tab3" name="tab-control">
+                            <input type="radio" id="tab4" name="tab-control">
+                            <input type="radio" id="tab5" name="tab-control">
+                            <input type="radio" id="tab6" name="tab-control">
+                            <input type="radio" id="tab7" name="tab-control">
+                            <input type="radio" id="tab8" name="tab-control">
+                            <input type="radio" id="tab9" name="tab-control">
+                            <div class="swiper-container-tabs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <label for="tab1" role="button"><span>Сімейне право</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab2" role="button"><span>Цивільне право</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab3" role="button"><span>Адміністративне право</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab4" role="button"><span>Адміністративне
+                                                правопорушення</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab5" role="button"><span>Кримінальне
+                                                право</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab6" role="button"><span>Господарське
+                                                право</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab7" role="button"><span>Земельні питання</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab8" role="button"><span>Трудове
+                                                право</span></label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <label for="tab9" role="button"><span>Відшкодування
+                                                шкоди</span></label>
+                                    </div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <!-- <ul>
+                                <li title="Сімейне право"><label for="tab1" role="button"><span>Сімейне
+                                            право</span></label></li>
+                                <li title="Цивільне право"><label for="tab2" role="button"><span>Цивільне
+                                            право</span></label></li>
+                                <li title="Адміністративне право"><label for="tab3" role="button"><span>Адміністративне
+                                            право</span></label></li>
+                                <li title="Адміністративне правопорушення"><label for="tab4" role="button"><span>Адміністративне правопорушення</span></label></li>
+                                <li title="Кримінальне право"><label for="tab5" role="button"><span>Кримінальне
+                                            право</span></label></li>
+                                <li title="Господарське право"><label for="tab6" role="button"><span>Господарське
+                                            право</span></label></li>
+                                <li title="Земельні питання"><label for="tab7" role="button"><span>Земельні
+                                            питання</span></label></li>
+                                <li title="Трудове право"><label for="tab8" role="button"><span>Трудове
+                                            право</span></label></li>
+                                <li title="Відшкодування шкоди"><label for="tab9" role="button"><span>Відшкодування
+                                            шкоди</span></label></li>
+                            </ul> -->
+
+                            <div class="slider">
+                                <div class="indicator"></div>
+                            </div>
                         </div>
                         <div class="content">
                             <section data-service="Сімейне право" data-show="false">
@@ -1134,6 +1206,34 @@
                 1600: {
                     slidesPerView: 3,
                     spaceBetween: 20,
+                }
+            }
+        });
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container-tabs', {
+            watchSlidesVisibility: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                1400: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+
+                1600: {
+                    slidesPerView: 5,
+                    spaceBetween: 15,
+                },
+                1600: {
+                    slidesPerView: 6,
+                    spaceBetween: 15,
                 }
             }
         });
