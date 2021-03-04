@@ -1772,11 +1772,11 @@ input:focus {
 }
 .tabs .swiper-button-prev {
   left: 40px;
-  top: 40%;
+  top: 50%;
 }
 .tabs .swiper-button-next {
   right: 40px;
-  top: 40%;
+  top: 50%;
 }
 .tabs input[name="tab-control"] {
   display: none;
