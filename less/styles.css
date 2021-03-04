@@ -174,7 +174,7 @@ body {
 }
 .hero__cover {
   height: 100vh;
-  background-position: left bottom;
+  background-position: right bottom;
   background-image: url(../assets/hero-crop.png);
   background-repeat: no-repeat;
   width: 100%;
@@ -214,7 +214,6 @@ body {
   display: flex;
   height: 80vh;
   align-items: center;
-  justify-content: flex-end;
 }
 .hero__content {
   max-width: 800px;

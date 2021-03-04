@@ -401,7 +401,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab1" name="tab-control" checked>
-                                            <label for="tab1" role="button"><h3>Сімейне право</h3></label>
+                                            <label for="tab1" role="button">
+                                                <h3>Сімейне право</h3>
+                                            </label>
                                             <div class="slider" id="slidertab1" style="display: block;">
                                                 <div class="indicator"></div>
                                             </div>
@@ -410,7 +412,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab2" name="tab-control">
-                                            <label for="tab2" role="button"><h3>Цивільне право</h3></label>
+                                            <label for="tab2" role="button">
+                                                <h3>Цивільне право</h3>
+                                            </label>
                                             <div class="slider" id="slidertab2">
                                                 <div class="indicator"></div>
                                             </div>
@@ -419,7 +423,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab3" name="tab-control">
-                                            <label for="tab3" role="button"><h3>Адміністративне право</h3></label>
+                                            <label for="tab3" role="button">
+                                                <h3>Адміністративне право</h3>
+                                            </label>
                                             <div class="slider" id="slidertab3">
                                                 <div class="indicator"></div>
                                             </div>
@@ -428,8 +434,10 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab4" name="tab-control">
-                                            <label for="tab4" role="button"><h3>Адміністративне
-                                                    правопорушення</h3></label>
+                                            <label for="tab4" role="button">
+                                                <h3>Адміністративне
+                                                    правопорушення</h3>
+                                            </label>
                                             <div class="slider" id="slidertab4">
                                                 <div class="indicator"></div>
                                             </div>
@@ -438,7 +446,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab5" name="tab-control">
-                                            <label for="tab5" role="button"><h3>Кримінальне право</h3></label>
+                                            <label for="tab5" role="button">
+                                                <h3>Кримінальне право</h3>
+                                            </label>
                                             <div class="slider" id="slidertab5">
                                                 <div class="indicator"></div>
                                             </div>
@@ -447,7 +457,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab6" name="tab-control">
-                                            <label for="tab6" role="button"><h3>Господарське право</h3></label>
+                                            <label for="tab6" role="button">
+                                                <h3>Господарське право</h3>
+                                            </label>
                                             <div class="slider" id="slidertab6">
                                                 <div class="indicator"></div>
                                             </div>
@@ -456,7 +468,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab7" name="tab-control">
-                                            <label for="tab7" role="button"><h3>Земельні питання</h3></label>
+                                            <label for="tab7" role="button">
+                                                <h3>Земельні питання</h3>
+                                            </label>
                                             <div class="slider" id="slidertab7">
                                                 <div class="indicator"></div>
                                             </div>
@@ -465,7 +479,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab8" name="tab-control">
-                                            <label for="tab8" role="button"><h3>Трудове право</h3></label>
+                                            <label for="tab8" role="button">
+                                                <h3>Трудове право</h3>
+                                            </label>
                                             <div class="slider" id="slidertab8">
                                                 <div class="indicator"></div>
                                             </div>
@@ -474,7 +490,9 @@
                                     <div class="swiper-slide">
                                         <div class="slider-wrapper">
                                             <input type="radio" id="tab9" name="tab-control">
-                                            <label for="tab9" role="button"><h3>Відшкодування шкоди</h3></label>
+                                            <label for="tab9" role="button">
+                                                <h3>Відшкодування шкоди</h3>
+                                            </label>
                                             <div class="slider" id="slidertab9">
                                                 <div class="indicator"></div>
                                             </div>
@@ -1191,6 +1209,11 @@
         var swiper = new Swiper('.swiper-container', {
             watchSlidesProgress: true,
             watchSlidesVisibility: true,
+            // loop: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
