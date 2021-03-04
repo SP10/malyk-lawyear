@@ -1,0 +1,93 @@
+@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+
+@font-primary       : 'Montserrat';
+@font-secondary     : 'Montserrat Alternates';
+@text-color-primary : #002E64;
+
+body {
+    font-family: @font-primary;
+}
+
+
+
+h2 {
+    font-size  : 24px;
+    font-weight: bolder;
+    color      : @text-color-primary;
+}
+
+h3 {
+    font-size  : 20px;
+    font-weight: bolder;
+    color      : @text-color-primary;
+}
+
+.lower-ukrainian {
+    list-style-type: none;
+}
+
+.lower-ukrainian li:before {
+    display     : inline-block;
+    margin-left : -1.5em;
+    margin-right: .55em;
+    text-align  : right;
+    width       : .95em;
+}
+
+.lower-ukrainian li:first-child:before {
+    content: "а)";
+}
+
+.lower-ukrainian li:nth-child(2):before {
+    content: "б)";
+}
+
+.lower-ukrainian li:nth-child(3):before {
+    content: "в)";
+}
+
+.lower-ukrainian li:nth-child(4):before {
+    content: "г)";
+}
+
+.lower-ukrainian li:nth-child(5):before {
+    content: "д)";
+}
+
+.lower-ukrainian li:nth-child(6):before {
+    content: "є)";
+}
+
+
+.text {
+    color    : @text-color-primary;
+    font-size: 18px;
+}
+
+.text-bold {
+    color      : @text-color-primary;
+    font-weight: bold;
+    font-size  : 24px;
+}
+
+.text-sign {
+    font-size  : 20px;
+    font-weight: bolder;
+    color      : @text-color-primary;
+    font-family: @font-secondary;
+}
+
+.new {
+
+    &__wrapper {
+        padding: 0 500px;
+    }
+
+    &__body {}
+
+    &__header {}
+
+    &__footer {
+        text-align: right;
+    }
+}
