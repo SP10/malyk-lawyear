@@ -1007,14 +1007,14 @@ input:focus {
   background-color: #F5F5F5;
 }
 .about__cover {
-  background-position: 85% bottom;
+  background-position: 15% bottom;
   background-image: url(../assets/malyk.png);
   background-repeat: no-repeat;
   width: 100%;
-  -webkit-background-size: auto 95vh;
-  -moz-background-size: auto 95vh;
-  -o-background-size: auto 95vh;
-  background-size: auto 95vh;
+  -webkit-background-size: auto 90vh;
+  -moz-background-size: auto 90vh;
+  -o-background-size: auto 90vh;
+  background-size: auto 90vh;
   vertical-align: middle;
   background-attachment: fixed;
   position: relative;
@@ -1061,7 +1061,7 @@ input:focus {
 }
 @media (min-width: 992px) and (max-width: 1399.98px) {
   .about__cover {
-    background-position: 80% bottom;
+    background-position: 15% bottom;
     -webkit-background-size: auto 85vh;
     -moz-background-size: auto 85vh;
     -o-background-size: auto 85vh;
@@ -1081,6 +1081,7 @@ input:focus {
 }
 #about-desktop {
   display: block;
+  padding-left: 52%;
 }
 #about-tablet {
   display: none;
@@ -1845,7 +1846,14 @@ input:focus {
   border-radius: 1px;
 }
 .tabs .content {
-  margin-top: 30px;
+  margin-top: 60px;
+  padding: 0px 100px 0 100px;
+}
+@media (max-width: 767.98px) {
+  .tabs .content {
+    margin-top: 30px;
+    padding: 10px;
+  }
 }
 .tabs .content section {
   display: none;
@@ -1974,9 +1982,6 @@ input:focus {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
   }
-}
-.tabs .content {
-  margin-top: 30px;
 }
 .tabs .content section {
   display: none;

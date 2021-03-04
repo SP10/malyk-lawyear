@@ -1312,14 +1312,14 @@ input {
 
     &__cover {
         // height: 100vh;
-        background-position: 85% bottom;
+        background-position: 15% bottom;  //background-position: 85% bottom;   
         background-image: url(../assets/malyk.png);
         background-repeat: no-repeat;
         width: 100%;
-        -webkit-background-size: auto 95vh;
-        -moz-background-size: auto 95vh;
-        -o-background-size: auto 95vh;
-        background-size: auto 95vh;
+        -webkit-background-size: auto 90vh;
+        -moz-background-size: auto 90vh;
+        -o-background-size: auto 90vh;
+        background-size: auto 90vh;
         vertical-align: middle;
         background-attachment: fixed;
         position: relative;
@@ -1382,7 +1382,7 @@ input {
 
     @media @desktop {
         &__cover {
-            background-position: 80% bottom;
+            background-position: 15% bottom;   // background-position: 80% bottom;
             -webkit-background-size: auto 85vh;
             -moz-background-size: auto 85vh;
             -o-background-size: auto 85vh;
@@ -1408,6 +1408,7 @@ input {
 
 #about-desktop {
     display: block;
+    padding-left: 52%;
 }
 
 #about-tablet {
@@ -2404,7 +2405,15 @@ input {
 }
 
 .tabs .content {
-    margin-top: 30px;
+    margin-top: 60px;
+    padding: 0px 100px 0 100px;
+}
+
+@media @mobile{
+    .tabs .content {
+        margin-top: 30px;
+        padding: 10px;
+    }
 }
 
 .tabs .content section {
@@ -2563,10 +2572,6 @@ input {
         /* On small screens, we are no longer using row direction but column */
         flex-direction: column;
     }
-}
-
-.tabs .content {
-    margin-top: 30px;
 }
 
 .tabs .content section {
