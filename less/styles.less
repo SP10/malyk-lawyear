@@ -4,6 +4,7 @@
 
 @text-color-primary : #002E64;
 @text-color-secondary: #ffffff;
+@link: #2324A9;
 @link-hover : #F5D481;
 @font-primary : 'Montserrat',
 sans-serif;
@@ -73,6 +74,11 @@ h6 {
     font-family: @font-secondary;
     font-size: 24px;
     line-height: 130%;
+}
+
+a {
+    color: @link;
+    font-weight: 600;
 }
 
 a:hover {
@@ -206,6 +212,10 @@ body {
     .text {
         font-size: 18px;
         line-height: 130%;
+    }
+
+    .subtext {
+        font-size: 18px;
     }
 }
 
@@ -1962,164 +1972,6 @@ input {
         }
     }
 }
-
-.contacts {
-
-    &__body {
-        color: @text-color-primary;
-        padding: 60px 0 25px 0;
-    }
-
-    &__header {
-        padding-bottom: 40px;
-    }
-
-    &__content {
-        // padding: 40px 0 0 0;
-        z-index: 0;
-        width: 100%;
-        display: flex;
-        // justify-content: space-between; // space-around;
-        // flex-wrap: wrap;
-    }
-
-    &__Административные дела {
-        width: 46vw;
-        padding-right: 70px;
-    }
-
-    &__info {}
-
-    &__column {
-        flex: 0 0 50%;
-        padding: 0 50px 0 0;
-    }
-
-    &__email {
-        padding-top: 20px;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2324A9;
-        font-weight: 600;
-    }
-
-    &__telephone {
-        padding-top: 10px;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2324A9;
-        font-weight: 600;
-    }
-
-    &__address {
-        padding-top: 20px;
-    }
-
-    &__address text {
-        font-size: 24px;
-        font-weight: 100;
-    }
-
-
-    &__footer {
-        display: flex;
-        flex-direction: row;
-        padding-top: 20px;
-    }
-
-    @media @mobile {
-
-        &__body {
-            color: @text-color-primary;
-            padding: 30px 0 25px 0;
-        }
-
-        &__content {
-            // padding: 40px 0 0 0;
-            z-index: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between; // space-around;
-            flex-wrap: wrap;
-        }
-
-        &__header {
-            padding-bottom: 30px;
-        }
-
-        &__map {
-            padding-top: 30px;
-            width: 100vw;
-            padding-right: 0;
-            order: 2;
-        }
-
-        &__info {
-            order: 1;
-        }
-
-        &__email {
-            padding-top: 20px;
-            font-size: 24px;
-            color: #2324A9;
-            font-weight: bold;
-        }
-
-        &__telephone {
-            padding-top: 0px;
-            font-size: 24px;
-            color: #2324A9;
-            font-weight: bold;
-        }
-
-        &__footer {
-            display: flex;
-            flex-direction: column;
-            padding-top: 20px;
-            display: none;
-        }
-
-
-        &__address text {
-            font-size: 18px;
-            font-weight: 100;
-        }
-
-    }
-
-    @media @tablet {
-        &__email {
-            font-size: 24px;
-        }
-
-        &__telephone {
-            font-size: 24px;
-            padding-top: 0px;
-        }
-
-        &__map {
-            width: 48vw;
-            padding-right: 45px;
-        }
-    }
-
-    @media @desktop {
-        &__email {
-            font-size: 32px;
-        }
-
-        &__telephone {
-            font-size: 32px;
-            padding-top: 0px;
-        }
-
-        &__map {
-            width: 54vw;
-            padding-right: 50px;
-        }
-    }
-}
-
 
 .contact {
     & {

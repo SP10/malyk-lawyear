@@ -39,6 +39,10 @@ h6 {
   font-size: 24px;
   line-height: 130%;
 }
+a {
+  color: #2324A9;
+  font-weight: 600;
+}
 a:hover {
   color: #F5D481;
 }
@@ -140,6 +144,9 @@ body {
   .text {
     font-size: 18px;
     line-height: 130%;
+  }
+  .subtext {
+    font-size: 18px;
   }
 }
 .wrapper {
@@ -1502,125 +1509,6 @@ input:focus {
   .news .swiper-button-prev,
   .news .swiper-button-next {
     display: none;
-  }
-}
-.contacts__body {
-  color: #002E64;
-  padding: 60px 0 25px 0;
-}
-.contacts__header {
-  padding-bottom: 40px;
-}
-.contacts__content {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-}
-.contacts__Административные дела {
-  width: 46vw;
-  padding-right: 70px;
-}
-.contacts__column {
-  flex: 0 0 50%;
-  padding: 0 50px 0 0;
-}
-.contacts__email {
-  padding-top: 20px;
-  font-size: 36px;
-  line-height: 44px;
-  color: #2324A9;
-  font-weight: 600;
-}
-.contacts__telephone {
-  padding-top: 10px;
-  font-size: 36px;
-  line-height: 44px;
-  color: #2324A9;
-  font-weight: 600;
-}
-.contacts__address {
-  padding-top: 20px;
-}
-.contacts__address text {
-  font-size: 24px;
-  font-weight: 100;
-}
-.contacts__footer {
-  display: flex;
-  flex-direction: row;
-  padding-top: 20px;
-}
-@media (max-width: 767.98px) {
-  .contacts__body {
-    color: #002E64;
-    padding: 30px 0 25px 0;
-  }
-  .contacts__content {
-    z-index: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .contacts__header {
-    padding-bottom: 30px;
-  }
-  .contacts__map {
-    padding-top: 30px;
-    width: 100vw;
-    padding-right: 0;
-    order: 2;
-  }
-  .contacts__info {
-    order: 1;
-  }
-  .contacts__email {
-    padding-top: 20px;
-    font-size: 24px;
-    color: #2324A9;
-    font-weight: bold;
-  }
-  .contacts__telephone {
-    padding-top: 0px;
-    font-size: 24px;
-    color: #2324A9;
-    font-weight: bold;
-  }
-  .contacts__footer {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    display: none;
-  }
-  .contacts__address text {
-    font-size: 18px;
-    font-weight: 100;
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .contacts__email {
-    font-size: 24px;
-  }
-  .contacts__telephone {
-    font-size: 24px;
-    padding-top: 0px;
-  }
-  .contacts__map {
-    width: 48vw;
-    padding-right: 45px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1399.98px) {
-  .contacts__email {
-    font-size: 32px;
-  }
-  .contacts__telephone {
-    font-size: 32px;
-    padding-top: 0px;
-  }
-  .contacts__map {
-    width: 54vw;
-    padding-right: 50px;
   }
 }
 .contact {

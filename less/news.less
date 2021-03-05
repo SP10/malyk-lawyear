@@ -1,37 +1,35 @@
 @import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+@import url('./styles.less');
 
-@font-primary       : 'Montserrat';
-@font-secondary     : 'Montserrat Alternates';
-@text-color-primary : #002E64;
+header {
+    &{
+        padding: 25px 40px 80px 40px;
+    }
+    
+    & nav> ul li .menu__link {
+        color: @text-color-primary;
+    }
+    & nav> ul li .menu__list {
+        color: @text-color-primary;
+    }
 
-body {
-    font-family: @font-primary;
+    & div> .menu__link {
+        color: @text-color-primary;
+    }
 }
 
 
-
-h2 {
-    font-size  : 24px;
-    font-weight: bolder;
-    color      : @text-color-primary;
-}
-
-h3 {
-    font-size  : 20px;
-    font-weight: bolder;
-    color      : @text-color-primary;
-}
 
 .lower-ukrainian {
     list-style-type: none;
 }
 
 .lower-ukrainian li:before {
-    display     : inline-block;
-    margin-left : -1.5em;
+    display: inline-block;
+    margin-left: -1.5em;
     margin-right: .55em;
-    text-align  : right;
-    width       : .95em;
+    text-align: right;
+    width: .95em;
 }
 
 .lower-ukrainian li:first-child:before {
@@ -59,35 +57,57 @@ h3 {
 }
 
 
-.text {
-    color    : @text-color-primary;
-    font-size: 18px;
-}
-
-.text-bold {
-    color      : @text-color-primary;
-    font-weight: bold;
-    font-size  : 24px;
-}
-
-.text-sign {
-    font-size  : 20px;
-    font-weight: bolder;
-    color      : @text-color-primary;
-    font-family: @font-secondary;
-}
-
 .new {
 
     &__wrapper {
+        color: @text-color-primary;
+    }
+
+    &__body {
         padding: 0 500px;
     }
 
-    &__body {}
-
     &__header {}
+
+    &__date {
+        & {
+            padding: 15px 0 20px 0;
+        }
+
+        & span {
+            font-size: 12px;
+            color: #b2b2b2;
+        }
+    }
+
+    &__content {}
 
     &__footer {
         text-align: right;
+        padding-top: 50px;
+    }
+
+    @media @mobile {
+        &__wrapper {}
+
+        &__body {
+            padding: 0 20px;
+        }
+    }
+
+    @media @tablet {
+        &__wrapper {}
+
+        &__body {
+            padding: 0 126px;
+        }
+    }
+
+    @media @desktop {
+        &__wrapper {}
+
+        &__body {
+            padding: 25px 300px;
+        }
     }
 }
