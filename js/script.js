@@ -1,89 +1,131 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     let burger = document.querySelector('.burger-menu');
-//     let header = document.querySelector('header');
-//     window.addEventListener('onscroll', function() {
-//         burger.hidden = (pageYOffset < header.clientHeight);
-//         console.log(pageYOffset);
-//     });
-// });
 
-// Initialize and add the map
-function initMap() {
-    var map = L.map('map').setView([49.2352, 28.4702], 16);
-    var icon = L.icon({
-        iconUrl: './assets/marker.svg',
-        iconSize: [88, 91.03], // size of the icon
-        //  iconAnchor: [-10, 60], // point of the icon which will correspond to marker's location
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    L.marker([49.2352, 28.4702], { icon: icon }).addTo(map);
-}
-
-function openMenu() {
-    let html = document.querySelector('html');
-    let overlay = document.querySelector('.overlay');
-    let sidemenu = document.querySelector('.side-menu');
-    html.classList.add('overflow');
-    overlay.classList.add('overlay-show');
-    sidemenu.classList.add('side-menu-show');
-}
-
-function closeMenu() {
-    let html = document.querySelector('html');
-    let overlay = document.querySelector('.overlay');
-    let sidemenu = document.querySelector('.side-menu');
-    html.classList.remove('overflow');
-    overlay.classList.remove('overlay-show');
-    sidemenu.classList.remove('side-menu-show');
-}
-
-function initScroll() {
+const onScroll = () => {
     let burger = document.querySelector('.burger-menu');
     let header = document.querySelector('header');
-    window.addEventListener('scroll', function() {
-        burger.hidden = (pageYOffset < header.clientHeight);
-        console.log(pageYOffset);
+    let wrapper = document.querySelector('.wrapper');
+
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth > 1399.98) {
+            if (pageYOffset > header.clientHeight) {
+                burger.hidden = false;
+                burger.style.display = 'block';
+            } else {
+                burger.style.display = 'none';
+            }
+        } else if (window.innerWidth >= 575 && window.innerWidth <= 1399.98) {
+            if (window.innerWidth > 991 && window.innerWidth <= 1399.98) {
+                if (pageYOffset > header.clientHeight) {
+                    burger.hidden = false;
+                    burger.style.display = 'block';
+                } else {
+                    burger.style.display = 'none';
+                }
+            } else {
+                burger.hidden = false;
+                burger.style.display = 'block';
+            }
+        }
+
+    }, false);
+}
+
+const OnBurgerClick = () => {
+    let burger = document.querySelector('.burger-menu');
+    burger.addEventListener('click', () => {
+        let html = document.querySelector('html');
+        let overlay = document.querySelector('.overlay');
+        let sidemenu = document.querySelector('.side-menu');
+        html.classList.add('overflow');
+        overlay.classList.add('overlay-bg');
+        sidemenu.classList.add('side-menu__show');
+    }, false);
+}
+
+const OnSideMenuClose = () => {
+    let html = document.querySelector('html');
+    let overlay = document.querySelector('.overlay');
+    let sidemenu = document.querySelector('.side-menu');
+    let closeBtn = document.getElementById('side-menu-close-btn');
+    closeBtn.addEventListener('click', () => {
+        html.classList.remove('overflow');
+        overlay.classList.remove('overlay-bg');
+        sidemenu.classList.remove('side-menu__show');
+    }, false);
+}
+
+const OnMenuItemClick = () => {
+    let html = document.querySelector('html');
+    let item = document.querySelectorAll('.menu__link');
+    let subitem = document.querySelectorAll('.menu-list__item');
+    let overlay = document.querySelector('.overlay');
+    let sidemenu = document.querySelector('.side-menu');
+    item.forEach(value => {
+        value.addEventListener('click', () => {
+            if (html.classList.contains('overflow')) html.classList.remove('overflow');
+            if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+            if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
+        }, false)
+    });
+    subitem.forEach(value => {
+        value.addEventListener('click', () => {
+            if (html.classList.contains('overflow')) html.classList.remove('overflow');
+            if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+            if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
+        }, false)
     });
 }
 
-function closeOverlay() {
-    var elements = document.querySelectorAll('#menu-side > ul >li >a');
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener("click", function() {
-            closeMenu();
-        });
+const OnOverlayClick = () => {
+    let html = document.querySelector('html');
+    let overlay = document.querySelector('.overlay');
+    let sidemenu = document.querySelector('.side-menu');
+    overlay.addEventListener('click', () => {
+        html.classList.remove('overflow');
+        overlay.classList.remove('overlay-bg');
+        sidemenu.classList.remove('side-menu__show');
+        CloseFeedBackForm();
+    }, false);
+}
+
+
+
+const resize = () => {
+    let maxMobileSize = 688;
+    let about = document.querySelector(".about");
+    let aboutmobile = document.querySelector(".about-mobile");
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= maxMobileSize) {
+
+        } else {
+
+        }
+    });
+}
+
+const onInit = () => {
+    let maxMobileSize = 688;
+    let maxTabletSize = 1024;
+    let header = document.querySelector('header');
+    let burger = document.querySelector('.burger-menu');
+
+    if (pageYOffset > header.clientHeight) {
+        burger.hidden = false;
+        burger.classList.add('burger-menu__show');
+        // if (window.innerWidth <= maxTabletSize) {
+        //     burger.classList.add('burger-menu__show');
+        // }
+
+    } else {
+        burger.classList.remove('burger-menu__show');
     }
-    var elements = document.querySelectorAll('#menu-side > ul > li > ul > li > a');
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener("click", function() {
-            closeMenu();
-        });
-    }
 }
 
-function showFeedBackForm() {
-    let overlay = document.getElementsByClassName("overlay")[0];
-    overlay.classList.add('overlay-bg');
-    let feedback = document.getElementsByClassName("feedback")[0];
-    feedback.classList.add('feedback-bg');
-}
-
-function closeFeedbackForm() {
-    let overlay = document.getElementsByClassName("overlay")[0];
-    overlay.classList.remove('overlay-bg');
-    let feedback = document.getElementsByClassName("feedback")[0];
-    feedback.classList.remove('feedback-bg');
-}
-
-function send() {
-    let bot = TelegramBot;
-    let feedbackForm = document.getElementById('feedbackForm');
-    let message = `
-    *${feedbackForm.children.name.value}*\n${feedbackForm.children.phoneNumber.value}`;
-    bot.sendMessage(message);
-    closeFeedbackForm();
+window.onload = () => {
+    onInit();
+    resize();
+    onScroll();
+    OnBurgerClick();
+    OnSideMenuClose();
+    OnMenuItemClick();
+    OnOverlayClick();
 }

@@ -1,47 +1,48 @@
 @import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
 @import url('./styles.less');
 
-.burger-menu{
+.burger-menu {
     display: block;
 }
 
 header {
-    &{
+    & {
         padding: 25px 40px 80px 40px;
     }
 
-    & nav> ul li .menu__link {
-        color: @text-color-primary;
-    }
-    & nav> ul li .menu__list {
+    & nav>ul li .menu__link {
         color: @text-color-primary;
     }
 
-    & div> .menu__link {
+    & nav>ul li .menu__list {
+        color: @text-color-primary;
+    }
+
+    & div>.menu__link {
         color: @text-color-primary;
     }
 
     @media @mobile {
-        &{
+        & {
             justify-content: center;
         }
     }
 
     @media @tablet {
-        &{
+        & {
             justify-content: center;
         }
     }
 }
 
-@media @tablet{
-    nav{
+@media @tablet {
+    nav {
         display: none;
     }
 }
 
-@media @desktop{
-    .burger-menu{
+@media @desktop {
+    .burger-menu {
         display: none;
     }
 }
@@ -52,11 +53,11 @@ header {
 }
 
 .lower-ukrainian li:before {
-    display: inline-block;
-    margin-left: -1.5em;
+    display     : inline-block;
+    margin-left : -1.5em;
     margin-right: .55em;
-    text-align: right;
-    width: .95em;
+    text-align  : right;
+    width       : .95em;
 }
 
 .lower-ukrainian li:first-child:before {
@@ -83,8 +84,61 @@ header {
     content: "є)";
 }
 
-@media @mobile{
-    ul{
+.decimal-list {
+    list-style-type: decimal;
+}
+
+.underline--wave {
+    text-decoration         : red wavy underline;
+    text-decoration-skip-ink: none;
+}
+
+.underline--dotted {
+    border-bottom           : 3px @text-color-primary dashed;
+    text-decoration-skip-ink: none;
+}
+
+.tooltip {
+    position     : relative;
+    /* making the .tooltip span a container for the tooltip text */
+    border-bottom: 1px dashed @text-color-primary;
+    /* little indicater to indicate it's hoverable */
+    cursor: grab;
+}
+
+.tooltip:hover:before {
+    display:block;
+  }
+
+.tooltip:before {
+    content : attr(data-text);
+    /* here's the magic */
+    position: absolute;
+
+    /* vertically center */
+    top      : 50%;
+    transform: translateY(-50%);
+
+    /* move to right */
+    left       : 100%;
+    margin-left: 20px;
+    /* and add a small left margin */
+
+    /* basic styles */
+    width        : 350px;
+    padding      : 30px;
+    border-radius: 10px;
+    background   : #fff;
+    color        : @text-color-primary;
+    text-align   : center;
+font-size: 15px;
+
+    display: none;
+    /* hide by default */
+}
+
+@media @mobile {
+    ul {
         padding-left: 22px;
     }
 }
@@ -108,7 +162,7 @@ header {
 
         & span {
             font-size: 12px;
-            color: #b2b2b2;
+            color    : #b2b2b2;
         }
     }
 
@@ -116,7 +170,7 @@ header {
 
     &__footer {
         text-align: right;
-        padding: 35px 0 65px 0;
+        padding   : 35px 0 65px 0;
     }
 
     @media @mobile {

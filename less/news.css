@@ -2015,6 +2015,49 @@ header div > .menu__link {
 .lower-ukrainian li:nth-child(6):before {
   content: "є)";
 }
+.decimal-list {
+  list-style-type: decimal;
+}
+.underline--wave {
+  text-decoration: red wavy underline;
+  text-decoration-skip-ink: none;
+}
+.underline--dotted {
+  border-bottom: 3px #002E64 dashed;
+  text-decoration-skip-ink: none;
+}
+.tooltip {
+  position: relative;
+  /* making the .tooltip span a container for the tooltip text */
+  border-bottom: 1px dashed #002E64;
+  /* little indicater to indicate it's hoverable */
+  cursor: grab;
+}
+.tooltip:hover:before {
+  display: block;
+}
+.tooltip:before {
+  content: attr(data-text);
+  /* here's the magic */
+  position: absolute;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%);
+  /* move to right */
+  left: 100%;
+  margin-left: 20px;
+  /* and add a small left margin */
+  /* basic styles */
+  width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  color: #002E64;
+  text-align: center;
+  font-size: 15px;
+  display: none;
+  /* hide by default */
+}
 @media (max-width: 767.98px) {
   ul {
     padding-left: 22px;
