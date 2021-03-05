@@ -2015,6 +2015,11 @@ header div > .menu__link {
 .lower-ukrainian li:nth-child(6):before {
   content: "є)";
 }
+@media (max-width: 767.98px) {
+  ul {
+    padding-left: 22px;
+  }
+}
 .new__wrapper {
   color: #002E64;
 }
