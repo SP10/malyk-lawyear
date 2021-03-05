@@ -21,9 +21,97 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
+    <div class="burger-menu">
+        <div class="burger-menu__circle">
+            <div class="burger-menu__burger">
+                <span></span>
+                <span class="burger-menu__p-10"></span>
+                <span class="burger-menu__p-20"></span>
+            </div>
+        </div>
+    </div>
+    <div class="side-menu">
+        <a href="#" class="close-button" id="side-menu-close-btn">
+            <img src="../../../assets/close-icon.svg">
+        </a>
+        <div class="side-menu__container">
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="/">Головна</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#about">Біографія</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#service">Послуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class='menu__list' href='/#'>Вартість послуг</a>
+                        <ul class='menu-list'>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#analysis">Аналіз справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrativeOff">Адміністративні правопорушення</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#criminal">Кримінальні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#civil">Цивільні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#family">Сімейні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrative">Адміністративні справи</a>
+                            </li>
+                            <li class="menu-list__item last-item">
+                                <a class="menu-list__link" href="/#business">Господарські справи</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#benefits">Переваги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#news">Новини</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#contacts">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="side-menu__footer">
+            <div class="side-menu__language">
+                <a href="/" class="side-menu__ua">українська мова</a>
+                <a href="/ru/" class="side-menu__ru">русский язык</a>
+            </div>
+            <div class="side-menu__social set row">
+                <a class="social-icon" href="tg://resolve?domain=lawyermalyk">
+                    <img src="../../../assets/telegram.svg" alt="telegram icon">
+                </a>
+
+                <a class="social-icon" href="viber://chat/?number=380961097608">
+                    <img src="../../../assets/viber.svg" alt="viber icon">
+                </a>
+
+                <a class="social-icon" href="https://www.facebook.com/lawyer.malyk/">
+                    <img src="../../../assets/facebook.svg" alt="facebook icon">
+                </a>
+                <a class="social-icon" href="https://www.instagram.com/lawyer.malyk/">
+                    <img src="../../../assets/instagram.svg" alt="instagram icon">
+                </a>
+            </div>
+            <h6>© 2021 Малик Олександр</h6>
+        </div>
+    </div>
     <main class="new__wrapper">
         <header>
-            <div><a class="menu__link" href="/">Головна</a></div>
+            <div id="home"><a class="menu__link" href="/">Головна</a></div>
             <nav>
                 <ul class="menu">
                     <li class="menu__item">
@@ -140,6 +228,139 @@
             </div>
         </section>
     </main>
+
+    <script>
+        const onScroll = () => {
+            let burger = document.querySelector('.burger-menu');
+            let header = document.querySelector('header');
+            let wrapper = document.querySelector('.wrapper');
+
+            window.addEventListener('scroll', () => {
+                if (window.innerWidth > 1399.98) {
+                    if (pageYOffset > header.clientHeight) {
+                        burger.hidden = false;
+                        burger.style.display = 'block';
+                    } else {
+                        burger.style.display = 'none';
+                    }
+                } else if (window.innerWidth >= 575 && window.innerWidth <= 1399.98) {
+                    if (window.innerWidth > 991 && window.innerWidth <= 1399.98) {
+                        if (pageYOffset > header.clientHeight) {
+                            burger.hidden = false;
+                            burger.style.display = 'block';
+                        } else {
+                            burger.style.display = 'none';
+                        }
+                    } else {
+                        burger.hidden = false;
+                        burger.style.display = 'block';
+                    }
+                }
+
+            }, false);
+        }
+
+        const OnBurgerClick = () => {
+            let burger = document.querySelector('.burger-menu');
+            burger.addEventListener('click', () => {
+                let html = document.querySelector('html');
+                let overlay = document.querySelector('.overlay');
+                let sidemenu = document.querySelector('.side-menu');
+                html.classList.add('overflow');
+                overlay.classList.add('overlay-bg');
+                sidemenu.classList.add('side-menu__show');
+            }, false);
+        }
+
+        const OnSideMenuClose = () => {
+            let html = document.querySelector('html');
+            let overlay = document.querySelector('.overlay');
+            let sidemenu = document.querySelector('.side-menu');
+            let closeBtn = document.getElementById('side-menu-close-btn');
+            closeBtn.addEventListener('click', () => {
+                html.classList.remove('overflow');
+                overlay.classList.remove('overlay-bg');
+                sidemenu.classList.remove('side-menu__show');
+            }, false);
+        }
+
+        const OnMenuItemClick = () => {
+            let html = document.querySelector('html');
+            let item = document.querySelectorAll('.menu__link');
+            let subitem = document.querySelectorAll('.menu-list__item');
+            let overlay = document.querySelector('.overlay');
+            let sidemenu = document.querySelector('.side-menu');
+            item.forEach(value => {
+                value.addEventListener('click', () => {
+                    if (html.classList.contains('overflow')) html.classList.remove('overflow');
+                    if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+                    if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
+                }, false)
+            });
+            subitem.forEach(value => {
+                value.addEventListener('click', () => {
+                    if (html.classList.contains('overflow')) html.classList.remove('overflow');
+                    if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+                    if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
+                }, false)
+            });
+        }
+
+        const OnOverlayClick = () => {
+            let html = document.querySelector('html');
+            let overlay = document.querySelector('.overlay');
+            let sidemenu = document.querySelector('.side-menu');
+            overlay.addEventListener('click', () => {
+                html.classList.remove('overflow');
+                overlay.classList.remove('overlay-bg');
+                sidemenu.classList.remove('side-menu__show');
+                CloseFeedBackForm();
+            }, false);
+        }
+
+
+
+        const resize = () => {
+            let maxMobileSize = 688;
+            let about = document.querySelector(".about");
+            let aboutmobile = document.querySelector(".about-mobile");
+            window.addEventListener('resize', () => {
+                if (window.innerWidth <= maxMobileSize) {
+
+                } else {
+
+                }
+            });
+        }
+
+        const onInit = () => {
+            let maxMobileSize = 688;
+            let maxTabletSize = 1024;
+            let header = document.querySelector('header');
+            let burger = document.querySelector('.burger-menu');
+
+            if (pageYOffset > header.clientHeight) {
+                burger.hidden = false;
+                burger.classList.add('burger-menu__show');
+                // if (window.innerWidth <= maxTabletSize) {
+                //     burger.classList.add('burger-menu__show');
+                // }
+
+            } else {
+                burger.classList.remove('burger-menu__show');
+            }
+        }
+
+        window.onload = () => {
+            onInit();
+            resize();
+            onScroll();
+            OnBurgerClick();
+            OnSideMenuClose();
+            OnMenuItemClick();
+            OnOverlayClick();
+        }
+    </script>
 </body>
 
 </html>

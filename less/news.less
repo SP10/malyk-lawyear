@@ -1,11 +1,15 @@
 @import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
 @import url('./styles.less');
 
+.burger-menu{
+    display: block;
+}
+
 header {
     &{
         padding: 25px 40px 80px 40px;
     }
-    
+
     & nav> ul li .menu__link {
         color: @text-color-primary;
     }
@@ -16,8 +20,31 @@ header {
     & div> .menu__link {
         color: @text-color-primary;
     }
+
+    @media @mobile {
+        &{
+            justify-content: center;
+        }
+    }
+
+    @media @tablet {
+        &{
+            justify-content: center;
+        }
+    }
 }
 
+@media @tablet{
+    nav{
+        display: none;
+    }
+}
+
+@media @desktop{
+    .burger-menu{
+        display: none;
+    }
+}
 
 
 .lower-ukrainian {
@@ -84,7 +111,7 @@ header {
 
     &__footer {
         text-align: right;
-        padding-top: 50px;
+        padding: 35px 0 65px 0;
     }
 
     @media @mobile {

@@ -1952,6 +1952,9 @@ input:focus {
   bottom: 1px;
   pointer-events: none;
 }
+.burger-menu {
+  display: block;
+}
 header {
   padding: 25px 40px 80px 40px;
 }
@@ -1963,6 +1966,26 @@ header nav > ul li .menu__list {
 }
 header div > .menu__link {
   color: #002E64;
+}
+@media (max-width: 767.98px) {
+  header {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  nav {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .burger-menu {
+    display: none;
+  }
 }
 .lower-ukrainian {
   list-style-type: none;
@@ -2007,7 +2030,7 @@ header div > .menu__link {
 }
 .new__footer {
   text-align: right;
-  padding-top: 50px;
+  padding: 35px 0 65px 0;
 }
 @media (max-width: 767.98px) {
   .new__body {
