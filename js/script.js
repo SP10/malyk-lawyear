@@ -1,4 +1,3 @@
-
 const onScroll = () => {
     let burger = document.querySelector('.burger-menu');
     let header = document.querySelector('header');
