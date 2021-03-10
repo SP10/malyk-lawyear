@@ -103,12 +103,12 @@ header {
     /* making the .tooltip span a container for the tooltip text */
     border-bottom: 1px dashed @text-color-primary;
     /* little indicater to indicate it's hoverable */
-    cursor: grab;
+    cursor       : grab;
 }
 
 .tooltip:hover:before {
-    display:block;
-  }
+    display: block;
+}
 
 .tooltip:before {
     content : attr(data-text);
@@ -131,7 +131,7 @@ header {
     background   : #fff;
     color        : @text-color-primary;
     text-align   : center;
-font-size: 15px;
+    font-size    : 15px;
 
     display: none;
     /* hide by default */
@@ -150,7 +150,8 @@ font-size: 15px;
     }
 
     &__body {
-        padding: 0 500px;
+        max-width: 850px;
+        margin: 0 auto;
     }
 
     &__header {}
@@ -193,7 +194,7 @@ font-size: 15px;
         &__wrapper {}
 
         &__body {
-            padding: 25px 300px;
+            // padding: 25px 300px;
         }
     }
 }

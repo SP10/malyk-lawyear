@@ -2067,7 +2067,8 @@ header div > .menu__link {
   color: #002E64;
 }
 .new__body {
-  padding: 0 500px;
+  max-width: 850px;
+  margin: 0 auto;
 }
 .new__date {
   padding: 15px 0 20px 0;
@@ -2088,10 +2089,5 @@ header div > .menu__link {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .new__body {
     padding: 0 126px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1399.98px) {
-  .new__body {
-    padding: 25px 300px;
   }
 }
