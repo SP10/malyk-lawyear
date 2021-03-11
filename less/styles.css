@@ -1119,7 +1119,7 @@ input:focus {
 }
 @media (max-width: 767.98px) {
   .service {
-    height: 100vh;
+    height: auto;
   }
   .service__body {
     color: #002E64;
