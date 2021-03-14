@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="ua">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="https://www.malyk.com.ua/service/family/rozirvannia-shliubu/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Розірвання шлюбу" />
+    <meta property="og:description" content="" />
+    <link rel="canonical" href="https://www.malyk.com.ua/service/family/rozirvannia-shliubu/">
+    <title>Розірвання шлюбу | Послуга</title>
+
+    <link href="../../../css/normalize.css" rel="stylesheet">
+    <link href="../../../less/service.css" rel="stylesheet">
+    <script async src="../../../js/script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="burger-menu">
+        <div class="burger-menu__circle">
+            <div class="burger-menu__burger">
+                <span></span>
+                <span class="burger-menu__p-10"></span>
+                <span class="burger-menu__p-20"></span>
+            </div>
+        </div>
+    </div>
+    <div class="side-menu">
+        <a href="#" class="close-button" id="side-menu-close-btn">
+            <img src="../../../assets/close-icon.svg">
+        </a>
+        <div class="side-menu__container">
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="/">Головна</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#about">Біографія</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#service">Послуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class='menu__list' href='/#'>Вартість послуг</a>
+                        <ul class='menu-list'>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#analysis">Аналіз справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrativeOff">Адміністративні правопорушення</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#criminal">Кримінальні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#civil">Цивільні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#family">Сімейні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrative">Адміністративні справи</a>
+                            </li>
+                            <li class="menu-list__item last-item">
+                                <a class="menu-list__link" href="/#business">Господарські справи</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#benefits">Переваги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#news">Новини</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#contacts">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="side-menu__footer">
+            <div class="side-menu__language">
+                <a href="/" class="side-menu__ua">українська мова</a>
+                <a href="/ru/" class="side-menu__ru">русский язык</a>
+            </div>
+            <div class="side-menu__social set row">
+                <a class="social-icon" href="tg://resolve?domain=lawyermalyk">
+                    <img src="../../../assets/telegram.svg" alt="telegram icon">
+                </a>
+
+                <a class="social-icon" href="viber://chat/?number=380961097608">
+                    <img src="../../../assets/viber.svg" alt="viber icon">
+                </a>
+
+                <a class="social-icon" href="https://www.facebook.com/lawyer.malyk/">
+                    <img src="../../../assets/facebook.svg" alt="facebook icon">
+                </a>
+                <a class="social-icon" href="https://www.instagram.com/lawyer.malyk/">
+                    <img src="../../../assets/instagram.svg" alt="instagram icon">
+                </a>
+            </div>
+            <h6>© 2021 Малик Олександр</h6>
+        </div>
+    </div>
+    <main class="service__wrapper">
+        <header>
+            <div id="home"><a class="menu__link" href="/">Головна</a></div>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#service">Послуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class='menu__list' href='/#'>Вартість послуг</a>
+                        <ul class='menu-list'>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#analysis">Аналіз справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrativeOff">Адміністративні
+                                    правопорушення</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#criminal">Кримінальні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#civil">Цивільні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#family">Сімейні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrative">Адміністративні справи</a>
+                            </li>
+                            <li class="menu-list__item last-item">
+                                <a class="menu-list__link" href="/#business">Господарські справи</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#benefits">Переваги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#news">Новини</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#contacts">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <section class="article__body">
+                <div class="article__header">
+                    <h2>Розірвання шлюбу</h2>
+                </div>
+                <div class="article__content">
+                    <div class="text">
+                        <p>Припинення шлюбу є юридичним фактом, з якого виникають важливі правові наслідки. У випадку припинення шлюбу припиняються особисті та майнові правовідносини подружжя.</p>
+                        <p>Відповідно до <a href="https://zakon.rada.gov.ua/laws/show/2947-14#n507">статті 104 Сімейного
+                                кодексу України</a>, шлюб може бути припинено в результаті його розірвання, яке здійснюється за ініціативою одного з подружжя або за спільною заявою подружжя, а також унаслідок смерті одного з подружжя або оголошення його
+                            померлим. </p>
+                        <p>З урахуванням обставин, що склалися в сім’ї, розірвання шлюбу може здійснюватися: державним органом реєстрації актів цивільного стану або в судовому порядку. Будь-хто з подружжя може подати до суду позов про розірвання шлюбу.</p>
+                        <p>Якщо у Вас є неповнолітні діти або ж згода на розлучення є лише в однієї сторони, то розлучення буде здійснюватися тільки судом. Для розлучення через суд необхідно підготувати подати позовну заяву про розірвання шлюбу.
+                            <p>Сімейний юрист допоможе Вам правильно оформити документи, належним чином завірити їх, сплатити судовий збір, аби уникнути повернення вашого позову або залишення його без руху.
+                            </p>
+                    </div>
+                </div>
+                <div class="article__footer">
+
+                </div>
+            </section>
+            <section class="sidebar">
+                <div class="column">
+                    <a href="/news/2021/sho-neobxidno-znaty-pro-rozirvannya-shlyubu/">
+                        <div class="new__card">
+                            <h3>Що необхідно знати про розірвання шлюбу</h3>
+                            <div class="row new__info">
+                                <span class="new__publication-date">05.02.2021</span>
+                                <span class="new__author"><a href="/#about">Олександр Малик</a></span>
+                            </div>
+                            <div class="text">
+                                Припинення шлюбу є юридичним фактом, з якого виникають важливі правові наслідки...
+                            </div>
+                        </div>
+                    </a>
+                    <br>
+                    <a href="/news/2021/podil-majna-sho-neobxidno-znaty/">
+                        <div class="new__card">
+                            <h3>Поділ майна – що необхідно знати?</h3>
+                            <div class="row new__info">
+                                <span class="new__publication-date">09.01.2021</span>
+                                <span class="new__author"><a href="/#about">Олександр Малик</a></span>
+                            </div>
+                            <div class="text">
+                                Під час розірвання шлюбу в подружжя виникає питання щодо поділу спільного майна, що набуте у шлюбі...
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="any-question">
+            <h3>Якщо у вас є якісь запитання, будь ласка, не соромтеся зв'яжіться зі мною</h3>
+        </div>
+        <div class="footer">
+            <div id="map"></div>
+            <div class="contact-card-wrapper">
+                <div class="contact-card">
+                    <div class="contact-content">
+                        <h3>Малик Олександр Володимирович</h3>
+                        <div class="subtext">адвокат</div>
+                        <br>
+                        <div class="column">
+                            <a class="adress-link" href="mailto:lawyermalyk@gmail.com">lawyermalyk@gmail.com</a>
+                            <a class="adress-link" href="tel:+380961097608">+38 096 109-76-08</a>
+                        </div>
+                        <br>
+                        <div class="column">
+                            <span class="text">вул. Миколи Оводова (Козицького), 29а</span>
+                            <span class="text">м. Вінниця, 21050</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        var map = L.map('map', {
+            scrollWheelZoom: false
+        }).setView([49.2352, 28.4702], 16);
+        var icon = L.icon({
+            iconUrl: '../../../assets/marker.svg',
+            iconSize: [88, 91.03], // size of the icon
+            //  iconAnchor: [-10, 60], // point of the icon which will correspond to marker's location
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([49.2352, 28.4702], {
+            icon: icon
+        }).addTo(map);
+    </script>
+</body>
+
+</html>

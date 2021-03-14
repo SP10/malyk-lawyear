@@ -1,0 +1,136 @@
+@import (css)
+  url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap");
+@import url("./news.less");
+
+.service {
+  &__wrapper {
+    color: @text-color-primary;
+  }
+}
+
+.article {
+  &__body {
+    width: 50vw;
+  }
+
+  &__footer {
+    text-align: right;
+    padding: 35px 0 65px 0;
+  }
+
+  @media @mobile {
+    &__body {
+      padding: 0 20px;
+    }
+  }
+
+  @media @tablet {
+    &__body {
+      padding: 0 126px;
+    }
+  }
+
+  @media @desktop {
+    &__body {
+      width: 50vw;
+    }
+  }
+}
+
+.sidebar {
+  width: 32vw;
+}
+
+.new {
+  &__card {
+    background-color: #fff;
+    padding: 35px;
+    height: 215px;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  &__card:hover {
+    // box-shadow: 0px 4px 4px rgb(253 182 89 / 15%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+  &__info {
+    padding: 10px 0px 20px 0px;
+  }
+
+  &__publication-date {
+    padding: 10px 20px 10px 0px;
+    font-size: 12px;
+    color: #b2b2b2;
+  }
+
+  &__author {
+    padding: 10px 20px 10px 0px;
+    font-size: 12px;
+  }
+
+  &__card a {
+    text-decoration: none;
+  }
+}
+
+.container {
+  z-index: 0;
+  display: flex;
+  justify-content: space-between; // space-around;
+  flex-wrap: wrap;
+}
+
+.any-question{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 20px 0px;
+}
+
+.any-question h3{
+   font-size: 24px;
+}
+
+.footer {
+  & {
+    position: relative;
+    height: 100vh;
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-card-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 10% 0 0 10%;
+    max-width: 400px;
+    z-index: 6000000000;
+  }
+
+  .contact-card {
+    position: absolute;
+    background: white;
+    min-height: 300px;
+    padding: 60px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .adress-link {
+    font-size: 22px;
+    line-height: 30px;
+    color: #2324a9;
+    font-weight: 600;
+  }
+
+  .adress-link:hover {
+    color: @link-hover;
+  }
+}
