@@ -368,6 +368,9 @@ header .menu__list:hover {
 header .menu__item:hover .menu-list {
   display: block;
 }
+header .menu__item .menu-list__item:hover .menu-list-nested {
+  display: block;
+}
 @media (min-width: 992px) and (max-width: 1399.98px) {
   header .menu__link {
     font-size: 18px;
@@ -378,7 +381,6 @@ header .menu__item:hover .menu-list {
 }
 header .menu-list {
   height: auto;
-  overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px;
@@ -888,7 +890,6 @@ header .hero__language .language__title:hover {
 }
 .side-menu .menu-list {
   height: auto;
-  overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px;
@@ -949,6 +950,43 @@ header .hero__language .language__title:hover {
   .side-menu__ru {
     font-size: 15px;
   }
+}
+.menu-list-nested {
+  display: none;
+  z-index: 60000000001;
+  position: absolute;
+  top: 0;
+  left: 79%;
+  border-radius: 25px;
+  height: auto;
+  width: 250px;
+  background: #2324a9;
+  padding: 45px;
+}
+.menu-list-nested__item {
+  display: block;
+  padding: 0 0 15px 0;
+  width: 100%;
+}
+.menu-list-nested__item.last-item {
+  padding: 0;
+}
+.menu-list-nested__link {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.menu-list-nested__link:hover {
+  color: #F5D481;
+}
+.menu-list-nested__item:hover {
+  display: block;
 }
 @media (max-width: 767.98px) {
   .side-menu {
