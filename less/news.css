@@ -82,6 +82,9 @@ body {
     font-size: 15px;
     line-height: 130%;
   }
+  a:hover {
+    color: #fff;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   h1 {
@@ -366,6 +369,9 @@ header .menu__list:hover {
 header .menu__item:hover .menu-list {
   display: block;
 }
+header .menu__item .menu-list__item:hover .menu-list-nested {
+  display: block;
+}
 @media (min-width: 992px) and (max-width: 1399.98px) {
   header .menu__link {
     font-size: 18px;
@@ -376,7 +382,6 @@ header .menu__item:hover .menu-list {
 }
 header .menu-list {
   height: auto;
-  overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px;
@@ -690,7 +695,7 @@ header .hero__language .language__title:hover {
 }
 .burger-menu__burger {
   width: 28px;
-  height: 19px;
+  height: 18px;
   z-index: 999;
   position: absolute;
   top: 50%;
@@ -720,10 +725,10 @@ header .hero__language .language__title:hover {
   background-color: #fff;
 }
 .burger-menu__p-10 {
-  top: 10px;
+  top: 8px;
 }
 .burger-menu__p-20 {
-  top: 20px;
+  top: 16px;
 }
 @media (max-width: 767.98px) {
   .burger-menu {
@@ -886,7 +891,6 @@ header .hero__language .language__title:hover {
 }
 .side-menu .menu-list {
   height: auto;
-  overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px;
@@ -947,6 +951,43 @@ header .hero__language .language__title:hover {
   .side-menu__ru {
     font-size: 15px;
   }
+}
+.menu-list-nested {
+  display: none;
+  z-index: 60000000001;
+  position: absolute;
+  top: 0;
+  left: 79%;
+  border-radius: 25px;
+  height: auto;
+  width: 250px;
+  background: #2324a9;
+  padding: 45px;
+}
+.menu-list-nested__item {
+  display: block;
+  padding: 0 0 15px 0;
+  width: 100%;
+}
+.menu-list-nested__item.last-item {
+  padding: 0;
+}
+.menu-list-nested__link {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.menu-list-nested__link:hover {
+  color: #F5D481;
+}
+.menu-list-nested__item:hover {
+  display: block;
 }
 @media (max-width: 767.98px) {
   .side-menu {
@@ -1120,7 +1161,7 @@ input:focus {
 }
 @media (max-width: 767.98px) {
   .service {
-    height: 100vh;
+    height: auto;
   }
   .service__body {
     color: #002E64;
@@ -1955,25 +1996,25 @@ input:focus {
 .burger-menu {
   display: block;
 }
-header {
+.header {
   padding: 25px 40px 80px 40px;
 }
-header nav > ul li .menu__link {
+.header nav > ul li .menu__link {
   color: #002E64;
 }
-header nav > ul li .menu__list {
+.header nav > ul li .menu__list {
   color: #002E64;
 }
-header div > .menu__link {
+.header div > .menu__link {
   color: #002E64;
 }
 @media (max-width: 767.98px) {
-  header {
+  .header {
     justify-content: center;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  header {
+  .header {
     justify-content: center;
   }
 }
