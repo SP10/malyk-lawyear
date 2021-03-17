@@ -2144,7 +2144,7 @@ input:focus {
 @media (max-width: 767.98px) {
   .article__body {
     width: 100vw;
-    padding: 0 20px;
+    padding-right: 0px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -2176,6 +2176,8 @@ input:focus {
   transition: 0.3s;
   border-radius: 5px;
   margin: 0 0 20px 0;
+  background-color: #EBAB08;
+  border-radius: 25px;
 }
 .new__card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -2235,7 +2237,6 @@ input:focus {
   }
   .sidebar {
     width: 100vw;
-    padding: 0 20px;
   }
   .any-question {
     padding: 20px 20px;
@@ -2327,6 +2328,12 @@ input:focus {
   }
   .footer #map {
     height: 50vh;
+  }
+  .footer .adress-link {
+    font-size: 18px;
+    line-height: 30px;
+    color: #2324a9;
+    font-weight: 600;
   }
   .footer .contact-card {
     position: relative;

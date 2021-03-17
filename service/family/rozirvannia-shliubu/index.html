@@ -217,7 +217,7 @@
                 </div>
             </article>
             <section class="sidebar">
-                <header class="section-title">
+                <!-- <header class="section-title">
                     <h3>Публікації</h3>
                 </header>
                 <div class="items">
@@ -243,6 +243,43 @@
                         <div class="text">
                             Під час розірвання шлюбу в подружжя виникає питання щодо поділу спільного майна, що набуте у шлюбі...
                         </div>
+                    </div>
+                </div> -->
+
+                <div class="publication">
+                    <h3>Публікації</h3>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="new__card">
+                                    <a href="/news/2021/sho-neobxidno-znaty-pro-rozirvannya-shlyubu/" class="new__card-link"></a>
+                                    <h5>Що необхідно знати про розірвання шлюбу</h5>
+                                    <div class="row new__info">
+                                        <span class="new__publication-date">05.02.2021</span>
+                                        <span class="new__author">Олександр Малик</span>
+                                    </div>
+                                    <div class="text">
+                                        Припинення шлюбу є юридичним фактом, з якого виникають важливі правові наслідки...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="new__card">
+                                    <a href="/news/2021/podil-majna-sho-neobxidno-znaty/" class="new__card-link"></a>
+                                    <h5>Поділ майна – що необхідно знати?</h5>
+                                    <div class="row new__info">
+                                        <span class="new__publication-date">09.01.2021</span>
+                                        <span class="new__author">Олександр Малик</span>
+                                    </div>
+                                    <div class="text">
+                                        Під час розірвання шлюбу в подружжя виникає питання щодо поділу спільного майна, що набуте у шлюбі...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
@@ -291,6 +328,49 @@
             icon: icon
         }).addTo(map);
     </script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        // loop: true,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 5,
+            },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1400: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+
+            1600: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1600: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        }
+    });
+</script>
 </body>
 
 </html>
