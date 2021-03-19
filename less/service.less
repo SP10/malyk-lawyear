@@ -42,13 +42,39 @@
 }
 
 .sidebar {
-  width: 30vw;
+  &__ {
+    width: 30vw;
+  }
+
+  & .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  & .swiper-slide {
+    // text-align: center;
+    // font-size: 18px;
+    /* Center slide text vertically */
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
 }
 
 .items {
   z-index: 0;
   display: flex;
-  justify-content: space-around;;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -61,7 +87,7 @@
     transition: 0.3s;
     border-radius: 5px;
     margin: 0 0 20px 0;
-    background-color: #EBAB08;
+    background-color: #ebab08;
     border-radius: 25px;
   }
 
@@ -102,7 +128,7 @@
 
   @media @mobile {
     &__card {
-      max-width: 360px;
+      max-width: 280px;
       height: auto;
     }
   }
@@ -140,7 +166,7 @@
     width: 100vw;
   }
 
-  .any-question{
+  .any-question {
     padding: 20px 20px;
   }
 }
@@ -160,7 +186,7 @@
     padding: 0 126px;
   }
 
-  .any-question{
+  .any-question {
     padding: 60px 126px;
   }
 }
@@ -177,19 +203,19 @@
     width: 100vw;
   }
 
-  .any-question{
+  .any-question {
     padding: 60px 126px;
   }
 }
 
-@media @ultraDesktop{
-  .any-question{
+@media @ultraDesktop {
+  .any-question {
     padding: 40px 126px;
   }
 }
 
-.section-title{
-  color:#EBAB08 ;
+.section-title {
+  color: #ebab08;
 }
 
 .any-question {
@@ -243,7 +269,7 @@
   }
 
   @media @mobile {
-    &{
+    & {
       display: flex;
       flex-direction: column-reverse;
     }
@@ -261,7 +287,7 @@
 
     .contact-card {
       position: relative;
-      background:none;
+      background: none;
       padding: 0px;
       box-sizing: border-box;
       width: 100%;

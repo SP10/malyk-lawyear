@@ -20,6 +20,7 @@
     <link href="../../../less/service.css" rel="stylesheet">
     <script async src="../../../js/script.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -329,48 +330,48 @@
         }).addTo(map);
     </script>
 
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        // loop: true,
-        autoplay: {
-            delay: 6000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            // loop: true,
+            // autoplay: {
+            //     delay: 6000,
+            //     disableOnInteraction: false,
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 5,
-            },
-            992: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            1400: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1400: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
 
-            1600: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-            },
-            1600: {
-                slidesPerView: 3,
-                spaceBetween: 20,
+                1600: {
+                    slidesPerView: 5,
+                    spaceBetween: 40,
+                },
+                1600: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                }
             }
-        }
-    });
-</script>
+        });
+    </script>
 </body>
 
 </html>
