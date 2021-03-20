@@ -2151,6 +2151,9 @@ input:focus {
     width: 100vw;
     padding-right: 0px;
   }
+  .article__content > .image {
+    float: none;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .article__body {
