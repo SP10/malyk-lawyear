@@ -2363,6 +2363,7 @@ input:focus {
     padding: 0px;
     box-sizing: border-box;
     width: 100%;
+    min-height: auto;
   }
   .footer .contact-card-wrapper {
     position: absolute;
