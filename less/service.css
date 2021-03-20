@@ -2137,6 +2137,11 @@ input:focus {
   width: 50vw;
   padding-right: 45px;
 }
+.article__content > .image {
+  float: left;
+  width: 180px;
+  padding: 20px 60px 20px 20px;
+}
 .article__footer {
   text-align: right;
   padding: 0px 0 35px 0;
@@ -2158,6 +2163,9 @@ input:focus {
     width: 100vw;
     padding-right: 0px;
   }
+}
+header .hero__phone .phone__number {
+  color: #2324A9;
 }
 .sidebar {
   width: 30vw;
