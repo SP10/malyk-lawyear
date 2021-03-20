@@ -42,7 +42,7 @@
 }
 
 .sidebar {
-  &__ {
+  & {
     width: 30vw;
   }
 
@@ -69,6 +69,14 @@
     -webkit-align-items: center;
     align-items: center;
   }
+
+  & .publication {
+    display: block;
+  }
+
+  & .publication-mobile {
+    display: none;
+  }
 }
 
 .items {
@@ -87,7 +95,7 @@
     transition: 0.3s;
     border-radius: 5px;
     margin: 0 0 35px 0;
-    background-color: #ebab08;
+    background-color:#fff ;
     border-radius: 25px;
   }
 
@@ -130,12 +138,13 @@
     &__card {
       // max-width: 280px;
       // height: auto;
+      background-color: #ebab08;
     }
 
     &__publication-date {
       color: #fff;
     }
-  
+
     &__author {
       color: #fff;
     }
@@ -144,12 +153,30 @@
   @media @tablet {
     &__card {
       max-width: 360px;
+      background-color: #ebab08;
+    }
+
+    &__publication-date {
+      color: #fff;
+    }
+
+    &__author {
+      color: #fff;
     }
   }
 
   @media @desktop {
     &__card {
       max-width: 360px;
+      background-color: #ebab08;
+    }
+
+    &__publication-date {
+      color: #fff;
+    }
+
+    &__author {
+      color: #fff;
     }
   }
 }
@@ -172,6 +199,14 @@
 
   .sidebar {
     width: 100%;
+
+    & .publication {
+      display: none;
+    }
+
+    & .publication-mobile {
+      display: block;
+    }
   }
 
   .any-question {
@@ -301,7 +336,7 @@
       width: 100%;
       min-height: auto;
     }
-    .contact-card-wrapper{
+    .contact-card-wrapper {
       position: absolute;
       left: 0;
       right: 0;
@@ -309,6 +344,5 @@
       margin: 0;
       padding: 20px;
     }
-    
   }
 }

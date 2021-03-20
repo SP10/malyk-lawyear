@@ -29,7 +29,7 @@ h6 {
   font-size: 14px;
 }
 .text {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 130%;
 }
 .note-sign {
@@ -2159,7 +2159,7 @@ input:focus {
     padding-right: 0px;
   }
 }
-.sidebar__ {
+.sidebar {
   width: 30vw;
 }
 .sidebar .swiper-container {
@@ -2182,6 +2182,12 @@ input:focus {
   -webkit-align-items: center;
   align-items: center;
 }
+.sidebar .publication {
+  display: block;
+}
+.sidebar .publication-mobile {
+  display: none;
+}
 .items {
   z-index: 0;
   display: flex;
@@ -2190,13 +2196,12 @@ input:focus {
 }
 .new__card {
   position: relative;
-  background-color: #fff;
   padding: 35px;
   height: 190px;
   transition: 0.3s;
   border-radius: 5px;
   margin: 0 0 35px 0;
-  background-color: #ebab08;
+  background-color: #fff;
   border-radius: 25px;
 }
 .new__card:hover {
@@ -2228,6 +2233,9 @@ input:focus {
   text-decoration: none;
 }
 @media (max-width: 767.98px) {
+  .new__card {
+    background-color: #ebab08;
+  }
   .new__publication-date {
     color: #fff;
   }
@@ -2238,11 +2246,25 @@ input:focus {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .new__card {
     max-width: 360px;
+    background-color: #ebab08;
+  }
+  .new__publication-date {
+    color: #fff;
+  }
+  .new__author {
+    color: #fff;
   }
 }
 @media (min-width: 992px) and (max-width: 1399.98px) {
   .new__card {
     max-width: 360px;
+    background-color: #ebab08;
+  }
+  .new__publication-date {
+    color: #fff;
+  }
+  .new__author {
+    color: #fff;
   }
 }
 .container {
@@ -2259,6 +2281,12 @@ input:focus {
   }
   .sidebar {
     width: 100%;
+  }
+  .sidebar .publication {
+    display: none;
+  }
+  .sidebar .publication-mobile {
+    display: block;
   }
   .any-question {
     padding: 20px 20px;
