@@ -16,7 +16,7 @@
 
   &__footer {
     text-align: right;
-    padding: 35px 0 35px 0;
+    padding: 0px 0 35px 0;
   }
 
   @media @mobile {
@@ -83,10 +83,10 @@
     position: relative;
     background-color: #fff;
     padding: 35px;
-    height: 180px;
+    height: 190px;
     transition: 0.3s;
     border-radius: 5px;
-    margin: 0 0 20px 0;
+    margin: 0 0 35px 0;
     background-color: #ebab08;
     border-radius: 25px;
   }
@@ -128,8 +128,16 @@
 
   @media @mobile {
     &__card {
-      max-width: 280px;
-      height: auto;
+      // max-width: 280px;
+      // height: auto;
+    }
+
+    &__publication-date {
+      color: #fff;
+    }
+  
+    &__author {
+      color: #fff;
     }
   }
 
@@ -163,7 +171,7 @@
   }
 
   .sidebar {
-    width: 100vw;
+    width: 100%;
   }
 
   .any-question {
@@ -292,5 +300,14 @@
       box-sizing: border-box;
       width: 100%;
     }
+    .contact-card-wrapper{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0;
+      padding: 20px;
+    }
+    
   }
 }
