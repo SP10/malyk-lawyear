@@ -580,6 +580,27 @@ header {
             color: @link-hover;
         }
 
+        &__nested {
+            font-family: @font-primary;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 130%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #002E64;
+        }
+
+        &__nested::after {
+            content: "\25BE";
+            margin-left: 5px;
+        }
+
+        &__nested:hover {
+            color: @link-hover;
+        }
+
         @media @mobile {
             &__link {
                 font-size: 15px;
@@ -600,6 +621,57 @@ header {
             }
         }
     }
+
+    & .menu-list-nested{
+        &{
+            display: none;
+            z-index: 60000000001;
+            position: absolute;
+            top: 0;
+            left: 79%;
+            border-radius: 25px;
+            height: auto;
+            width: 250px;
+            background: #2324a9;
+            padding: 45px;
+        }
+
+        &::after {
+            content: "\25BE";
+            margin-left: 5px;
+        }
+    
+        &__item {
+            display: block;
+            padding: 0 0 15px 0;
+            width: 100%;
+        }
+    
+        &__item.last-item {
+            padding: 0;
+        }
+    
+        &__link {
+            font-family: @font-primary;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 130%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: @text-color-secondary;
+        }
+    
+        &__link:hover {
+            color: @link-hover;
+        }
+    
+        &__item:hover {
+            display: block;
+        }
+    }
+    
 
     .hero__phone {
         & {
@@ -1138,10 +1210,9 @@ header {
             display: block;
         }
 
-
-        // &__item-nested:hover .menu-list-nested {
-        //     display: block;
-        // }
+        &__item .menu-list__item:hover .menu-list-nested {
+            display: block;
+        }
 
         @media @mobile {
             &__link {
@@ -1210,7 +1281,6 @@ header {
         &__link:hover {
             color: @link-hover;
         }
-
         @media @mobile {
             & {
                 height: auto;
@@ -1237,6 +1307,56 @@ header {
         }
     }
 
+    & .menu-list-nested{
+        &{
+            display: none;
+            z-index: 60000000001;
+            position: absolute;
+            top: 0;
+            border-radius: 25px;
+            height: auto;
+            width: 250px;
+            background: #2324a9;
+            padding: 45px;
+        }
+
+        &::after {
+            content: "\25BE";
+            margin-left: 5px;
+        }
+    
+        &__item {
+            display: block;
+            padding: 0 0 15px 0;
+            width: 100%;
+        }
+    
+        &__item.last-item {
+            padding: 0;
+        }
+    
+        &__link {
+            font-family: @font-primary;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 130%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: @text-color-secondary;
+        }
+    
+        &__link:hover {
+            color: @link-hover;
+        }
+    
+        &__item:hover {
+            display: block;
+        }
+    }
+    
+
     @media @mobile {
         &__ua {
             font-size: 15px;
@@ -1245,51 +1365,6 @@ header {
         &__ru {
             font-size: 15px;
         }
-    }
-}
-
-.menu-list-nested{
-    &{
-        display: none;
-        z-index: 60000000001;
-        position: absolute;
-        top: 0;
-        left: 79%;
-        border-radius: 25px;
-        height: auto;
-        width: 250px;
-        background: #2324a9;
-        padding: 45px;
-    }
-
-    &__item {
-        display: block;
-        padding: 0 0 15px 0;
-        width: 100%;
-    }
-
-    &__item.last-item {
-        padding: 0;
-    }
-
-    &__link {
-        font-family: @font-primary;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 130%;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: @text-color-secondary;
-    }
-
-    &__link:hover {
-        color: @link-hover;
-    }
-
-    &__item:hover {
-        display: block;
     }
 }
 
