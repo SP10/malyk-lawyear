@@ -2204,7 +2204,7 @@ input:focus {
 }
 .article__content > .image {
   float: left;
-  max-width: 300px;
+  max-height: 300px;
   padding: 20px 60px 20px 20px;
 }
 .article__footer {
@@ -2222,6 +2222,7 @@ input:focus {
   .article__content > .image {
     float: none;
     width: 100%;
+    max-height: 300px;
     padding: 0px;
   }
 }
