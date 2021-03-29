@@ -450,16 +450,12 @@ header .menu-list-nested {
   z-index: 60000000001;
   position: absolute;
   top: 0;
-  left: 79%;
+  left: 90%;
   border-radius: 25px;
   height: auto;
   width: 250px;
   background: #2324a9;
   padding: 45px;
-}
-header .menu-list-nested::after {
-  content: "\25BE";
-  margin-left: 5px;
 }
 header .menu-list-nested__item {
   display: block;
@@ -2202,9 +2198,9 @@ input:focus {
   width: 50vw;
   padding-right: 45px;
 }
-.article__content > .image {
+.article__content .text > .image {
   float: left;
-  max-height: 300px;
+  max-height: 200px;
   padding: 20px 60px 60px 20px;
 }
 .article__footer {
@@ -2222,7 +2218,7 @@ input:focus {
   .article__content > .image {
     float: none;
     width: 100%;
-    max-height: 300px;
+    max-height: 160px;
     padding: 0px;
   }
 }

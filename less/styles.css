@@ -448,16 +448,12 @@ header .menu-list-nested {
   z-index: 60000000001;
   position: absolute;
   top: 0;
-  left: 79%;
+  left: 90%;
   border-radius: 25px;
   height: auto;
   width: 250px;
   background: #2324a9;
   padding: 45px;
-}
-header .menu-list-nested::after {
-  content: "\25BE";
-  margin-left: 5px;
 }
 header .menu-list-nested__item {
   display: block;
