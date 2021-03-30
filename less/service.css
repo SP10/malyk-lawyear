@@ -2198,9 +2198,9 @@ input:focus {
   width: 50vw;
   padding-right: 45px;
 }
-.article__content .text > .image {
+.article__content > .image {
   float: left;
-  max-height: 200px;
+  max-height: 300px;
   padding: 20px 60px 60px 20px;
 }
 .article__footer {
