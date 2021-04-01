@@ -971,6 +971,9 @@ header {
     right   : 10px;
     cursor  : pointer;
     z-index : 999999;
+    outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
 }
 
 .close-button img {
@@ -1401,7 +1404,7 @@ header {
 
 .feedback {
     display      : none;
-    position     : absolute;
+    position     : fixed;
     top          : 50%;
     left         : 50%;
     margin-right : -50%;

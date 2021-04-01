@@ -81,15 +81,15 @@ const OnMenuItemClick = () => {
 }
 
 const OnOverlayClick = () => {
-    let html = document.querySelector('html');
-    let overlay = document.querySelector('.overlay');
-    let sidemenu = document.querySelector('.side-menu');
-    overlay.addEventListener('click', () => {
-        html.classList.remove('overflow');
-        overlay.classList.remove('overlay-bg');
-        sidemenu.classList.remove('side-menu__show');
-        CloseFeedBackForm();
-    }, false);
+    // let html = document.querySelector('html');
+    // let overlay = document.querySelector('.overlay');
+    // let sidemenu = document.querySelector('.side-menu');
+    // overlay.addEventListener('click', () => {
+    //     html.classList.remove('overflow');
+    //     overlay.classList.remove('overlay-bg');
+    //     sidemenu.classList.remove('side-menu__show');
+    //     CloseFeedBackForm();
+    // }, false);
 }
 
 const OpenFeedBackForm = () => {
