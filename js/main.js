@@ -18,13 +18,17 @@ const onScroll = () => {
 
         let home = document.getElementById('home');
         let callBtn = document.querySelector('.call-button');
+        let feedbackBtn = document.querySelector('.feedback-container');
         if (pageYOffset > home.clientHeight) {
             callBtn.classList.add('call-button-show');
             callBtn.hidden = false;
-            // console.log('show call btn');
+            feedbackBtn.classList.add('feedback-container-show');
+            feedbackBtn.hidden = false;
         } else {
             callBtn.classList.remove('call-button-show');
             callBtn.hidden = true;
+            feedbackBtn.classList.remove('feedback-container-show');
+            feedbackBtn.hidden = true;
         }
 
     }, false);

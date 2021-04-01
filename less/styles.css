@@ -659,6 +659,24 @@ header .hero__language .language__title:hover {
 .call-button-show {
   display: block;
 }
+.feedback-container {
+  display: none;
+  z-index: 1024;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+.feedback-container-show {
+  display: block;
+}
+@media (max-width: 767.98px) {
+  .feedback-container {
+    display: none;
+  }
+  .feedback-container-show {
+    display: none;
+  }
+}
 @media (min-width: 768px) and (max-width: 991.98px) {
   .call-button {
     display: none;
