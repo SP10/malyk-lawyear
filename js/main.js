@@ -38,22 +38,22 @@ const OnBurgerClick = () => {
     let burger = document.querySelector('.burger-menu');
     burger.addEventListener('click', () => {
         let html = document.querySelector('html');
-        let overlay = document.querySelector('.overlay');
+        let overlay = document.querySelector('.overlay-side-menu');
         let sidemenu = document.querySelector('.side-menu');
         html.classList.add('overflow');
-        overlay.classList.add('overlay-bg');
+        overlay.classList.add('overlay-side-menu-bg');
         sidemenu.classList.add('side-menu__show');
     }, false);
 }
 
 const OnSideMenuClose = () => {
     let html = document.querySelector('html');
-    let overlay = document.querySelector('.overlay');
+    let overlay = document.querySelector('.overlay-side-menu');
     let sidemenu = document.querySelector('.side-menu');
     let closeBtn = document.getElementById('side-menu-close-btn');
     closeBtn.addEventListener('click', () => {
         html.classList.remove('overflow');
-        overlay.classList.remove('overlay-bg');
+        overlay.classList.remove('overlay-side-menu-bg');
         sidemenu.classList.remove('side-menu__show');
     }, false);
 }
@@ -62,19 +62,19 @@ const OnMenuItemClick = () => {
     let html = document.querySelector('html');
     let item = document.querySelectorAll('.menu__link');
     let subitem = document.querySelectorAll('.menu-list__item');
-    let overlay = document.querySelector('.overlay');
+    let overlay = document.querySelector('.overlay-side-menu');
     let sidemenu = document.querySelector('.side-menu');
     item.forEach(value => {
         value.addEventListener('click', () => {
             if (html.classList.contains('overflow')) html.classList.remove('overflow');
-            if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+            if (overlay.classList.contains('overlay-side-menu-bg')) overlay.classList.remove('overlay-side-menu-bg');
             if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
         }, false)
     });
     subitem.forEach(value => {
         value.addEventListener('click', () => {
             if (html.classList.contains('overflow')) html.classList.remove('overflow');
-            if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+            if (overlay.classList.contains('overlay-side-menu-bg')) overlay.classList.remove('overlay-side-menu-bg');
             if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
         }, false)
     });

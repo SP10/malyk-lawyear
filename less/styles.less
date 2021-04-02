@@ -908,22 +908,22 @@ header {
 }
 
 .feedback-container {
-    display: none;
-    z-index: 1024;
+    display : none;
+    z-index : 1024;
     position: fixed;
-    right: 25px;
-    bottom: 25px;
+    right   : 25px;
+    bottom  : 25px;
 }
 
 .feedback-container-show {
     display: block;
 }
 
-@media @mobile{
+@media @mobile {
     .feedback-container {
         display: none;
     }
-    
+
     .feedback-container-show {
         display: none;
     }
@@ -964,16 +964,17 @@ header {
 
 
 .close-button {
-    width   : 40px;
-    height  : 40px;
-    position: absolute;
-    top     : 10px;
-    right   : 10px;
-    cursor  : pointer;
-    z-index : 999999;
-    outline: none; /* Для синий ободки */
-  border: 0;
-  background: transparent;
+    width     : 40px;
+    height    : 40px;
+    position  : absolute;
+    top       : 10px;
+    right     : 10px;
+    cursor    : pointer;
+    z-index   : 999999;
+    outline   : none;
+    /* Для синий ободки */
+    border    : 0;
+    background: transparent;
 }
 
 .close-button img {
@@ -981,7 +982,7 @@ header {
     height: 40px;
 }
 
-.overlay {
+.overlay, .overlay-side-menu {
     display           : none;
     position          : fixed;
     top               : 0;
@@ -996,7 +997,7 @@ header {
     transition        : opacity ease-in-out 0.3s;
 }
 
-.overlay-bg {
+.overlay-bg, .overlay-side-menu-bg {
     // position: absolute;
     display         : block;
     z-index         : 99998;
@@ -1416,7 +1417,7 @@ header {
     border-radius: 25px;
     z-index      : 99999;
     padding      : 50px;
-    width        : 26vw;
+    max-width    : 28vw;
 
 }
 
@@ -1454,6 +1455,25 @@ header {
     }
 }
 
+
+@media @sm-mobile {
+    .feedback {
+        max-width: 55vw;
+    }
+}
+
+@media @desktop {
+    .feedback {
+        max-width: 42vw;
+    }
+}
+
+@media @tablet {
+    .feedback {
+        max-width: 46vw;
+    }
+}
+
 input {
     width        : 100%;
     background   : #FFFFFF;
@@ -1463,10 +1483,12 @@ input {
     height       : 40px;
     margin-bottom: 10px;
     font-size    : 17px;
+    outline      : 0px;
 
 
     &:focus {
-        border: 1px solid #EDEDED;
+        border : 1px solid #ddd3d3;
+        outline: 1px;
     }
 }
 
