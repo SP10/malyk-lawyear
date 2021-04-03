@@ -1117,7 +1117,7 @@ header .hero__language .language__title:hover {
 }
 @media (max-width: 767.98px) {
   .feedback {
-    width: auto;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
