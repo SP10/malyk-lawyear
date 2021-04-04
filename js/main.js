@@ -81,15 +81,15 @@ const OnMenuItemClick = () => {
 }
 
 const OnOverlayClick = () => {
-     let html = document.querySelector('html');
-     let overlay = document.querySelector('.overlay-side-menu');
- let sidemenu = document.querySelector('.side-menu');
-     overlay.addEventListener('click', () => {
-         html.classList.remove('overflow');
-         overlay.classList.remove('overlay-side-menu-bg');
-         sidemenu.classList.remove('side-menu__show');
-         CloseFeedBackForm();
-     }, false);
+    let html = document.querySelector('html');
+    let overlay = document.querySelector('.overlay-side-menu');
+    let sidemenu = document.querySelector('.side-menu');
+    overlay.addEventListener('click', () => {
+        html.classList.remove('overflow');
+        overlay.classList.remove('overlay-side-menu-bg');
+        sidemenu.classList.remove('side-menu__show');
+        CloseFeedBackForm();
+    }, false);
 }
 
 const OpenFeedBackForm = () => {
@@ -139,6 +139,18 @@ const resize = () => {
     });
 }
 
+
+const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId)
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show')
+            toggle.classList.toggle('bx-x')
+        })
+    }
+}
+
 const onInit = () => {
     let maxMobileSize = 688;
     let maxTabletSize = 1024;
@@ -156,6 +168,16 @@ const onInit = () => {
     if (window.innerWidth <= maxTabletSize) {
         burger.classList.add('burger-menu__show');
     }
+
+
+    showMenu('header-toggle', 'nav-menu')
+    const navLink = document.querySelectorAll('.nav__link');
+
+    function linkAction() {
+        navLink.forEach(n => n.classList.remove('active'));
+        this.classList.add('active');
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction));
 }
 
 const onInitService = () => {
