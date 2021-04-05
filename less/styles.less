@@ -1137,13 +1137,13 @@ header {
   }
 
   &__header{
-      height: 6vh;
+      height: 8vh;
   }
 
   &__container {
     & {
       height: 55vh; // height: 100%;
-      padding: 0px 20px 20px 45px;
+      padding: 0 20px 20px 45px;
       margin: 0 13px 0 0;
       overflow-y: auto;
     }
@@ -1162,6 +1162,24 @@ header {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
         background-color: #f9f9fd;
+      }
+
+      @media @mobile {
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #f9f9fd;
+          }
+      
+          &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: #ebab08;
+          }
+      
+          &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            background-color: #f9f9fd;
+          }
       }
 
   }
