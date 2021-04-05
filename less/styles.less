@@ -1136,28 +1136,34 @@ header {
     z-index: 999999;
   }
 
+  &__header{
+      height: 6vh;
+  }
+
   &__container {
     & {
       height: 55vh; // height: 100%;
-      padding: 42px 20px 20px 45px;
+      padding: 0px 20px 20px 45px;
+      margin: 0 13px 0 0;
       overflow-y: auto;
     }
 
     &::-webkit-scrollbar {
-      width: 10px;
-      background-color: #f9f9fd;
-    }
+        width: 10px;
+        background-color: #f9f9fd;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #ebab08;
+      }
+  
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background-color: #f9f9fd;
+      }
 
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: #ebab08;
-    }
-
-    &::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-      background-color: #f9f9fd;
-    }
   }
 
   &__container nav {
@@ -1197,9 +1203,22 @@ header {
       &__link {
         color: @text-color-primary;
         text-decoration: none;
+        font-size: 18px;
       }
       &__link:hover {
         color: @link-hover;
+      }
+
+      @media @mobile {
+        &__link {
+            font-size: 15px;
+          }
+      }
+
+      @media @tablet {
+        &__link {
+            font-size: 18px;
+          }
       }
     }
 

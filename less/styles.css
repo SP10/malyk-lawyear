@@ -864,9 +864,13 @@ header .hero__language .language__title:hover {
   transform: translate(0, 0);
   z-index: 999999;
 }
+.side-menu__header {
+  height: 6vh;
+}
 .side-menu__container {
   height: 55vh;
-  padding: 42px 20px 20px 45px;
+  padding: 0px 20px 20px 45px;
+  margin: 0 13px 0 0;
   overflow-y: auto;
 }
 .side-menu__container::-webkit-scrollbar {
@@ -919,9 +923,20 @@ header .hero__language .language__title:hover {
 .side-menu__container nav .nav__link {
   color: #002e64;
   text-decoration: none;
+  font-size: 18px;
 }
 .side-menu__container nav .nav__link:hover {
   color: #f5d481;
+}
+@media (max-width: 767.98px) {
+  .side-menu__container nav .nav__link {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .side-menu__container nav .nav__link {
+    font-size: 18px;
+  }
 }
 .side-menu__container nav .active {
   color: "Montserrat", sans-serif;

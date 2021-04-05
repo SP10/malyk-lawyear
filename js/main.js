@@ -60,8 +60,8 @@ const OnSideMenuClose = () => {
 
 const OnMenuItemClick = () => {
     let html = document.querySelector('html');
-    let item = document.querySelectorAll('.menu__link');
-    let subitem = document.querySelectorAll('.menu-list__item');
+    let item = document.querySelectorAll('.nav__link');
+    // let subitem = document.querySelectorAll('.menu-list__item');
     let overlay = document.querySelector('.overlay-side-menu');
     let sidemenu = document.querySelector('.side-menu');
     item.forEach(value => {
@@ -71,13 +71,13 @@ const OnMenuItemClick = () => {
             if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
         }, false)
     });
-    subitem.forEach(value => {
-        value.addEventListener('click', () => {
-            if (html.classList.contains('overflow')) html.classList.remove('overflow');
-            if (overlay.classList.contains('overlay-side-menu-bg')) overlay.classList.remove('overlay-side-menu-bg');
-            if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
-        }, false)
-    });
+    // subitem.forEach(value => {
+    //     value.addEventListener('click', () => {
+    //         if (html.classList.contains('overflow')) html.classList.remove('overflow');
+    //         if (overlay.classList.contains('overlay-side-menu-bg')) overlay.classList.remove('overlay-side-menu-bg');
+    //         if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
+    //     }, false)
+    // });
 }
 
 const OnOverlayClick = () => {
