@@ -54,24 +54,31 @@ const OnSideMenuClose = () => {
 
 const OnMenuItemClick = () => {
     let html = document.querySelector('html');
-    let item = document.querySelectorAll('.menu__link');
-    let subitem = document.querySelectorAll('.menu-list__item');
-    let overlay = document.querySelector('.overlay');
+    let item = document.querySelectorAll('.nav__link');
+    let overlay = document.querySelector('.overlay-side-menu');
     let sidemenu = document.querySelector('.side-menu');
     item.forEach(value => {
         value.addEventListener('click', () => {
             if (html.classList.contains('overflow')) html.classList.remove('overflow');
-            if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
+            if (overlay.classList.contains('overlay-side-menu-bg')) overlay.classList.remove('overlay-side-menu-bg');
             if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
         }, false)
     });
-    subitem.forEach(value => {
-        value.addEventListener('click', () => {
-            if (html.classList.contains('overflow')) html.classList.remove('overflow');
-            if (overlay.classList.contains('overlay-bg')) overlay.classList.remove('overlay-bg');
-            if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
-        }, false)
-    });
+}
+
+const OnExpandList = () => {
+    let dropdown_link = document.querySelectorAll('.dropdown__link');
+    dropdown_link.forEach(link => {
+        link.addEventListener('click', (e) => {
+            let click=(link.dataset.click==='true');
+            click=!click;
+            link.setAttribute('data-click', click);
+
+            let expand = (link.nextElementSibling.dataset.expand === 'true');
+            expand = !expand;
+            link.nextElementSibling.setAttribute('data-expand', expand);
+        }, false);
+    })
 }
 
 const OnOverlayClick = () => {
@@ -127,4 +134,5 @@ window.onload = () => {
     OnSideMenuClose();
     OnMenuItemClick();
     OnOverlayClick();
+    OnExpandList();
 }
