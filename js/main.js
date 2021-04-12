@@ -80,6 +80,21 @@ const OnMenuItemClick = () => {
     // });
 }
 
+const OnExpandList = () => {
+    let dropdown_link = document.querySelectorAll('.dropdown__link');
+    dropdown_link.forEach(link => {
+        link.addEventListener('click', (e) => {
+            let click=(link.dataset.click==='true');
+            click=!click;
+            link.setAttribute('data-click', click);
+
+            let expand = (link.nextElementSibling.dataset.expand === 'true');
+            expand = !expand;
+            link.nextElementSibling.setAttribute('data-expand', expand);
+        }, false);
+    })
+}
+
 const OnOverlayClick = () => {
     let html = document.querySelector('html');
     let overlay = document.querySelector('.overlay-side-menu');
@@ -261,4 +276,5 @@ window.onload = () => {
     OnOverlayClick();
     OnServiceSelectClick();
     OnServiceRadioClick();
+    OnExpandList();
 }
