@@ -865,10 +865,10 @@ header .hero__language .language__title:hover {
   z-index: 999999;
 }
 .side-menu__header {
-  height: 8vh;
+  height: 10vh;
 }
 .side-menu__container {
-  height: 55vh;
+  height: 50vh;
   padding: 0 20px 20px 45px;
   margin: 0 13px 0 0;
   overflow-y: auto;
@@ -990,6 +990,21 @@ header .hero__language .language__title:hover {
 }
 .side-menu__container nav .dropdown__item {
   margin: 0.5rem 0;
+}
+@media (max-width: 767.98px) {
+  .side-menu__container nav .dropdown__link {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .side-menu__container nav .dropdown__link {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .side-menu__container nav .dropdown__link {
+    font-size: 18px;
+  }
 }
 .side-menu__footer {
   position: absolute;
@@ -1150,7 +1165,7 @@ header .hero__language .language__title:hover {
 }
 .feedback-success {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   margin-right: -50%;

@@ -8,8 +8,8 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="description" content="Адвокат Малик Александр Владимирович. Предоставляю качественную юридическую помощь в городе Виннице и по всей Украине.">
     <meta name="keywords" content="юрист, адвокат, расторжение брака, Винница, Хмельницкий, Житомир, супруги, совместное имущество, раздел имущества, суд, Малик Александр, качественная юридическая помощь" />
+    <link rel="shortcut icon" href="../assets/favico.ico" type="image/x-icon">
     <title>Адвокат Малик Александр Владимирович</title>
-
 
     <link rel="canonical" href="https://www.malyk.com.ua/" />
     <link rel="alternate" hreflang="ua" href="https://www.malyk.com.ua/" />
@@ -18,12 +18,10 @@
     <link href="../css/normalize.css" rel="stylesheet">
     <link href="../less/styles.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="../assets/favico.ico" type="image/x-icon">
-
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <script src="../js/telegram.js"></script>
+    <script async src="../js/telegram.js"></script>
+    <script async src="../js/main.js"></script>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -53,7 +51,8 @@
     <!-- End Facebook Pixel Code -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D107PK7VY"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190739934-1">
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -62,12 +61,13 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'G-1D107PK7VY');
+        gtag('config', 'UA-190739934-1');
     </script>
 </head>
 
 <body>
     <div class="overlay"></div>
+    <div class="overlay-side-menu"></div>
     <div class="burger-menu">
         <div class="burger-menu__circle">
             <div class="burger-menu__burger">
@@ -78,57 +78,63 @@
         </div>
     </div>
     <div class="side-menu">
-        <a href="#" class="close-button" id="side-menu-close-btn">
-            <img src="../assets/close-icon.svg">
-        </a>
+        <div class="side-menu__header">
+            <button class="close-button" id="side-menu-close-btn">
+                <img src="../assets/close-icon.svg" alt="close icon">
+            </button>
+        </div>
         <div class="side-menu__container">
-            <nav>
-                <ul class="menu">
-                    <li class="menu__item">
-                        <a class="menu__link" href="#home">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#about">Биография</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#service">Услуги</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class='menu__list' href='#'>Стоимость услуг</a>
-                        <ul class='menu-list'>
-                            <li class="menu-list__item">
-                                <a class="menu-list__link" href="#analysis">Анализ дела</a>
+            <nav class="nav">
+                <div class="nav__content bd-grid">
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="#home">Главная</a>
                             </li>
-                            <li class="menu-list__item">
-                                <a class="menu-list__link" href="#administrativeOff">Административные правонарушения</a>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#about">Биография</a>
                             </li>
-                            <li class="menu-list__item">
-                                <a class="menu-list__link" href="#criminal">Уголовные дела</a>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#service">Услуги</a>
                             </li>
-                            <li class="menu-list__item">
-                                <a class="menu-list__link" href="#civil">Гражданские дела</a>
+                            <li class="nav__item dropdown">
+                                <span class="dropdown__link">Стоимость услуг</span>
+                                <ul class='dropdown__menu'>
+                                    <li class="dropdown__item">
+                                        <a class="nav__link" href="#analysis">Анализ дела</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="nav__link" href="#administrativeOff">Административные правонарушения</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="nav__link" href="#criminal">Уголовные дела</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="nav__link" href="#civil">Гражданские дела</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="nav__link" href="#family">Семейные дела</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="nav__link" href="#administrative">Административные дела</a>
+                                    </li>
+                                    <li class="dropdown__item last-item">
+                                        <a class="nav__link" href="#business">Хозяйственные дела</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="menu-list__item">
-                                <a class="menu-list__link" href="#family">Семейные дела</a>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#benefits">Преимущества</a>
                             </li>
-                            <li class="menu-list__item">
-                                <a class="menu-list__link" href="#administrative">Административные дела</a>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#news">Новости</a>
                             </li>
-                            <li class="menu-list__item last-item">
-                                <a class="menu-list__link" href="#business">Хозяйственные дела</a>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#contacts">Контакты</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#benefits">Преимущества</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#news">Новости</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#contacts">Контакты</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </nav>
         </div>
         <div class="side-menu__footer">
@@ -332,7 +338,8 @@
                             в Винницкой области.
                         </p>
                         <p> В свое время судил I Дебатный правовой турнир среди учащейся и студенческой молодежи города Винницы. </p>
-                        <p> Лауреат Всеукраинского конкурса при Министерстве юстиции Украины "Молодой юрист года 2016" в номинации" Работник судебной системы ". Номинант областного конкурса на звание "Человек года" за 2019 в номинации "Юрист года". </p>
+                        <p> Лауреат Всеукраинского конкурса при Министерстве юстиции Украины "Молодой юрист года 2016" в номинации" Работник судебной системы ". Номинант областного конкурса на звание "Человек года" за 2019 в номинации "Юрист года".
+                        </p>
                         <p> Награжден почетной грамотой Территориального управления Государственной судебной администрации Украины в Винницкой области. </p>
                         <p> Александр является автором ряда научных статей, в частности: </p>
                         <p>
@@ -342,7 +349,8 @@
                             </ul>
                         </p>
                         <H3> <b> Образование </b> </h3>
-                        <p> Малик Александр закончил Киевский университет права Национальной академии наук Украины по специальности "Правоведение". В 2018 году получил квалификацию магистр права в Донецком национальном университете имени Василия Стуса. </p>
+                        <p> Малик Александр закончил Киевский университет права Национальной академии наук Украины по специальности "Правоведение". В 2018 году получил квалификацию магистр права в Донецком национальном университете имени Василия Стуса.
+                        </p>
                         <h3> <b> Опыт работы </b> </h3>
                         <p> Александр Владимирович работал в одном из загруженных и крупнейших местных судов Винницкой области в Винницком городском суде. </p>
                         <p> За время работы в суде, находясь на должностях секретаря судебного заседания и помощника судьи, получил ценный практический опыт, что позволяет оценить дело комплексно и предусмотреть окончательное решение. Тем самым не давать
@@ -366,7 +374,8 @@
                             в Винницкой области.
                         </p>
                         <p> В свое время судил I Дебатный правовой турнир среди учащейся и студенческой молодежи города Винницы. </p>
-                        <p> Лауреат Всеукраинского конкурса при Министерстве юстиции Украины "Молодой юрист года 2016" в номинации" Работник судебной системы ". Номинант областного конкурса на звание "Человек года" за 2019 в номинации "Юрист года". </p>
+                        <p> Лауреат Всеукраинского конкурса при Министерстве юстиции Украины "Молодой юрист года 2016" в номинации" Работник судебной системы ". Номинант областного конкурса на звание "Человек года" за 2019 в номинации "Юрист года".
+                        </p>
                         <p> Награжден почетной грамотой Территориального управления Государственной судебной администрации Украины в Винницкой области. </p>
                         <p> Александр является автором ряда научных статей, в частности: </p>
                         <p>
@@ -376,7 +385,8 @@
                             </ul>
                         </p>
                         <H3> <b> Образование </b> </h3>
-                        <p> Малик Александр закончил Киевский университет права Национальной академии наук Украины по специальности "Правоведение". В 2018 году получил квалификацию магистр права в Донецком национальном университете имени Василия Стуса. </p>
+                        <p> Малик Александр закончил Киевский университет права Национальной академии наук Украины по специальности "Правоведение". В 2018 году получил квалификацию магистр права в Донецком национальном университете имени Василия Стуса.
+                        </p>
                         <h3> <b> Опыт работы </b> </h3>
                         <p> Александр Владимирович работал в одном из загруженных и крупнейших местных судов Винницкой области в Винницком городском суде. </p>
                         <p> За время работы в суде, находясь на должностях секретаря судебного заседания и помощника судьи, получил ценный практический опыт, что позволяет оценить дело комплексно и предусмотреть окончательное решение. Тем самым не давать

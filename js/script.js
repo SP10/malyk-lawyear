@@ -70,8 +70,8 @@ const OnExpandList = () => {
     let dropdown_link = document.querySelectorAll('.dropdown__link');
     dropdown_link.forEach(link => {
         link.addEventListener('click', (e) => {
-            let click=(link.dataset.click==='true');
-            click=!click;
+            let click = (link.dataset.click === 'true');
+            click = !click;
             link.setAttribute('data-click', click);
 
             let expand = (link.nextElementSibling.dataset.expand === 'true');
@@ -131,8 +131,8 @@ window.onload = () => {
     resize();
     onScroll();
     OnBurgerClick();
+    OnExpandList();
     OnSideMenuClose();
     OnMenuItemClick();
     OnOverlayClick();
-    OnExpandList();
 }

@@ -1137,12 +1137,12 @@ header {
   }
 
   &__header{
-      height: 8vh;
+      height: 10vh;
   }
 
   &__container {
     & {
-      height: 55vh; // height: 100%;
+      height: 50vh; // height: 100%;
       padding: 0 20px 20px 45px;
       margin: 0 13px 0 0;
       overflow-y: auto;
@@ -1291,14 +1291,25 @@ header {
       &__item {
         margin: 0.5rem 0;
       }
+
+      @media @mobile {
+        &__link {
+            font-size: 15px;
+          }
+      }
+
+      @media @tablet {
+        &__link {
+            font-size: 18px;
+          }
+      }
+
+      @media @desktop {
+        &__link {
+            font-size: 18px;
+          }
+      }
     }
-    // .dropdown:hover > .dropdown__menu {
-    //   display: block;
-    // }
-    //   .dropdown:hover .dropdown__link::after {
-    //     content: "\25B3";
-    //     margin-left: 5px;
-    //   }
   }
 
   &__footer {
@@ -1490,7 +1501,7 @@ header {
 
 .feedback-success {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   margin-right: -50%;
