@@ -2308,6 +2308,9 @@ input:focus {
   width: 50vw;
   padding-right: 45px;
 }
+.article__content .text > ul {
+  padding-left: 20px;
+}
 .article__content > .image {
   float: left;
   max-height: 300px;
