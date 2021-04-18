@@ -14,9 +14,9 @@
     <meta property="og:title" content="Позбавлення батьківських прав" />
     <meta property="og:description" content="Позбавлення батьківських прав у місті Вінниця. Адвокат Малик Олександр Володимирович допоможе захистити права дитини у разі коли їй загрожує небезпека, а саме шкідливі та небезпечні дії одного з батьків (або обох) стосовно інших членів родини; Використання батьківських прав як інструменту тиску та порушення прав дитини; Ухилення від виконання батьківських обов’язків;Жорстоке поводження з дитиною;Хронічне зловживання алкоголем та наркотична залежність батьків;Відмова забрати свою дитину з пологового будинку або інших закладів."
     />
-    <meta property="og:image" content="https://www.malyk.com.ua/assets/parental-rights.svg" />
-    <meta property="og:image:secure_url" content="https://www.malyk.com.ua/assets/parental-rights.svg" />
-    <meta property="og:image:type" content="image/svg" />
+    <meta property="og:image" content="https://www.malyk.com.ua/assets/facebook/parental-rights.png" />
+    <meta property="og:image:secure_url" content="https://www.malyk.com.ua/assets/facebook/parental-rights.png" />
+    <meta property="og:image:type" content="image/png" />
     <link rel="shortcut icon" href="../../../assets/favico.ico" type="image/x-icon">
     <title>Позбавлення батьківських прав | Послуга</title>
 
@@ -146,6 +146,28 @@
             <h6>© 2021 Малик Олександр</h6>
         </div>
     </div>
+    <div class="feedback">
+        <button class="close-button" onclick="CloseFeedBackForm()">
+            <img src="../../../assets/close-icon.svg" alt="close icon">
+        </button>
+        <h3>Залишіть номер телефону, зателефоную та надам консультацію</h3>
+        <span class="note-sign">*</span><span class="note">консультація платна</span>
+        <div id="feedbackForm" class="feedback__form">
+            <input type="text" name="name" placeholder="ім'я" required="">
+            <input type="text" name="phoneNumber" placeholder="номер телефону" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" type="tel" required="">
+            <button onclick="sendMessage()" class="button button__send">Відправити</button>
+        </div>
+    </div>
+    <div class="feedback-success">
+        <h3>Дякую!</h3>
+        <h3>Очікуйте, скоро наберу.</h3>
+    </div>
+    <div class="call-container">
+        <a href="tel:+380961097608" class="call-button">Зателефонувати</a>
+    </div>
+    <div class="feedback-container">
+        <button class="button" onclick="OpenFeedBackForm()">Консультація</button>
+    </div>
     <main class="service__wrapper">
         <header class="header">
             <div id="home"><a class="menu__link" href="/">Головна</a></div>
@@ -243,7 +265,7 @@
                     <h2>Позбавлення батьківських прав</h2>
                 </header>
                 <section class="article__content">
-                    <img class="image" src="../../../assets/parental-rights.svg" alt="позбавлення батьківських прав">
+                    <img class="image" src="../../../assets/service/parental-rights.svg" alt="позбавлення батьківських прав">
                     <div class="text">
                         <p>Крайньою мірою, що застосовується до батьків, які систематично не виконують своїх батьківських обов’язків, зловживають алкогольними або наркотичними засобами, або ж були засуджені за злочин проти дитини є позбавлення їх батьківських
                             прав. Ініціювати позбавлення батьківських прав може на лише батько або матір, а й інші родичі, а також компетентні органи.</p>

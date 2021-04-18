@@ -25,6 +25,20 @@ const onScroll = () => {
             }
         }
 
+        let home = document.getElementById('home');
+        let callBtn = document.querySelector('.call-button');
+        let feedbackBtn = document.querySelector('.feedback-container');
+        if (pageYOffset > home.clientHeight) {
+            callBtn.classList.add('call-button-show');
+            callBtn.hidden = false;
+            feedbackBtn.classList.add('feedback-container-show');
+            feedbackBtn.hidden = false;
+        } else {
+            callBtn.classList.remove('call-button-show');
+            callBtn.hidden = true;
+            feedbackBtn.classList.remove('feedback-container-show');
+            feedbackBtn.hidden = true;
+        }
     }, false);
 }
 
@@ -93,7 +107,37 @@ const OnOverlayClick = () => {
     }, false);
 }
 
+const OpenFeedBackForm = () => {
+    let html = document.querySelector('html');
+    html.classList.add('overflow');
+    let overlay = document.getElementsByClassName("overlay")[0];
+    overlay.classList.add('overlay-bg');
+    let feedback = document.getElementsByClassName("feedback")[0];
+    feedback.classList.add('feedback-bg');
+}
 
+const CloseFeedBackForm = () => {
+    let html = document.querySelector('html');
+    html.classList.remove('overflow');
+    let overlay = document.getElementsByClassName("overlay")[0];
+    overlay.classList.remove('overlay-bg');
+    let feedback = document.getElementsByClassName("feedback")[0];
+    feedback.classList.remove('feedback-bg');
+}
+
+const sendMessage = () => {
+    let feedbackForm = document.getElementById('feedbackForm');
+    let message = `*${feedbackForm.children.name.value}*\n${feedbackForm.children.phoneNumber.value}`;
+    if (message !== `**\n`) {
+        TelegramBot.sendMessage(message);
+        let success = document.querySelector('.feedback-success');
+        success.classList.add('feedback-success-bg');
+        CloseFeedBackForm();
+        setTimeout(() => {
+            success.classList.remove('feedback-success-bg');
+        }, 2000)
+    }
+}
 
 const resize = () => {
     let maxMobileSize = 688;
