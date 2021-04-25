@@ -170,6 +170,66 @@ const onInit = () => {
     }
 }
 
+const onInitSideMenuRU = () => {
+    let content = `
+    <div class="nav__content bd-grid">
+    <div class="nav__menu">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" href="#home">Главная</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#about">Биография</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#service">Услуги</a>
+            </li>
+            <li class="nav__item dropdown">
+                <span class="dropdown__link">Стоимость услуг</span>
+                <ul class='dropdown__menu'>
+                    <li class="dropdown__item">
+                        <a class="nav__link" href="#analysis">Анализ дела</a>
+                    </li>
+                    <li class="dropdown__item">
+                        <a class="nav__link" href="#administrativeOff">Административные правонарушения</a>
+                    </li>
+                    <li class="dropdown__item">
+                        <a class="nav__link" href="#criminal">Уголовные дела</a>
+                    </li>
+                    <li class="dropdown__item">
+                        <a class="nav__link" href="#civil">Гражданские дела</a>
+                    </li>
+                    <li class="dropdown__item">
+                        <a class="nav__link" href="#family">Семейные дела</a>
+                    </li>
+                    <li class="dropdown__item">
+                        <a class="nav__link" href="#administrative">Административные дела</a>
+                    </li>
+                    <li class="dropdown__item last-item">
+                        <a class="nav__link" href="#business">Хозяйственные дела</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#benefits">Преимущества</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#news">Новости</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#contacts">Контакты</a>
+            </li>
+        </ul>
+    </div>
+</div>
+    `;
+
+    let nav = document.createElement('nav');
+    nav.classList.add('nav');
+    nav.innerHTML = content;
+    document.querySelector('.side-menu__container').append(nav);
+}
+
 window.onload = () => {
     onInit();
     resize();
@@ -179,4 +239,5 @@ window.onload = () => {
     OnSideMenuClose();
     OnMenuItemClick();
     OnOverlayClick();
+    onInitSideMenuRU();
 }

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="ua">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="description" content="Процедура отримання спадщини за заповітом. Права спадкоємця. Прийняття та відмова від спадщини. Визнання заповіту нечинним. Роз’яснення адвоката Малика Олександра Володимировича">
+    <meta name="keywords" content="юрист, адвокат, отримання спадщини, заповіт, Вінниця, суд, Малик Олександр" />
+    <meta property="og:url" content="https://www.malyk.com.ua/news/2021/spadshchyna-za-zapovitom-sho-neobxidno-znaty/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Спадщина за заповітом: що варто знати" />
+    <meta property="og:description" content="Процедура отримання спадщини за заповітом. Права спадкоємця. Прийняття та відмова від спадщини. Визнання заповіту нечинним. Роз’яснення адвоката Малика Олександра Володимировича" />
+    <link rel="canonical" href="https://www.malyk.com.ua/news/2021/spadshchyna-za-zapovitom-sho-neobxidno-znaty/">
+    <title>Спадщина за заповітом: що варто знати | Малик Олександр</title>
+
+    <link href="../../../css/normalize.css" rel="stylesheet">
+    <link href="../../../less/news.css" rel="stylesheet">
+    <script async src="../../../js/script.js"></script>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="overlay-side-menu"></div>
+
+    <div class="feedback">
+        <button class="close-button" onclick="CloseFeedBackForm()">
+            <img src="../../../assets/close-icon.svg" alt="close icon">
+        </button>
+        <h3>Залишіть номер телефону, зателефоную та надам консультацію</h3>
+        <span class="note-sign">*</span><span class="note">консультація платна</span>
+        <div id="feedbackForm" class="feedback__form">
+            <input type="text" name="name" placeholder="ім'я" required="">
+            <input type="text" name="phoneNumber" placeholder="номер телефону" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" type="tel" required="">
+            <button onclick="sendMessage()" class="button button__send">Відправити</button>
+        </div>
+    </div>
+    <div class="feedback-success">
+        <h3>Дякую!</h3>
+        <h3>Очікуйте, скоро наберу.</h3>
+    </div>
+    <div class="call-container">
+        <a href="tel:+380961097608" class="call-button">Зателефонувати</a>
+    </div>
+    <div class="feedback-container">
+        <button class="button" onclick="OpenFeedBackForm()">Консультація</button>
+    </div>
+    <div class="burger-menu">
+        <div class="burger-menu__circle">
+            <div class="burger-menu__burger">
+                <span></span>
+                <span class="burger-menu__p-10"></span>
+                <span class="burger-menu__p-20"></span>
+            </div>
+        </div>
+    </div>
+    <div class="side-menu">
+        <div class="side-menu__header">
+            <button class="close-button" id="side-menu-close-btn">
+                <img src="../../../assets/close-icon.svg" alt="close icon">
+            </button>
+        </div>
+        <div class="side-menu__container">
+            <nav class="nav">
+                <div class="nav__content bd-grid">
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="/" class="nav__link">Головна</a></li>
+                            <li class="nav__item"><a href="/#about" class="nav__link">Біографія</a></li>
+                            <li class="nav__item dropdown">
+                                <span data-click="false" class="dropdown__link">Послуги</span>
+                                <ul class="dropdown__menu" data-expand="false">
+                                    <li class="nav__item dropdown">
+                                        <span data-click="false" class="dropdown__link">Сімейний адвокат</span>
+                                        <ul class="dropdown__menu" data-expand="false">
+                                            <li class="dropdown__item">
+                                                <a class="nav__link" href="/service/family/rozirvannia-shliubu">Розірвання шлюбу</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="nav__link" href="/service/family/rozirvannia-shliubu-z-inozemtsem/">Розірвання шлюбу з іноземцем</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="nav__link" href="/service/family/stiahnennia-alimentiv">Стягнення аліментів</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="nav__link" href="/service/family/rozpodil-spilnoho-maina">Розподіл спільного
+                                                    майна подружжя</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="nav__link" href="/service/family/pozbavlennia-batkivskykh-prav">Позбавлення
+                                                    батьківських прав </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="nav__link" href="/service/family/vstanovlennia-batkivstva">Встановлення
+                                                    батьківства</a>
+                                            </li>
+                                            <li class="menu-list-nested__item last-item">
+                                                <a class="nav__link" href="/service/family/usynovlennia">Усиновлення</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown__item"><a href="/#service" class="nav__link">Цивільне право</a>
+                                    </li>
+                                    <li class="dropdown__item"><a href="/#service" class="nav__link">Кримінальне
+                                            право</a></li>
+                                    <li class="dropdown__item"><a href="/#service" class="nav__link">Адміністративне
+                                            право</a></li>
+                                    <li class="dropdown__item"><a href="/#service" class="nav__link">Господарське
+                                            право</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item dropdown">
+                                <span class="dropdown__link">Вартість послуг</span>
+                                <ul class="dropdown__menu">
+                                    <li class="dropdown__item"><a href="/#analysis" class="nav__link">Аналіз справи</a>
+                                    </li>
+                                    <li class="dropdown__item"><a href="/#administrativeOff" class="nav__link">Адміністративні правопорушення</a></li>
+                                    <li class="dropdown__item"><a href="/#criminal" class="nav__link">Кримінальні
+                                            справи</a></li>
+                                    <li class="dropdown__item"><a href="/#civil" class="nav__link">Цивільні справи</a>
+                                    </li>
+                                    <li class="dropdown__item"><a href="/#family" class="nav__link">Сімейні справи</a>
+                                    </li>
+                                    <li class="dropdown__item"><a href="/#administrative" class="nav__link">Адміністративні справи</a></li>
+                                    <li class="dropdown__item"><a href="/#business" class="nav__link">Господарські
+                                            справи</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item"><a href="/#benefits" class="nav__link">Переваги</a></li>
+                            <li class="nav__item"><a href="/#news" class="nav__link">Новини</a></li>
+                            <li class="nav__item"><a href="#contacts" class="nav__link">Контакти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="side-menu__footer">
+            <div class="side-menu__language">
+                <a href="/" class="side-menu__ua">українська мова</a>
+                <a href="/ru/" class="side-menu__ru">русский язык</a>
+            </div>
+            <div class="side-menu__social set row">
+                <a class="social-icon" href="tg://resolve?domain=lawyermalyk">
+                    <img src="../../../assets/telegram.svg" alt="telegram icon">
+                </a>
+
+                <a class="social-icon" href="viber://chat/?number=380961097608">
+                    <img src="../../../assets/viber.svg" alt="viber icon">
+                </a>
+
+                <a class="social-icon" href="https://www.facebook.com/lawyer.malyk/">
+                    <img src="../../../assets/facebook.svg" alt="facebook icon">
+                </a>
+                <a class="social-icon" href="https://www.instagram.com/lawyer.malyk/">
+                    <img src="../../../assets/instagram.svg" alt="instagram icon">
+                </a>
+            </div>
+            <h6>© 2021 Малик Олександр</h6>
+        </div>
+    </div>
+
+    <main class="new__wrapper">
+        <header class="header">
+            <div id="home"><a class="menu__link" href="/">Головна</a></div>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class='menu__list' href='#'>Послуги</a>
+                        <ul class='menu-list'>
+                            <li class="menu-list__item">
+                                <a class="menu-list__nested" href="#">Сімейний адвокат</a>
+                                <ul class='menu-list-nested'>
+                                    <li class="menu-list-nested__item">
+                                        <a class="menu-list-nested__link" href="/service/family/rozirvannia-shliubu">Розірвання шлюбу</a>
+                                    </li>
+                                    <li class="menu-list-nested__item">
+                                        <a class="menu-list-nested__link" href="/service/family/rozirvannia-shliubu-z-inozemtsem">Розірвання шлюбу з іноземцем</a>
+                                    </li>
+                                    <li class="menu-list-nested__item">
+                                        <a class="menu-list-nested__link" href="/service/family/stiahnennia-alimentiv">Стягнення аліментів</a>
+                                    </li>
+                                    <li class="menu-list-nested__item">
+                                        <a class="menu-list-nested__link" href="/service/family/rozpodil-spilnoho-maina">Розподіл спільного
+                                            майна подружжя</a>
+                                    </li>
+                                    <li class="menu-list-nested__item">
+                                        <a class="menu-list-nested__link" href="/service/family/pozbavlennia-batkivskykh-prav">Позбавлення
+                                            батьківських прав </a>
+                                    </li>
+                                    <li class="menu-list-nested__item">
+                                        <a class="menu-list-nested__link" href="/service/family/vstanovlennia-batkivstva">Встановлення
+                                            батьківства</a>
+                                    </li>
+                                    <li class="menu-list-nested__item last-item">
+                                        <a class="menu-list-nested__link" href="/service/family/usynovlennia">Усиновлення</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#administrativeOff">Адміністративні
+                                    правопорушення</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#criminal">Кримінальні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#civil">Цивільні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="#administrative">Адміністративні справи</a>
+                            </li>
+                            <li class="menu-list__item last-item">
+                                <a class="menu-list__link" href="#business">Господарські справи</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a class='menu__list' href='/#'>Вартість послуг</a>
+                        <ul class='menu-list'>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#analysis">Аналіз справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrativeOff">Адміністративні
+                                    правопорушення</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#criminal">Кримінальні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#civil">Цивільні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#family">Сімейні справи</a>
+                            </li>
+                            <li class="menu-list__item">
+                                <a class="menu-list__link" href="/#administrative">Адміністративні справи</a>
+                            </li>
+                            <li class="menu-list__item last-item">
+                                <a class="menu-list__link" href="/#business">Господарські справи</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#benefits">Переваги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#news">Новини</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contacts">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="new__body">
+            <div class="new__header">
+                <h2>Спадщина за заповітом: що варто знати</h2>
+            </div>
+            <div class="new__date"><span class="text-date">09.04.2021</span></div>
+            <div class="new__content text">
+                <p>
+                    Кожна людина має право самостійно розпоряджатися, що й кому дістанеться після її смерті. Останньою волею спадкодавця є
+                    <strong>заповіт</strong>, що дає право визначити конкретних осіб, яким дістанеться майно після його смерті. Заповіт може скласти будь-яка особа з повною цивільною дієздатністю, тобто повнолітня.
+                </p>
+                <h4>Хто може отримати спадок за заповітом</h4>
+                <p>Заповідач може визначити спадкоємцями як фізичних, так і юридичних осіб. Причому фізичні особи не обов’язково повинні бути його родичами. </p>
+                <p>
+                </p>У <strong>заповіті</strong> можна вказати й тих осіб, яких заповідач позбавляє права на спадщину, причому без обґрунтування причин. Це можуть особи з-поміж тих, хто претендуватиме на спадщину за законом.
+                <p>Однак є ті, <strong>хто має право на обов’язкову частку у спадщині</strong> навіть незалежно від того, чи згадано їх у заповіті:</p>
+                <p>
+                    <ul>
+                        <li>малолітні, неповнолітні, повнолітні непрацездатні діти спадкодавця;</li>
+                        <li>непрацездатна вдова / вдівець;</li>
+                        <li>непрацездатні батьки. </li>
+                    </ul>
+                </p>
+                <p> Вони успадковують половину частки, яка належала б кожному з них у разі спадкування за законом.</p>
+                <h4>Що можна передати в спадщину за заповітом</h4>
+                <p>Заповідач може передати всі права та обов’язки, які йому належать, або лише певну частину. </p>
+                <p>Якщо якусь частину спадщини не охоплено заповітом, то право отримати її мають спадкоємці за законом відповідно до черги.</p>
+                <p>У заповіті також можна прописати, де особа бажає бути похованою, певні особливості ритуалу поховання або дати доручення щодо розпорядження певними особистими паперами заповідача тощо. </p>
+                <h4>Як оформити спадщину за заповітом </h4>
+                <p><strong>Відкриття спадщини</strong> відбувається в день смерті особи або оголошення її померлою. </p>
+                <p>Щоб <strong>прийняти спадщину</strong>, спадкоємець повинен протягом 6 місяців звернутись до державного або приватного нотаріуса за місцем проживання спадкодавця із <strong>заявою про прийняття спадщини</strong> та надати такі документи:
+                </p>
+                <p>
+                    <ul>
+                        <li>свідоцтво про смерть спадкодавця;</li>
+                        <li>паспорт, реєстраційний номер облікової картки платника податків;</li>
+                        <li>заповіт;</li>
+                        <li>довідку про місце проживання спадкодавця;</li>
+                        <li>інші документи.</li>
+                    </ul>
+                </p>
+                <p>Якщо заповідач склав <strong>секретний заповіт</strong>, зміст якого можна дізнатись лише після його смерті, то нотаріус, отримавши інформацію про відкриття спадщини, призначає день для оголошення заповіту і повідомляє про це членів сім’ї
+                    та родичів померлого.</p>
+                <p>Під час оголошення секретного заповіту обов’язково мають бути присутні два свідки. Оголошення заповіту підтверджується протоколом, у який записується зміст заповіту, а сам протокол підписують нотаріус і свідки. Після цього починається
+                    процедура оформлення спадщини.</p>
+                <h4> Чи можна відмовитись від спадщини за заповітом?</h4>
+                <p>
+                </p>
+                <p>Спадкоємець за заповітом має право не тільки прийняти спадщину, а й відмовитися від неї. Щоб це зробити, протягом 6 місяців з дня відкриття спадщини потрібно звернутись до нотаріуса із заявою про відмову від прийняття спадщини.</p>
+                <p>Якщо особа <strong>відмовляється від прийняття спадщини</strong> за заповітом, то має право на отримання її за законом відповідно до черги.</p>
+                <p>Законодавство передбачає можливість відкликати таку <strong>відмову</strong>, але лише протягом цього ж 6-місячного строку.</p>
+                <h4>Як визнати заповіт нечинним?</h4>
+                <p>Особа має право визнати заповіт нечинним у судовому порядку, але лише після смерті заповідача. </p>
+                <p>Суд може <strong>визнати нечинним або весь заповіт, або окрему його частину</strong>, якщо буде доведено, що волевиявлення заповідача не було вільним і не відповідало його волі або якщо його складено з порушенням вимог стосовно його форми
+                    чи в ньому відсутні відомості про час і місце складання, особистий підпис тощо.</p>
+                <p>Нечинність окремого положення заповіту не означає, що заповіт є нечинним повністю. А у разі визнання нечинним усього заповіту, особа має право отримати спадок на загальних підставах, тобто за законом.</p>
+                <p>Кожна спадкова справа має свої особливості, а тому для з’ясування усіх нюансів потрібна <strong>правова допомога адвоката.</strong> </p>
+                <p><strong>Маєте запитання щодо отримання спадку за заповітом – звертайтесь до нас. Надамо роз’яснення, проконсультуємо, за потреби спрогнозуємо шанси на успіх у суді та захистимо ваші інтереси. </strong></p>
+            </div>
+            <div class="new__footer">
+                <span class="subtext">адвокат <a href="/">Малик Олександр Володимирович</a></span>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
