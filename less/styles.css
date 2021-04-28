@@ -984,6 +984,9 @@ header .hero__language .language__title:hover {
   content: "\25BE";
   margin-left: 5px;
 }
+.side-menu__container nav .dropdown__link:hover {
+  color: #f5d481;
+}
 .side-menu__container nav .dropdown__icon {
   font-size: 1.3rem;
   transition: 0.5s;
