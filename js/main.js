@@ -71,21 +71,14 @@ const OnMenuItemClick = () => {
             if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
         }, false)
     });
-    // subitem.forEach(value => {
-    //     value.addEventListener('click', () => {
-    //         if (html.classList.contains('overflow')) html.classList.remove('overflow');
-    //         if (overlay.classList.contains('overlay-side-menu-bg')) overlay.classList.remove('overlay-side-menu-bg');
-    //         if (sidemenu.classList.contains('side-menu__show')) sidemenu.classList.remove('side-menu__show');
-    //     }, false)
-    // });
 }
 
 const OnExpandList = () => {
     let dropdown_link = document.querySelectorAll('.dropdown__link');
     dropdown_link.forEach(link => {
         link.addEventListener('click', (e) => {
-            let click=(link.dataset.click==='true');
-            click=!click;
+            let click = (link.dataset.click === 'true');
+            click = !click;
             link.setAttribute('data-click', click);
 
             let expand = (link.nextElementSibling.dataset.expand === 'true');
