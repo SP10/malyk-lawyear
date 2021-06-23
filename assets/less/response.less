@@ -1,0 +1,225 @@
+@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+
+@text-color-primary  : #002e64;
+@text-color-secondary: #ffffff;
+@link                : #2324a9;
+@link-hover          : #f5d481;
+@font-primary        : "Montserrat",
+sans-serif;
+@font-secondary : "Montserrat Alternates",
+sans-serif;
+
+// Extra small devices (portrait phones, less than 576px)
+@mobile: ~"(max-width: 767.98px)";
+
+// Small devices (landscape phones, 576px and up)
+@sm-mobile: ~"(min-width: 576px) and (max-width: 767.98px)";
+
+// Medium devices (tablets, 768px and up)
+@tablet: ~"(min-width: 768px) and (max-width: 991.98px)";
+
+// Large devices (desktops, 992px and up)
+@desktop: ~"(min-width: 992px) and (max-width: 1399.98px)";
+
+// Extra large devices (large desktops, 1200px and up)
+@ultraDesktop: ~"(min-width: 1400px) and (max-width: 1920px)";
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// ---------------text style---------------
+h1 {
+  font-size  : 60px;
+  line-height: 100%;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size  : 20px;
+  line-height: 130%;
+}
+
+h5 {
+  font-size  : 18px;
+  line-height: 130%;
+}
+
+h6 {
+  font-size  : 15px;
+  line-height: 120%;
+}
+
+.note {
+  font-size: 14px;
+}
+
+.text {
+  font-size  : 20px;
+  line-height: 130%;
+}
+
+.note-sign {
+  font-size: 17px;
+  color    : red;
+}
+
+.subtext {
+  font-family: @font-secondary;
+  font-size  : 24px;
+  line-height: 130%;
+}
+
+a {
+  color      : @link;
+  font-weight: 600;
+}
+
+a:hover {
+  color: @link-hover;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media @mobile {
+  h1 {
+    font-size  : 24px;
+    line-height: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size  : 18px;
+    line-height: 130%;
+  }
+
+  h5 {
+    font-size  : 15px;
+    line-height: 130%;
+  }
+
+  h6 {
+    font-size  : 15px;
+    line-height: 120%;
+  }
+
+  .text {
+    font-size  : 15px;
+    line-height: 130%;
+  }
+
+  .subtext {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size  : 15px;
+    line-height: 130%;
+  }
+}
+
+@media @tablet {
+  h1 {
+    font-size  : 40px;
+    line-height: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size  : 18px;
+    line-height: 130%;
+  }
+
+  h5 {
+    font-size  : 18px;
+    line-height: 130%;
+  }
+
+  h6 {
+    font-size  : 18px;
+    line-height: 120%;
+  }
+
+  .text {
+    font-size  : 18px;
+    line-height: 130%;
+  }
+
+  .subtext {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size  : 18px;
+    line-height: 130%;
+  }
+}
+
+@media @desktop {
+  h1 {
+    font-size  : 48px;
+    line-height: 100%;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size  : 18px;
+    line-height: 130%;
+  }
+
+  h5 {
+    font-size  : 16px;
+    line-height: 130%;
+  }
+
+  h6 {
+    font-size  : 15px;
+    line-height: 120%;
+  }
+
+  .note {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size  : 18px;
+    line-height: 130%;
+  }
+
+  .subtext {
+    font-size: 18px;
+  }
+}

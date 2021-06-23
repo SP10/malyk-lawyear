@@ -1,3 +1,6 @@
+import Menu from "./menu.js";
+import { Slider } from './slider/slider.component.js';
+
 const onScroll = () => {
     let burger = document.querySelector('.burger-menu');
     let header = document.querySelector('header');
@@ -118,17 +121,61 @@ const CloseFeedBackForm = () => {
     feedback.classList.remove('feedback-bg');
 }
 
+const OnInitConsultationBtn = () => {
+    let btn = document.getElementById('consultation-btn');
+    btn.addEventListener('click', () => {
+        let html = document.querySelector('html');
+        html.classList.add('overflow');
+        let popup = document.getElementById('feedback-popup');
+        popup.classList.add('dialog-window--show');
+    }, false);
+
+    let btnHome = document.getElementById('consultation-home-btn');
+    btnHome.addEventListener('click', () => {
+        let html = document.querySelector('html');
+        html.classList.add('overflow');
+        let popup = document.getElementById('feedback-popup');
+        popup.classList.add('dialog-window--show');
+    }, false);
+
+    let closeBtn = document.getElementById('feedback-close-btn');
+    closeBtn.addEventListener('click', () => {
+        let html = document.querySelector('html');
+        html.classList.remove('overflow');
+        let popup = document.getElementById('feedback-popup');
+        popup.classList.remove('dialog-window--show');
+    }, false);
+
+    let sendBtn = document.getElementById('feedback-send-btn');
+    sendBtn.addEventListener('click', () => {
+        sendMessage();
+    }, false);
+}
+
 const sendMessage = () => {
+    let body = document.querySelector('body');
+    let html = document.querySelector('html');
+    let popup = document.getElementById('feedback-popup');
+
     let feedbackForm = document.getElementById('feedbackForm');
     let message = `*${feedbackForm.children.name.value}*\n${feedbackForm.children.phoneNumber.value}`;
     if (message !== `**\n`) {
         TelegramBot.sendMessage(message);
-        let success = document.querySelector('.feedback-success');
-        success.classList.add('feedback-success-bg');
-        CloseFeedBackForm();
+        let div = document.createElement('div');
+        let thanksText = document.createElement('h3');
+        let waitText = document.createElement('h3');
+        div.classList.add('feedback-success', 'feedback-success-bg');
+        thanksText.innerText = "Дякую!";
+        waitText.innerText = "Очікуйте, скоро наберу.";
+
+        html.classList.remove('overflow');
+        popup.classList.remove('dialog-window--show');
+        div.append(thanksText);
+        div.append(waitText);
+        body.append(div);
         setTimeout(() => {
-            success.classList.remove('feedback-success-bg');
-        }, 2000)
+            div.classList.remove('feedback-success-bg');
+        }, 4000)
     }
 }
 
@@ -188,86 +235,88 @@ const onInit = () => {
     navLink.forEach(n => n.addEventListener('click', linkAction));
 }
 
-const onInitService = () => {
-    let select = document.getElementById("service-select");
-    let targetIndex = select.selectedIndex;
-    let targetData = document.querySelector(`[data-service='${select.value}']`);
-    if (targetData) {
-        targetData.style.hidden = false;
-        targetData.style.display = "block";
-        document.querySelectorAll(`[data-show]`)[targetIndex].setAttribute("data-show", "true");
-    }
+const onInitSideMenu = () => {
+    // let menu = new Menu();
+    let target = document.querySelector('.side-menu-navigation');
+    let overlay = document.querySelector('.overlay-side-menu');
+    let html = document.querySelector('html');
+
+    let $subElements = document.querySelectorAll('.side-menu-navigation .dropdown');
+    $subElements.forEach(element => {
+        let parent = element.parentElement;
+        parent.setAttribute('data-opened', 'false');
+
+        parent.addEventListener('click', event => {
+            // event.preventDefault();
+            event.stopPropagation();
+
+            let currentElement = event.target.parentElement;
+            let isOpened = (currentElement.dataset.opened === 'true');
+            isOpened = !isOpened;
+            currentElement.setAttribute('data-opened', isOpened);
+
+            let subElement = currentElement.querySelector('.dropdown');
+            if (isOpened) {
+                subElement.classList.add('js-opened');
+            } else {
+                subElement.classList.remove('js-opened');
+            }
+        });
+    });
+
+    let $elements=document.querySelectorAll('.side-menu-navigation li');
+    $elements.forEach(element=>{
+         element.addEventListener('click', event=>{
+             event.stopPropagation();
+
+             if(event.target.offsetParent.dataset.hasOwnProperty('opened')) return;
+             
+             html.classList.remove('overflow');
+             overlay.classList.remove('overlay-side-menu-bg');
+             target.offsetParent.classList.remove('side-menu__show');
+         });
+    });
+    // menu.createSideMenu(target, overlay, html);
 }
 
-const OnServiceSelectClick = () => {
-
-    let select = document.getElementById("service-select");
-
-    select.addEventListener("change", (option) => {
-        let content = document.querySelectorAll(`[data-show='true']`);
-
-        if (content) {
-            content.forEach((value, i) => {
-                value.setAttribute("data-show", "false");
-                value.style.display = 'none';
-            });
-        }
-        let target = select.value;
-        let targetIndex = select.selectedIndex;
-        let targetData = document.querySelector(`[data-service='${target}']`);
-        if (targetData) {
-            targetData.style.hidden = false;
-            targetData.style.display = "block";
-            document.querySelectorAll(`[data-show]`)[targetIndex].setAttribute("data-show", "true");
+const onService = () => {
+    let serviceSlider = new Slider('.service__slider', '.service__select-control', '.service__control', '.service__tab', {
+        navigation: {
+            nextEl: '.service-button-next',
+            prevEl: '.service-button-prev',
         }
     });
 }
 
-const OnServiceRadioClick = () => {
-    for (let i = 1; i <= 9; i++) {
-        let tab = document.getElementById('tab' + i);
-        tab.addEventListener("click", (mouseEvent) => {
-            currentInputId = mouseEvent.target.id;
-            currentInputName = mouseEvent.target.labels[0].innerText;
-            currentIndicator = document.getElementById(`slider${mouseEvent.target.id}`);
+const cropText = () => {
+    const cropElement = document.querySelectorAll('.crop-text'),
+        size = 350,
+        endCharacter = '...';
 
-            {
-                let indicators = document.querySelectorAll('.slider').forEach(indicator => {
-                    indicator.style.hidden = false;
-                    indicator.style.display = "none";
-                })
-            }
+    cropElement.forEach(el => {
+        let text = el.innerHTML;
 
-            {
-                let showSections = document.querySelectorAll(`[data-show='true']`).forEach(section => {
-                    section.setAttribute("data-show", "false");
-                    section.style.hidden = true;
-                    section.style.display = "none";
-                })
-
-            }
-
-            if (currentInputName) {
-                let section = document.querySelector(`[data-service='${currentInputName}']`);
-                section.setAttribute("data-show", "true");
-                section.style.hidden = false;
-                section.style.display = "block";
-                currentIndicator.style.display = "block";
-            }
-        })
-    }
+        if (el.innerHTML.length > size) {
+            text = text.substr(0, size);
+            el.innerHTML = text + endCharacter;
+        }
+    });
 }
 
 window.onload = () => {
     onInit();
-    onInitService();
+    // onInitService();
     resize();
     onScroll();
     OnBurgerClick();
     OnSideMenuClose();
     OnMenuItemClick();
     OnOverlayClick();
-    OnServiceSelectClick();
-    OnServiceRadioClick();
+    onService();
+    // OnServiceSelectClick();
+    // OnServiceRadioClick();
+    OnInitConsultationBtn();
     OnExpandList();
+    onInitSideMenu();
+    cropText();
 }
